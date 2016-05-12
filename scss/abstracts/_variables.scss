@@ -1,0 +1,109 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+// COMPASS VARIABLES
+// -----------------------------------------------------------------------------
+
+// No support for IE before 8 and firefox before 3.5
+
+$legacy-support-for-ie: false;
+$legacy-support-for-mozilla: false;
+
+
+
+
+
+// FONTS EXAMPLES
+// -----------------------------------------------------------------------------
+
+// Font Stacks
+
+$font-family--titles: 'Bodoni MT', Didot, 'Didot LT STD', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+$font-family--text  : 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 100 !default;
+$font-weight--light      : 300 !default;
+$font-weight--medium     : 400 !default;
+$font-weight--bold       : 700 !default;
+$font-weight--ultra-bold : 900 !default;
+
+// Font Sizes
+
+$font-size--small      : 12px !default;
+$font-size--text       : 16px !default;
+$font-size--large      : 21px !default;
+$font-size--big        : 28px !default;
+$font-size--huge       : 37px !default;
+$font-size--title      : 50px !default;
+$font-size--title-huge : 67px !default;
+
+
+
+// COLORS EXAMPLES
+// -----------------------------------------------------------------------------
+
+// Descriptive Base Colors
+
+$white : #fff !default;
+$black : #000 !default;
+
+// Color Usage
+
+
+
+
+
+// MEDIA QUERIES EXAMPLES
+// -----------------------------------------------------------------------------
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+/// @see {mixin} respond-to
+
+$break: (
+  small:  400px,
+  medium: 600px,
+  large:  1000px,
+  huge:   1500px
+) !default;
+
+
+
+
+
+
+// RANDOM STUFF EXAMPLES
+// -----------------------------------------------------------------------------
+
+// Text
+
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 1px;
+
+// Border radius
+
+$br--default    : .4em;
+$br--round      : 50%;
+
+// Transitions
+
+$trans-duration  : .3s;
+
+/// Container's maximum width
+/// @type Length
+$max-width: 2000px !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+/// $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../images/' !default;

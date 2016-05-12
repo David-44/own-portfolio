@@ -1,0 +1,123 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the grid of the site/application.
+// -----------------------------------------------------------------------------
+
+// This is a super simple example.
+// Grid based on http://www.sitepoint.com/easy-responsive-css-grid-layouts/
+
+// Use with this style of markup :
+
+// <div class="grid-container clearfix">
+//   <div class="col-1-2"></div>
+//   <div class="col-1-2"></div>
+// </div><!-- /.row -->
+
+// <div class="row clearfix">
+//   <div class="col-1-4"></div>
+//   <div class="col-1-4"></div>
+//   <div class="col-1-4"></div>
+//   <div class="col-1-4"></div>
+// </div><!-- /.row -->
+
+// <div class="row clearfix">
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+//   <div class="col-1-8"></div>
+// </div><!-- /.row -->
+
+/*
+
+
+
+
+**************************************************************
+# GRID
+**************************************************************/
+
+/**
+ * Defines all columns that will be used by the grid
+ * Shamelessly borrowed from http://www.sitepoint.com/easy-responsive-css-grid-layouts/ :
+ */
+
+
+// Example of parameters
+$context-max-width : 2000px !default;
+$gutter-proportion : 20% !default;
+$grid-breaks: (
+	medium: 4
+) !default;
+
+@mixin grid($gutters, $grid-breakpoints, $main-breakpoints, $context-width: null) {
+
+	// Gets the maximum number of columns from the breakpoints list
+	$max-cols: 1;
+	$col-values: map-values($grid-breaks);
+	@each $item in $col-values {
+		$max-cols: max($max-cols, $item);
+	}
+
+	// Optional context width
+	.grid-container {
+		max-width: $context-width;
+	}
+
+	//Rules that will be common to all columns in the grid
+	[class*="col-"] {
+  		padding-right: $gutters / 2;
+  		padding-left: $gutters / 2;
+	}
+
+	// Sets up the grids for different media queries
+	// 1. It does iterate through the $grid-breakpoints and does the following
+		// 2. Checks that the key exists in the main breakpoints map
+			// 3. If yes, it gets the associated number of columns from grid-breakpoints
+			// 4. Creates the media query using the "breakpoint" plug-in
+			// 5. Adds @content to every column in this media query
+			// 6. Adds the proper width percentage to each column
+			// 7. replaces width with 100% for each number of columns larger than $max-cols
+		// 8. Warns if the key doesn't exist in breakpoint map
+
+
+	@each $key in map-keys($grid-breakpoints) {			// 1
+		@if map-has-key($main-breakpoints, $key) {		// 2
+			$cols: map-get($grid-breakpoints, $key);	// 3
+			@include breakpoint(map-get($main-breakpoints, $key)) {	// 4
+				[class*="col-"] {	// 5
+					@content;		// 5
+				}
+				@for $i from 1 through $cols {			// 6
+					.col-#{$i}-#{$max-cols} {			// 6
+						width: percentage($i / $cols);	// 6
+					}
+				}
+				@if $cols < $max-cols {							// 7
+					@for $j from $cols + 1 through $max-cols {	// 7
+						.col-#{$j}-#{$max-cols} {				// 7
+							width: 100%;						// 7
+						}
+					}
+				}
+			}
+		} @else {
+			@warn "No value for '#{$key}' in your main breakpoints map";	// 8
+		}
+	}
+}
+
+
+// Example of mixin call
+@include grid($gutter-proportion, $grid-breaks, $break) {
+	float: left;
+};
+
+
+
+
+
+
+
