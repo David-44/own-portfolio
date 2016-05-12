@@ -4,4 +4,21 @@
 
 .work-list {
 	background-color: $white;
+	z-index: 1;
+}
+
+.work-title {
+	font-size: $font-size--big;
+	width: 100%;
+	text-align: center;
+	margin: $font-size--base 0;
+
+}
+
+
+
+
+
+.work-demo {
+	background-color: $black;
 }
