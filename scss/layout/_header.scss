@@ -3,22 +3,15 @@
 // -----------------------------------------------------------------------------
 
 .header {
-	position: relative;
-	width: 100%;
-	height: 100vh;
-	background-color: $black;
-
-	color: white;
-
-	@include breakpoint(map-get($break, medium))  {
-	}
+    background-color: $black;
+    color: $white;
 }
 
 .header-img {
-	position: absolute;
-	background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+    position: absolute;
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
 	                  url('#{$base-url}banner-grey.jpg');
-	background-size: cover;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 
@@ -34,7 +27,7 @@
 .header-logo {
 	position: absolute;
 	z-index: 1;
-	top: 40%;
+	top: 33.33%;
 	text-align: center;
 	width: 100%;
 
@@ -45,11 +38,19 @@
 }
 
 .header-title {
-	font-size: 50px;
+	font-size: $font-size--big;
+	line-height: $font-size--huge;
+	
+	@include breakpoint(map-get($break, small))  {
+	    font-size: $font-size--huge;
+	    line-height: $font-size--title;
+	}
+	
+
 }
 
 .header-subtitle {
-	font-size: 20px;
+	font-size: $font-size--base;
 }
 
 

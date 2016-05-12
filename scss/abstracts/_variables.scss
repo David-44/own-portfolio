@@ -36,13 +36,13 @@ $font-weight--ultra-bold : 900 !default;
 
 // Font Sizes
 
-$font-size--small      : 12px !default;
-$font-size--text       : 16px !default;
-$font-size--large      : 21px !default;
-$font-size--big        : 28px !default;
-$font-size--huge       : 37px !default;
-$font-size--title      : 50px !default;
-$font-size--title-huge : 67px !default;
+$font-size--base       : 16px !default;
+$font-size--small      : $font-size--base * 0.66 !default;
+
+$font-size--large      : $font-size--base / 0.66 !default;
+$font-size--big        : $font-size--base / (0.66 * 0.66) !default;
+$font-size--huge       : $font-size--base / (0.66 * 0.66 * 0.66) !default;
+$font-size--title      : $font-size--base / (0.66 * 0.66 * 0.66 * 0.66) !default;
 
 
 
@@ -83,11 +83,6 @@ $break: (
 // RANDOM STUFF EXAMPLES
 // -----------------------------------------------------------------------------
 
-// Text
-
-$base__font-size : 16px;
-$base__line      : 24px;
-$letter-space    : 1px;
 
 // Border radius
 
