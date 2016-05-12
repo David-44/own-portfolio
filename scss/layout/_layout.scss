@@ -7,3 +7,24 @@
     width: 100%;
     height: 100vh;
 }
+
+@mixin panel-half {
+    position: absolute;
+    width: 100%;
+    @include breakpoint(map-get($break, medium))  {
+        width: 50%;
+        @content;
+    }
+}
+
+.l-panel-left {
+    @include panel-half {
+    	left: 0;
+    }
+}
+
+.l-panel-right {
+    @include panel-half {
+    	right: 0;
+    }
+}
