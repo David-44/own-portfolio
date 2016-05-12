@@ -2,27 +2,34 @@
 // This file contains all styles related to basic layout.
 // -----------------------------------------------------------------------------
 
-.l-panel {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
 
+// Mixin used to pass layout styles to left and right panels
 @mixin panel-half {
     position: absolute;
     width: 100%;
+    height: 100vh;
     @include breakpoint(map-get($break, medium))  {
         width: 50%;
         @content;
     }
 }
 
+
+// A whole panel taking a whole screen
+.l-panel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+// Left half panel
 .l-panel-left {
     @include panel-half {
     	left: 0;
     }
 }
 
+// Right half panel
 .l-panel-right {
     @include panel-half {
     	right: 0;
