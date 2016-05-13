@@ -39,15 +39,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 html {
   box-sizing: border-box; }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *, *::before, *::after {
   box-sizing: inherit; }
 
+/**
+ * Basic typography
+ */
 body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
 
@@ -57,9 +54,15 @@ h1, h2, h3 {
 /**
  * Basic styles for links
  */
-/**
- * Different basic styles for links
- */
+a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 36.73095px; }
+a:hover {
+  text-decoration: none;
+  font-size: 24.24242px; }
+
 /**
  * Clear inner floats
  */
@@ -67,26 +70,6 @@ h1, h2, h3 {
   clear: both;
   content: '';
   display: table; }
-
-/**
- * Main content containers
- * 1. Make the container full-width with a maximum width
- * 2. Center it in the viewport
- * 3. Leave some space on the edges, especially valuable on small screens
- */
-.container {
-  max-width: 2000px;
-  /* 1 */
-  margin-left: auto;
-  /* 2 */
-  margin-right: auto;
-  /* 2 */
-  padding-left: 20px;
-  /* 3 */
-  padding-right: 20px;
-  /* 3 */
-  width: 100%;
-  /* 1 */ }
 
 /**
  * Hide element while making it readable for screen readers
@@ -102,6 +85,12 @@ h1, h2, h3 {
   padding: 0;
   position: absolute;
   width: 1px; }
+
+.hidden-small {
+  display: none; }
+@media (min-width: 800px) {
+  .hidden-small {
+    display: block; } }
 
 .l-panel {
   position: relative;
@@ -183,15 +172,33 @@ h1, h2, h3 {
 .header-subtitle {
   font-size: 16px; }
 
-.work-list {
+.work-description {
   background-color: #fff;
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
 
 .work-title {
   font-size: 36.73095px;
   width: 100%;
   text-align: center;
-  margin: 16px 0; }
+  margin: 24.24242px 0; }
+
+.work-subtitle {
+  width: 80%;
+  margin: 5% auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24.24242px; }
+@media (min-width: 800px) {
+  .work-subtitle {
+    margin: 5% 10%;
+    text-align: left; } }
+
+.work-list {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  line-height: 24.24242px; }
 
 .work-demo {
   background-color: #000; }

@@ -9,16 +9,14 @@ html {
   box-sizing: border-box;
 }
 
-/**
- * Make all elements from the DOM inherit from the parent box-sizing
- * Since `*` has a specificity of 0, it does not override the `html` value
- * making all elements inheriting from the root box-sizing value
- * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
- */
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
+
+/**
+ * Basic typography
+ */
 body {
 	font-family: $font-family--text;
 }
@@ -32,23 +30,20 @@ h1, h2, h3 {
 /**
  * Basic styles for links
  */
-// a {
-//   color: $brand-color;
-//   text-decoration: none;
+a {
+  color: $black;
+  display: inline-block;
+  text-decoration: none;
+  line-height: $font-size--big;
 
-//   @include on-event {
-//     color: $text-color;
-//     text-decoration: underline;
-//   }
-// }
+  &:hover {
+    text-decoration: none;
+    font-size: $font-size--large;
+    
+  }
+}
 
-/**
- * Different basic styles for links
- */
 
-// a {
-// 	color: palette(grey, dark); 
-// 	text-decoration: none;
-// 	font-weight: $font-weight--medium;
-// }
+
+
 
