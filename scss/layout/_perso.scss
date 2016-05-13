@@ -2,12 +2,10 @@
 // This file contains all styles related to the personal part of the site/application.
 // -----------------------------------------------------------------------------
 
-.me-skills {
-	background-color: $black;
-	color: $white;
-}
-
-.me-about {
-	background-color: $white;
-	color: $black;
+.me {
+    background-color: $white;
+	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
+	@include breakpoint(map-get($break, medium)) {
+        background-image: linear-gradient(to left, $white 50%, $black 50%);
+	}
 }

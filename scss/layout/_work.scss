@@ -1,46 +1,11 @@
 // -----------------------------------------------------------------------------
-// This file contains all styles related to the work of the site/application.
+// This file contains all styles related to the work panel of the site/application.
 // -----------------------------------------------------------------------------
 
 .work {
 	background-color: $white;
+	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
-	    background-image: linear-gradient(to right, $white 50%, $black 50%);
-    }
-}
-
-.work-description {
-	z-index: 1;
-}
-
-.work-title {
-	position: absolute;
-	font-size: $font-size--big;
-	width: 100%;
-	text-align: center;
-	margin: $font-size--large 0;
-}
-
-.work-subtitle {
-	width: 80%;
-	margin: 100px auto 4% auto;
-	text-align: center;
-	font-weight: $font-weight--bold;
-	font-size: $font-size--large;
-	@include breakpoint(map-get($break, medium)) {
-		text-align: left;
+        background-image: linear-gradient(to right, $white 50%, $black 50%);
 	}
 }
-
-.work-list {
-	margin-left: 10%;
-	margin-right: 10%;
-	text-align: center;
-	line-height: $font-size--large;
-}
-
-
-
-
-
-

@@ -5,54 +5,77 @@
 
 // Mixin used to pass layout styles to left and right panels
 @mixin panel-half {
+    position: absolute;
     width: 100%;
+    height: 100vh;
     @include breakpoint(map-get($break, medium))  {
+        width: 50%;
         @content;
     }
 }
 
-
-// A whole panel taking a whole screen
-.l-panel_superposed {
+// Basic panel layout
+%panel {
     position: relative;
     width: 100%;
     height: 100vh;
+}
+
+
+
+// A panel in which both sides are superposed at small size
+.l-panel_superposed {
+    @extend %panel;
     overflow: hidden;
 }
 
+// A panel in which sides are one after the other at small size
 .l-panel_following {
-    position: relative;
-    width: 100%;
+    @extend %panel;
     height: 200vh;
-    overflow: hidden;
     @include breakpoint(map-get($break, medium))  {
         height: 100vh;
     }
 }
 
+
+
 // Left half panel
 .l-panel-left {
-    position: absolute;
     top: 0;
-    height: 100vh;
     @include panel-half {
-        width: 50%;
     	left: 0;
     }
 }
 
 // Right half panel
 .l-panel-right {
-    position: absolute;
     bottom: 0;
-    height: 100vh;
     @include panel-half {
-        width: 50%;
     	right: 0;
     }
 }
 
+// Bottom half panel, in case of interlaced panels
+.l-panel-bottom {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 100vh;
+}
 
+
+
+// Moving content to the right at medium size
+.medium-right {
+  @include breakpoint(map-get($break, medium)) {
+    position: absolute;
+    left: 200%;
+    top: 100px;
+    transform: translate(-125%);
+    z-index: 100;
+  }
+}
 
 
 
