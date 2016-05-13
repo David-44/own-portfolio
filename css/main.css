@@ -129,7 +129,8 @@ a:hover {
 
 .header {
   background-color: #000;
-  color: #fff; }
+  color: #fff;
+  overflow: hidden; }
 
 .header-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-grey.jpg");
