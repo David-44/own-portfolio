@@ -5,10 +5,10 @@
 .work-description {
 	background-color: $white;
 	z-index: 1;
-	overflow: hidden;
 }
 
 .work-title {
+	position: absolute;
 	font-size: $font-size--big;
 	width: 100%;
 	text-align: center;
@@ -18,12 +18,11 @@
 
 .work-subtitle {
 	width: 80%;
-	margin: 5% auto;
+	margin: 100px auto 4% auto;
 	text-align: center;
 	font-weight: $font-weight--bold;
 	font-size: $font-size--large;
 	@include breakpoint(map-get($break, medium)) {
-		margin: 5% 10%;
 		text-align: left;
 	}
 }
@@ -38,3 +37,9 @@
 .work-demo {
 	background-color: $black;
 }
+
+
+
+
+
+

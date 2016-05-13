@@ -33,3 +33,15 @@
     display: block;
   }
 }
+
+.medium-right {
+  @include breakpoint(map-get($break, medium)) {
+    position: absolute;
+    left: 100%;
+    z-index: 100;
+  }
+}
+
+.hidden {
+  display: none;
+}
