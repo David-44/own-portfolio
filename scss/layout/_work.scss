@@ -3,11 +3,13 @@
 // -----------------------------------------------------------------------------
 
 .work {
-	background-image: linear-gradient(to right, $white 50%, $black 50%);
+	background-color: $white;
+	@include breakpoint(map-get($break, medium)) {
+	    background-image: linear-gradient(to right, $white 50%, $black 50%);
+    }
 }
 
 .work-description {
-	background-color: $white;
 	z-index: 1;
 }
 

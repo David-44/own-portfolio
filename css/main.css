@@ -155,10 +155,12 @@ a:hover {
   font-size: 16px; }
 
 .work {
-  background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); }
+  background-color: #fff; }
+@media (min-width: 800px) {
+  .work {
+    background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
 
 .work-description {
-  background-color: #fff;
   z-index: 1; }
 
 .work-title {
