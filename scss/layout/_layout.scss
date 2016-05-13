@@ -7,7 +7,7 @@
 @mixin panel-half {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     @include breakpoint(map-get($break, medium))  {
         @content;
     }
@@ -18,7 +18,8 @@
 .l-panel {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    overflow: scroll;
 }
 
 // Left half panel

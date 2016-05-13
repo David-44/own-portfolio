@@ -1,8 +1,0 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
-// -----------------------------------------------------------------------------
-
-body {
-	@include column-grid-background(8, 12.5%, 0, 0);
-	height: 100vh;
-}

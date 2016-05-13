@@ -1,0 +1,193 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+/**
+ * Basic typography
+ */
+body {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+
+h1, h2, h3 {
+  font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
+
+/**
+ * Basic styles for links
+ */
+a {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 36.73095px; }
+a:hover {
+  text-decoration: none;
+  font-size: 24.24242px; }
+
+/**
+ * Clear inner floats
+ */
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table; }
+
+/**
+ * Hide element while making it readable for screen readers
+ * Shamelessly borrowed from HTML5Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css#L119-L133
+ */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+.hidden-small {
+  display: none; }
+@media (min-width: 800px) {
+  .hidden-small {
+    display: block; } }
+
+@media (min-width: 800px) {
+  .medium-right {
+    position: absolute;
+    left: 200%;
+    top: 100px;
+    transform: translate(-125%);
+    z-index: 100; } }
+
+.hidden {
+  display: none; }
+
+.l-panel {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: scroll; }
+
+.l-panel-left {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+@media (min-width: 800px) {
+  .l-panel-left {
+    width: 50%;
+    left: 0; } }
+
+.l-panel-right {
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+@media (min-width: 800px) {
+  .l-panel-right {
+    width: 50%;
+    right: 0; } }
+
+.header {
+  background-color: #000;
+  color: #fff; }
+
+.header-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-grey.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat; }
+
+.header-logo {
+  z-index: 1;
+  top: 33.33%;
+  text-align: center; }
+
+.header-title {
+  font-size: 36.73095px;
+  line-height: 55.65295px; }
+@media (min-width: 400px) {
+  .header-title {
+    font-size: 55.65295px;
+    line-height: 84.32265px; } }
+
+.header-subtitle {
+  font-size: 16px; }
+
+.work {
+  background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); }
+
+.work-description {
+  background-color: #fff;
+  z-index: 1; }
+
+.work-title {
+  position: absolute;
+  font-size: 36.73095px;
+  width: 100%;
+  text-align: center;
+  margin: 24.24242px 0; }
+
+.work-subtitle {
+  width: 80%;
+  margin: 100px auto 4% auto;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24.24242px; }
+@media (min-width: 800px) {
+  .work-subtitle {
+    text-align: left; } }
+
+.work-list {
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  line-height: 24.24242px; }
+
+.carousel-container {
+  width: 66%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.carousel-item, .carousel-thumbnail {
+  width: 100%; }

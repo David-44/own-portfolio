@@ -37,7 +37,9 @@
 .medium-right {
   @include breakpoint(map-get($break, medium)) {
     position: absolute;
-    left: 100%;
+    left: 200%;
+    top: 100px;
+    transform: translate(-125%);
     z-index: 100;
   }
 }

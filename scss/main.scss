@@ -4,7 +4,6 @@
 @import
   'compass/css3',
   'compass/reset',
-  'compass/layout/grid-background',
   'compass/typography/vertical_rhythm',
   'breakpoint';
 
@@ -30,8 +29,5 @@
 // 4. Components
 @import
   'components/button',
-  'components/menus';
+  'components/carousel';
 
-// 5. Page-specific styles
-@import
-  'pages/home';
