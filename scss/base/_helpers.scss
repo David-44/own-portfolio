@@ -38,6 +38,18 @@
   display: none;
 }
 
+.white-to-black {
+  color: $white;
+  background-color: $black;
+  @include breakpoint(map-get($break, medium)) {
+      color: $black;
+      background-color: $white;
+  }
+}
+
+
+
+
 
 
 

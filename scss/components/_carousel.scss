@@ -7,6 +7,9 @@
     min-width: 300px;
     margin-left: auto;
     margin-right: auto;
+    @include breakpoint(map-get($break, medium))  {
+        width: 33%;
+    }
 }
 
 .carousel-item, .carousel-thumbnail {
