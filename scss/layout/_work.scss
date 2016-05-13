@@ -9,3 +9,28 @@
         background-image: linear-gradient(to right, $white 50%, $black 50%);
 	}
 }
+
+.work-title {
+	width: 100%;
+	text-align: center;
+	font-size: $font-size--huge;
+	margin: $font-size--big 0;
+}
+
+.work-subtitle {
+	width: 100%;
+	text-align: center;
+	font-weight: $font-weight--bold;
+	font-size: $font-size--large;
+	line-height: $font-size--huge;
+	@include breakpoint(map-get($break, medium)) {
+        width: 50%;
+        text-align: left;
+        text-indent: 100px;
+	}
+}
+
+.work-list {
+	width: 100%;
+	text-align: center;
+}

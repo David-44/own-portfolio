@@ -98,9 +98,7 @@ a:hover {
 .l-panel_superposed, .l-panel_following {
   position: relative;
   width: 100%;
-  height: 100vh; }
-
-.l-panel_superposed {
+  height: 100vh;
   overflow: hidden; }
 
 .l-panel_following {
@@ -113,7 +111,8 @@ a:hover {
   top: 0;
   position: absolute;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: visible; }
 @media (min-width: 800px) {
   .l-panel-left {
     width: 50%;
@@ -123,17 +122,29 @@ a:hover {
   bottom: 0;
   position: absolute;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: visible; }
 @media (min-width: 800px) {
   .l-panel-right {
     width: 50%;
     right: 0; } }
 
 .l-panel-bottom {
+  top: 100vh;
   position: absolute;
   width: 100%;
   height: 100vh;
-  top: 100vh; }
+  overflow: visible; }
+@media (min-width: 800px) {
+  .l-panel-bottom {
+    width: 50%;
+    position: relative;
+    height: auto;
+    top: 0; } }
+
+@media (min-width: 800px) {
+  .l-panel-top {
+    width: 50%; } }
 
 @media (min-width: 800px) {
   .medium-right {
@@ -177,19 +188,34 @@ a:hover {
   .work {
     background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
 
+.work-title {
+  width: 100%;
+  text-align: center;
+  font-size: 55.65295px;
+  margin: 36.73095px 0; }
+
+.work-subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24.24242px;
+  line-height: 55.65295px; }
+@media (min-width: 800px) {
+  .work-subtitle {
+    width: 50%;
+    text-align: left;
+    text-indent: 100px; } }
+
+.work-list {
+  width: 100%;
+  text-align: center; }
+
 .me {
   background-color: #fff;
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
   .me {
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
-
-.work {
-  background-color: #fff;
-  background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
-@media (min-width: 800px) {
-  .work {
-    background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
 
 .carousel-container {
   width: 66%;

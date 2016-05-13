@@ -8,6 +8,7 @@
     position: absolute;
     width: 100%;
     height: 100vh;
+    overflow: visible;
     @include breakpoint(map-get($break, medium))  {
         width: 50%;
         @content;
@@ -19,6 +20,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 
@@ -26,7 +28,6 @@
 // A panel in which both sides are superposed at small size
 .l-panel_superposed {
     @extend %panel;
-    overflow: hidden;
 }
 
 // A panel in which sides are one after the other at small size
@@ -58,10 +59,18 @@
 
 // Bottom half panel, in case of interlaced panels
 .l-panel-bottom {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
     top: 100vh;
+    @include panel-half {
+       position: relative;
+       height: auto;
+       top: 0;
+    }
+}
+
+.l-panel-top {
+    @include breakpoint(map-get($break, medium)) {
+        width: 50%;
+    }
 }
 
 
