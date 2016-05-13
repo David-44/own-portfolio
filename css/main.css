@@ -184,6 +184,13 @@ a:hover {
   .me {
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
 
+.work {
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
+@media (min-width: 800px) {
+  .work {
+    background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
+
 .carousel-container {
   width: 66%;
   min-width: 300px;
