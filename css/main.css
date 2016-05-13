@@ -103,6 +103,14 @@ a:hover {
     color: #000;
     background-color: #fff; } }
 
+.black-to-white {
+  color: #000;
+  background-color: #fff; }
+@media (min-width: 800px) {
+  .black-to-white {
+    color: #fff;
+    background-color: #000; } }
+
 .l-panel_superposed, .l-panel_following {
   position: relative;
   width: 100%;
@@ -161,13 +169,6 @@ a:hover {
     position: static;
     height: auto;
     top: 0; } }
-
-@media (min-width: 800px) {
-  .medium-right {
-    position: absolute;
-    top: 129.11484px;
-    left: 100%;
-    transform: translate(-125%); } }
 
 .header {
   background-color: #000;
@@ -228,12 +229,26 @@ a:hover {
 .work-second {
   margin-top: 55.65295px; }
 
+@media (min-width: 800px) {
+  .medium-right {
+    position: absolute;
+    top: 129.11484px;
+    left: 100%;
+    transform: translate(-125%); } }
+
 .me {
   background-color: #fff;
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
   .me {
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
+
+.perso-subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24.24242px;
+  margin-top: 55.65295px; }
 
 .carousel-container {
   width: 66%;

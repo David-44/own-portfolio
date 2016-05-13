@@ -47,6 +47,15 @@
   }
 }
 
+.black-to-white {
+  color: $black;
+  background-color: $white;
+  @include breakpoint(map-get($break, medium)) {
+      color: $white;
+      background-color: $black;
+  }
+}
+
 
 
 
