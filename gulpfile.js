@@ -1,11 +1,12 @@
 "use strict";
 
-var gulp = require('gulp'),
-  concat = require('gulp-concat'),
-  uglify = require('gulp-uglify'),
-  rename = require('gulp-rename'),
- compass = require('gulp-compass'),
-     del = require('del');
+var     gulp = require('gulp'),
+      concat = require('gulp-concat'),
+      uglify = require('gulp-uglify'),
+      rename = require('gulp-rename'),
+     compass = require('gulp-compass'),
+         del = require('del'),
+autoprefixer = require('gulp-autoprefixer');
 
 
 // Concatenate scripts
@@ -57,6 +58,18 @@ gulp.task('compileCompassLive', function() {
     }));
 });
 
+// CSS Autoprefixer
+// -----------------------------------------------------------------
+
+gulp.task('autoprefix', ["compileCompass"], function() {
+  return gulp.src('css/main.css')
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('css'));
+});
+
 
 // Clean
 // -----------------------------------------------------------------
@@ -80,7 +93,7 @@ gulp.task("build", ['minifyScripts', 'compileCompassLive'], function() {
 // -----------------------------------------------------------------
 
 gulp.task('watchFiles', function() {
-  gulp.watch('scss/**/*.scss', ['compileCompass']);
+  gulp.watch('scss/**/*.scss',['autoprefix']);
   gulp.watch('scripts/*.js', ['minifyScripts']);
 })
 
