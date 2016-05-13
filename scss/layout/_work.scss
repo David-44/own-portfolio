@@ -43,6 +43,7 @@
 
 // Moving content to the right at medium size
 .medium-right {
+  margin-bottom: $font-size--huge;
   @include breakpoint(map-get($break, medium)) {
     position: absolute;
     top: $font-size--huge + 2 * $font-size--big;
@@ -50,3 +51,8 @@
     transform: translate(-125%);
   }
 }
+
+
+
+
+

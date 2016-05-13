@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the Contact of the site/application.
+// -----------------------------------------------------------------------------
+
+.contact-img {
+    background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
+	                  url('#{$base-url}contact.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.contact-list {
+	z-index: 1;
+}
