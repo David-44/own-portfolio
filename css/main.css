@@ -46,7 +46,8 @@ html {
  * Basic typography
  */
 body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif; }
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  position: relative; }
 
 h1, h2, h3 {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
@@ -256,6 +257,22 @@ a:hover {
 
 .contact-list {
   z-index: 1; }
+
+.temp {
+  width: 100%;
+  text-align: center; }
+
+.footer {
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  line-height: 5vh;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #000; }
 
 .carousel-container {
   width: 66%;
