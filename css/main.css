@@ -103,16 +103,26 @@ a:hover {
 .hidden {
   display: none; }
 
-.l-panel {
+.l-panel_superposed {
   position: relative;
   width: 100%;
-  min-height: 100vh;
-  overflow: scroll; }
+  height: 100vh;
+  overflow: hidden; }
+
+.l-panel_following {
+  position: relative;
+  width: 100%;
+  height: 200vh;
+  overflow: hidden; }
+@media (min-width: 800px) {
+  .l-panel_following {
+    height: 100vh; } }
 
 .l-panel-left {
   position: absolute;
-  width: 100%;
-  height: 100%; }
+  top: 0;
+  height: 100vh;
+  width: 100%; }
 @media (min-width: 800px) {
   .l-panel-left {
     width: 50%;
@@ -120,8 +130,9 @@ a:hover {
 
 .l-panel-right {
   position: absolute;
-  width: 100%;
-  height: 100%; }
+  bottom: 0;
+  height: 100vh;
+  width: 100%; }
 @media (min-width: 800px) {
   .l-panel-right {
     width: 50%;
@@ -185,6 +196,14 @@ a:hover {
   margin-right: 10%;
   text-align: center;
   line-height: 24.24242px; }
+
+.me-skills {
+  background-color: #000;
+  color: #fff; }
+
+.me-about {
+  background-color: #fff;
+  color: #000; }
 
 .carousel-container {
   width: 66%;
