@@ -3,11 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .contact-img {
-    background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
-	                  url('#{$base-url}contact.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    @include banner('contact.jpg');
 }
 
 .contact-list {
