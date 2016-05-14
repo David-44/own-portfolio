@@ -138,30 +138,44 @@ a:hover {
     width: 50%;
     right: 0; } }
 
-.l-panel-bottom {
-  top: 100vh;
+.l-panel-bottom, .l-panel-top {
   position: absolute;
   width: 100%;
   height: 100vh;
   overflow: scroll; }
 @media (min-width: 800px) {
-  .l-panel-bottom {
+  .l-panel-bottom, .l-panel-top {
     width: 50%;
     position: static;
     height: auto;
     top: 0; } }
 
-.l-panel-top {
-  position: absolute;
+.l-panel-bottom {
+  top: 100vh; }
+
+.footer {
+  height: 10vh;
   width: 100%;
-  height: 100vh;
-  overflow: scroll; }
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  line-height: 5vh;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #000; }
+
+.carousel-container {
+  width: 66%;
+  min-width: 300px;
+  margin-left: auto;
+  margin-right: auto; }
 @media (min-width: 800px) {
-  .l-panel-top {
-    width: 50%;
-    position: static;
-    height: auto;
-    top: 0; } }
+  .carousel-container {
+    width: 33%; } }
+
+.carousel-item, .carousel-thumbnail {
+  width: 100%; }
 
 .header {
   background-color: #000;
@@ -257,27 +271,3 @@ a:hover {
 .temp {
   width: 100%;
   text-align: center; }
-
-.footer {
-  height: 10vh;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  text-align: center;
-  line-height: 5vh;
-  vertical-align: middle;
-  color: #fff;
-  background-color: #000; }
-
-.carousel-container {
-  width: 66%;
-  min-width: 300px;
-  margin-left: auto;
-  margin-right: auto; }
-@media (min-width: 800px) {
-  .carousel-container {
-    width: 33%; } }
-
-.carousel-item, .carousel-thumbnail {
-  width: 100%; }

@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 
-// Mixin used to pass layout styles to left and right panels
+// Mixin used to pass layout styles to half panels
 @mixin panel-half {
     position: absolute;
     width: 100%;
@@ -41,7 +41,7 @@
 
 
 
-// Left half panel
+// Left half panel, on top
 .l-panel-left {
     top: 0;
     @include panel-half {
@@ -57,9 +57,9 @@
     }
 }
 
-// Bottom half panel, in case of interlaced panels
-.l-panel-bottom {
-    top: 100vh;
+// top and bottom half panels, in case of interlaced panels
+.l-panel-bottom, 
+.l-panel-top {
     @include panel-half {
        position: static;
        height: auto;
@@ -67,12 +67,9 @@
     }
 }
 
-.l-panel-top {
-    @include panel-half {
-       position: static;
-       height: auto;
-       top: 0;
-    }
+// Bottom half panel is pushed 100vh down
+.l-panel-bottom {
+    top: 100vh;
 }
 
 

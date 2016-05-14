@@ -21,15 +21,15 @@
 // 3. Layout-related sections
 @import
   'layout/layout',
-  // 'layout/grid',
-  'layout/header',
-  'layout/work',
-  'layout/perso',
-  'layout/contact',
   'layout/footer';
  
-// 4. Components
+// 4. Modules
 @import
-  'components/button',
-  'components/carousel';
+  'modules/carousel';
 
+// 5. Pages
+@import
+  'pages/header',
+  'pages/work',
+  'pages/perso',
+  'pages/contact';
