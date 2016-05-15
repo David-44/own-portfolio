@@ -64,6 +64,17 @@ a:hover {
   text-decoration: none;
   font-size: 24px; }
 
+/*
+ * General subtitles used mostly by h3 tags
+ */
+.subtitle, .work-subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 54px;
+  margin-top: 54px; }
+
 /**
  * Clear inner floats
  */
@@ -107,8 +118,7 @@ a:hover {
 .l-panel_superposed, .l-panel_following {
   position: relative;
   width: 100%;
-  height: 100vh;
-  overflow: hidden; }
+  height: 100vh; }
 
 .l-panel_following {
   height: 200vh; }
@@ -119,9 +129,9 @@ a:hover {
 .l-panel-left {
   top: 0;
   position: absolute;
+  overflow: scroll;
   width: 100%;
-  height: 100vh;
-  overflow: scroll; }
+  height: 100vh; }
 @media (min-width: 800px) {
   .l-panel-left {
     width: 50%;
@@ -130,9 +140,9 @@ a:hover {
 .l-panel-right {
   bottom: 0;
   position: absolute;
+  overflow: scroll;
   width: 100%;
-  height: 100vh;
-  overflow: scroll; }
+  height: 100vh; }
 @media (min-width: 800px) {
   .l-panel-right {
     width: 50%;
@@ -140,9 +150,9 @@ a:hover {
 
 .l-panel-bottom, .l-panel-top {
   position: absolute;
+  overflow: scroll;
   width: 100%;
-  height: 100vh;
-  overflow: scroll; }
+  height: 100vh; }
 @media (min-width: 800px) {
   .l-panel-bottom, .l-panel-top {
     width: 50%;
@@ -163,7 +173,11 @@ a:hover {
   line-height: 5vh;
   vertical-align: middle;
   color: #fff;
-  background-color: #000; }
+  background-color: #000;
+  font-size: 10.66667px; }
+@media (min-width: 450px) {
+  .footer {
+    font-size: 16px; } }
 
 .carousel-container {
   width: 66%;
@@ -196,7 +210,7 @@ a:hover {
 .header-title {
   font-size: 36px;
   line-height: 54px; }
-@media (min-width: 400px) {
+@media (min-width: 450px) {
   .header-title {
     font-size: 54px;
     line-height: 81px; } }
@@ -217,12 +231,6 @@ a:hover {
   font-size: 54px;
   margin: 36px 0; }
 
-.work-subtitle {
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 54px; }
 @media (min-width: 800px) {
   .work-subtitle {
     width: 50%;
@@ -232,9 +240,6 @@ a:hover {
 .work-list {
   width: 100%;
   text-align: center; }
-
-.work-second {
-  margin-top: 54px; }
 
 .medium-right {
   margin-bottom: 54px; }
@@ -251,13 +256,6 @@ a:hover {
 @media (min-width: 800px) {
   .me {
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
-
-.perso-subtitle {
-  width: 100%;
-  text-align: center;
-  font-weight: 700;
-  font-size: 24px;
-  margin-top: 54px; }
 
 .contact-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");

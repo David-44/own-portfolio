@@ -44,7 +44,18 @@ a {
 } 
 
 
+/*
+ * General subtitles used mostly by h3 tags
+ */
 
+.subtitle {
+  width: 100%;
+  text-align: center;
+  font-weight: $font-weight--bold;
+  font-size: $font-size--large;
+  line-height: $font-size--huge;
+  margin-top: $font-size--huge;
+}
 
 
 

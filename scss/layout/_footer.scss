@@ -13,4 +13,8 @@
  	vertical-align: middle;
  	color: $white;
  	background-color: $black;
+ 	font-size: $font-size--small;
+ 	@include breakpoint(map-get($break, small))  {
+        font-size: $font-size--base;
+ 	}
  }

@@ -18,11 +18,7 @@
 }
 
 .work-subtitle {
-	width: 100%;
-	text-align: center;
-	font-weight: $font-weight--bold;
-	font-size: $font-size--large;
-	line-height: $font-size--huge;
+	@extend .subtitle;
 	@include breakpoint(map-get($break, medium)) {
         width: 50%;
         text-align: left;
@@ -35,9 +31,6 @@
 	text-align: center;
 }
 
-.work-second {
-	margin-top: $font-size--huge;
-}
 
 
 
