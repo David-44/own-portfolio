@@ -92,8 +92,17 @@ a:hover {
   .hidden-small {
     display: block; } }
 
+/*
+ * Hides item
+ */
 .hidden {
   display: none; }
+
+/*
+ * Selects item
+ */
+.displayed {
+  display: inline-block; }
 
 /*
  * Changes the background color from white at small size

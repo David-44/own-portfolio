@@ -14,11 +14,10 @@ autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("concatScripts", function() {
     return gulp.src([
+        'scripts/carousel.js',
         'scripts/main.js'
         ])
-    .pipe(maps.init())
     .pipe(concat('app.js'))
-    .pipe(maps.write('./'))
     .pipe(gulp.dest('scripts'));
 });
 
