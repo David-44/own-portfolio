@@ -43,7 +43,7 @@ html {
   box-sizing: inherit; }
 
 /**
- * Basic typography
+ * Basic styles
  */
 body {
   font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
@@ -60,7 +60,7 @@ a {
   display: inline-block;
   text-decoration: none;
   line-height: 36px; }
-a:hover {
+a:hover, a.selected {
   text-decoration: none;
   font-size: 24px; }
 
@@ -202,21 +202,27 @@ a:hover {
 .carousel-item, .carousel-thumbnail {
   width: 100%; }
 
-.carousel-arrow {
+.carousel-link {
+  box-sizing: content-box;
   position: absolute;
   top: 50%;
   z-index: 10;
   width: 36px;
+  height: 36px;
+  padding: 10px; }
+
+.carousel-arrow {
   fill: #fff;
-  stroke-width: 1px; }
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%; }
 
-.carousel-left-arrow {
-  left: 6%;
-  transform: translate(-8.33%, -50%); }
+.carousel-left-link {
+  left: 3%;
+  transform: translate(0, -50%); }
 
-.carousel-right-arrow {
-  right: 6%;
-  transform: translate(8.33%, -50%); }
+.carousel-right-link {
+  right: 3%;
+  transform: translate(0, -50%); }
 
 .header {
   background-color: #000;

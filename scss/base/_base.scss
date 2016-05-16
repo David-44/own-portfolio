@@ -15,7 +15,7 @@ html {
 
 
 /**
- * Basic typography
+ * Basic styles
  */
 body {
 	font-family: $font-family--text;
@@ -37,7 +37,7 @@ a {
   text-decoration: none;
   line-height: $font-size--big;
 
-  &:hover {
+  &:hover, &.selected {
     text-decoration: none;
     font-size: $font-size--large;  
   }

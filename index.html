@@ -67,6 +67,7 @@
   </defs>
 </svg>
 
+<!-- END SPRITESHEET -->
 
 
 
@@ -93,21 +94,21 @@
     <section class="l-panel-top">
       <h2 class="work-title hidden-small">My Work</h2>
 	    <h3 class="work-subtitle">Sites</h3>
-	    <ul class="work-list hidden-small">
-        <li><a href="#">Rodolf Vanthuyne</a></li>
-        <li><a href="#">Alpha Clean</a></li>
-        <li><a href="#">My portfolio</a></li>
+	    <ul id="sites-list" class="work-list hidden-small">
+        <li><a class="selected" href="#" data-site-num="0">Rodolf Vanthuyne</a></li>
+        <li><a href="#" data-site-num="1">Alpha Clean</a></li>
+        <li><a href="#" data-site-num="2">My portfolio</a></li>
       </ul>
 
       <div class="medium-right right-container">
         <div class="carousel-container">
-          <a id="sites-carousel_left" href="#">
-            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow carousel-left-arrow">
+          <a class="carousel-link carousel-left-link" id="sites-carousel_left" href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow">
               <use xlink:href="#circle-left"></use>
             </svg>
           </a>
-          <a id="sites-carousel_right" href="#">
-            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow carousel-right-arrow">
+          <a class="carousel-link carousel-right-link" id="sites-carousel_right" href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow">
               <use xlink:href="#circle-right"></use>
             </svg>
           </a>
