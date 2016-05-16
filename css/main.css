@@ -180,16 +180,34 @@ a:hover {
     font-size: 16px; } }
 
 .carousel-container {
-  width: 66%;
-  min-width: 300px;
-  margin-left: auto;
-  margin-right: auto; }
-@media (min-width: 800px) {
-  .carousel-container {
-    width: 33%; } }
+  position: absolute;
+  width: 100%;
+  max-width: 600px;
+  left: 50%;
+  transform: translate(-50%); }
+
+.carousel {
+  position: relative;
+  width: 100%; }
 
 .carousel-item, .carousel-thumbnail {
   width: 100%; }
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  width: 36px;
+  fill: #fff;
+  stroke-width: 1px; }
+
+.carousel-left-arrow {
+  left: 6%;
+  transform: translate(-8.33%, -50%); }
+
+.carousel-right-arrow {
+  right: 6%;
+  transform: translate(8.33%, -50%); }
 
 .header {
   background-color: #000;
@@ -241,14 +259,16 @@ a:hover {
   width: 100%;
   text-align: center; }
 
-.medium-right {
+.right-container {
+  position: relative;
   margin-bottom: 54px; }
 @media (min-width: 800px) {
-  .medium-right {
+  .right-container {
     position: absolute;
+    width: 50%;
     top: 126px;
     left: 100%;
-    transform: translate(-125%); } }
+    transform: translate(-100%); } }
 
 .me {
   background-color: #fff;

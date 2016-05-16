@@ -3,15 +3,37 @@
 // -----------------------------------------------------------------------------
 
 .carousel-container {
-    width: 66%;
-    min-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    @include breakpoint(map-get($break, medium))  {
-        width: 33%;
-    }
+	position: absolute;
+	width: 100%;
+	max-width: 600px;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+.carousel {
+	position: relative;
+	width: 100%;
 }
 
 .carousel-item, .carousel-thumbnail {
 	width: 100%;
+}
+
+.carousel-arrow {
+	position: absolute;
+	top: 50%;
+	z-index: 10;
+	width: $font-size--big;
+	fill: $white;
+	stroke-width: 1px;
+}
+
+.carousel-left-arrow {
+    left: 6%;
+    transform: translate(-8.33%, -50%);
+}
+
+.carousel-right-arrow {
+    right: 6%;
+    transform: translate(8.33%, -50%);
 }

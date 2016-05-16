@@ -35,13 +35,13 @@
   </symbol>
 
   <symbol id="circle-left" viewBox="0 0 16 16">
-    <path fill="#000000" d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM8 1.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5 2.91-6.5 6.5-6.5z"></path>
-    <path fill="#000000" d="M10.457 4.957l-1.414-1.414-4.457 4.457 4.457 4.457 1.414-1.414-3.043-3.043z"></path>
+    <path d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM8 1.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5 2.91-6.5 6.5-6.5z"></path>
+    <path d="M10.457 4.957l-1.414-1.414-4.457 4.457 4.457 4.457 1.414-1.414-3.043-3.043z"></path>
   </symbol>
 
   <symbol id="circle-right" viewBox="0 0 16 16">
-    <path fill="#000000" d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
-    <path fill="#000000" d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+    <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
+    <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
   </symbol>
 
   <symbol id="mail" viewBox="0 0 16 16">
@@ -99,18 +99,24 @@
         <li><a href="#">My portfolio</a></li>
       </ul>
 
-      <div class="carousel-container medium-right">
-        <svg viewBox="0 0 16 16" class="svg-icon">
-          <use xlink:href="#circle-left"></use>
-        </svg>
-        <ul class="carousel" id="carousel-sites">
-          <li class="carousel-sites-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
-          <li class="carousel-sites-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
-          <li class="carousel-sites-item"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
-        </ul>
-        <svg viewBox="0 0 16 16" class="svg-icon">
-          <use xlink:href="#circle-right"></use>
-        </svg>
+      <div class="medium-right right-container">
+        <div class="carousel-container">
+          <a href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow carousel-left-arrow">
+              <use xlink:href="#circle-left"></use>
+            </svg>
+          </a>
+          <a href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow carousel-right-arrow">
+              <use xlink:href="#circle-right"></use>
+            </svg>
+          </a>
+          <ul class="carousel" id="carousel-sites">
+            <li class="carousel-sites-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
+            <li class="carousel-sites-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
+            <li class="carousel-sites-item"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
+          </ul>
+        </div>
       </div>
     </section>
 
