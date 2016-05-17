@@ -3,33 +3,32 @@
  ***************************************************************************/
 
 
-var sitesCarousel = carousel(document.getElementById("carousel-sites"));
-var sitesLinks = document.querySelectorAll("#sites-list a");
+var sitesCarousel = carousel($("#carousel-sites .carousel-sites-item"));
+var $sitesLinks = $("#sites-list a");
 
 /* Events Listeners for sites carousel */
-document.getElementById("sites-carousel_left").addEventListener("click", function(event) {
+$("#sites-carousel_left").click(function(event) {
 	event.stopPropagation();
     event.preventDefault();
 	sitesCarousel.moveLeft();
-	helpers.removeAllClass(document.getElementById("sites-list"), "selected");
-    sitesLinks[sitesCarousel.currentItemNumber].classList.add("selected");
+    $sitesLinks.removeClass("selected");
+    $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
 });
 
-document.getElementById("sites-carousel_right").addEventListener("click", function(event) {
+$("#sites-carousel_right").click(function(event) {
 	event.stopPropagation();
     event.preventDefault();
 	sitesCarousel.moveRight();
-	helpers.removeAllClass(document.getElementById("sites-list"), "selected");
-    sitesLinks[sitesCarousel.currentItemNumber].classList.add("selected");
+    $sitesLinks.removeClass("selected");
+    $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
 });
 
-document.getElementById("sites-list").addEventListener("click", function(event) {
+$sitesLinks.click(function(event) {
     event.stopPropagation();
     event.preventDefault();
-    var nextImage = event.target.dataset.siteNum;
-    if (nextImage) {
-        sitesCarousel.changeItem(nextImage);
-        helpers.removeAllClass(this, "selected");
-        event.target.classList.add("selected");
-    }
+    var $nextImage = $(event.target);
+    sitesCarousel.changeItem($nextImage.data("site-num"));
+    $nextImage.removeClass("selected")
+    $sitesLinks.removeClass("selected");
+    $nextImage.addClass("selected");
 });

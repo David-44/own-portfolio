@@ -2,16 +2,12 @@
  * CAROUSEL
  ***************************************************************************/
 
-var carousel = function(collection) {
+var carousel = function($collection) {
 
     'use strict';
 
     var exports = {};
-	exports.currentItemNumber = 0; // Index of the current item in imagesArray
-
-
-    var itemsArray = collection.children, // Array of carousel items
-	   currentItem = itemsArray[0];       // DOM element being displayed
+	exports.currentItemNumber = 0; // Index of the current item in the jQUery object
 
     
    
@@ -19,29 +15,28 @@ var carousel = function(collection) {
     /* Exports the change image functions */
 
     exports.changeItem = function(newItemNumber) {
-        currentItem.classList.remove("displayed");
-        currentItem.classList.add("hidden");
+        $collection.eq(exports.currentItemNumber).removeClass("displayed");
+        $collection.eq(exports.currentItemNumber).addClass("hidden");
 
         exports.currentItemNumber = newItemNumber;
-        currentItem = itemsArray[exports.currentItemNumber];
 
-        currentItem.classList.remove("hidden");
-        currentItem.classList.add("displayed");
+        $collection.eq(exports.currentItemNumber).removeClass("hidden");
+        $collection.eq(exports.currentItemNumber).addClass("displayed");
     };
 
     exports.moveLeft = function(event) {
     	if (exports.currentItemNumber === 0) {
-    		exports.changeItem(itemsArray.length - 1);
+    		exports.changeItem($collection.length - 1);
     	} else {
-    		exports.changeItem(--exports.currentItemNumber);
+    		exports.changeItem(exports.currentItemNumber - 1);
     	}
     };
 
     exports.moveRight = function(event) {
-    	if (exports.currentItemNumber === itemsArray.length - 1) {
+    	if (exports.currentItemNumber === $collection.length - 1) {
     		exports.changeItem(0);
     	} else {
-    		exports.changeItem(++exports.currentItemNumber);
+    		exports.changeItem(exports.currentItemNumber + 1);
     	}
     };
 
