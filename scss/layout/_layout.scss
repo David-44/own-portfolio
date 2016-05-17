@@ -6,7 +6,6 @@
 // Mixin used to pass layout styles to half panels
 @mixin panel-half {
     position: absolute;
-    overflow: scroll;
     width: 100%;
     height: 100vh;
     @include breakpoint(map-get($break, medium))  {
@@ -17,6 +16,7 @@
 
 // Basic panel layout
 %panel {
+    overflow: scroll;
     position: relative;
     width: 100%;
     height: 100vh;
