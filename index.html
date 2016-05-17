@@ -137,8 +137,8 @@
       <ul id="widgets-list" class="work-list hidden-small">
         <li><a href="#" data-widget-num="0">Javascript calculator</a></li>
         <li><a href="#" data-widget-num="1">Simon Game</a></li>
-        <li><a href="#" data-widget-num="2">Pomodoro Clock</a></li>
-        <li><a href="#" data-widget-num="3">Noughts &amp; Crosses</a></li>
+        <li><a href="#" data-widget-num="2">Noughts &amp; Crosses</a></li>
+        <li><a href="#" data-widget-num="3">Pomodoro Clock</a></li>
         <li><a href="#" data-widget-num="4">Weather Widget</a></li>
         <li><a href="#" data-widget-num="5">Wikipedia Search</a></li>
       </ul>
@@ -185,7 +185,7 @@
 
             <!-- SIMON GAME -->
 
-            <li class="carousel-item displayed">
+            <li class="carousel-item hidden">
               <div class="sim-wrap">
                 <div id="sim-buttons" class="sim-buttons">
                   <button type="button" id="sim-green" class="sim-color-button sim-green-button"></button>
@@ -201,6 +201,43 @@
                   <button type="button" name="sim-strict" id="sim-strict" class="sim-strict-btn"></button>
                   <div id="sim-streak" class="sim-output">00</div>
                 </div>
+              </div>
+            </li>
+
+            <!-- NOUGHTS AND CROSSES -->
+
+            <li class="carousel-item displayed">
+              <div class="tic-wrap">
+                <div id="tic-rules" class="tic-visible">
+                  <p>Crosses go first. Choose: </p>
+                  <button class="tic-btn" id="tic-cross">X</button><button class="tic-btn" id="tic-nought">O</button>
+                </div>
+
+                <div id="tic-lose" class="tic-hidden">
+                  <p>You lose !!!</p>
+                </div>
+
+                <div id="tic-draw" class="tic-hidden">
+                  <p>Draw Game !!!</p>
+                </div>
+
+                <table id="tic-table" class="tic-hidden tic-table">
+                  <tr>
+                    <td class="tic-cell" id="c-0-0" data-grid="0"></td>
+                    <td class="tic-cell" id="c-0-1" data-grid="1"></td>
+                    <td class="tic-cell" id="c-0-2" data-grid="2"></td>
+                  </tr>
+                  <tr>
+                    <td class="tic-cell" id="c-1-0" data-grid="3"></td>
+                    <td class="tic-cell" id="c-1-1" data-grid="4"></td>
+                    <td class="tic-cell" id="c-1-2" data-grid="5"></td>
+                  </tr>
+                  <tr>
+                    <td class="tic-cell" id="c-2-0" data-grid="6"></td>
+                    <td class="tic-cell" id="c-2-1" data-grid="7"></td>
+                    <td class="tic-cell" id="c-2-2" data-grid="8"></td>
+                  </tr>
+                </table>
               </div>
             </li>
 

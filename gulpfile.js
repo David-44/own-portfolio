@@ -20,6 +20,7 @@ gulp.task("concatScripts", function() {
         'scripts/carousel.js',
         'scripts/widgets/calculator.js',
         'scripts/widgets/simon.js',
+        'scripts/widgets/noughts.js',
         'scripts/main.js'
         ])
     .pipe(concat('app.js'))
