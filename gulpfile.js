@@ -15,6 +15,7 @@ autoprefixer = require('gulp-autoprefixer');
 gulp.task("concatScripts", function() {
     return gulp.src([
         'scripts/jquery.js',
+        'scripts/jquery-mobile.js',
         'scripts/helpers.js',
         'scripts/carousel.js',
         'scripts/main.js'

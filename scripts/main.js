@@ -15,10 +15,26 @@ $("#sites-carousel_left").click(function(event) {
     $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
 });
 
+$("#carousel-sites").on( "swipeleft", function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    sitesCarousel.moveLeft();
+    $sitesLinks.removeClass("selected");
+    $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
+});
+
 $("#sites-carousel_right").click(function(event) {
 	event.stopPropagation();
     event.preventDefault();
 	sitesCarousel.moveRight();
+    $sitesLinks.removeClass("selected");
+    $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
+});
+
+$("#carousel-sites").on( "swiperight", function(event) {
+    event.stopPropagation();
+    event.preventDefault();
+    sitesCarousel.moveRight();
     $sitesLinks.removeClass("selected");
     $sitesLinks.eq(sitesCarousel.currentItemNumber).addClass("selected");
 });
