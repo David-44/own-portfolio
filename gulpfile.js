@@ -14,6 +14,7 @@ autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("concatScripts", function() {
     return gulp.src([
+        'scripts/jquery.js',
         'scripts/helpers.js',
         'scripts/carousel.js',
         'scripts/main.js'
@@ -94,7 +95,7 @@ gulp.task("build", ['minifyScripts', 'compileCompassLive'], function() {
 
 gulp.task('watchFiles', function() {
   gulp.watch('scss/**/*.scss',['autoprefix']);
-  gulp.watch('scripts/*.js', ['minifyScripts']);
+  gulp.watch('scripts/*.js', ['concatScripts']);
 })
 
 
