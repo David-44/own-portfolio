@@ -304,3 +304,106 @@ a:hover, a.selected {
 .temp {
   width: 100%;
   text-align: center; }
+
+/* general layout and style
+****************************/
+.cal-calculator {
+  width: 300px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #17191c;
+  border-radius: 10px;
+  background-color: #f0e6d1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
+  box-shadow: 2px 4px 4px #0d1526, inset 1px 2px 2px #f9f4ec, inset -1px -2px 2px #f9f4ec; }
+
+.cal-display {
+  width: 225px;
+  height: 53px;
+  margin: 40px auto 40px;
+  border: 1px solid black;
+  font-family: 'Lucida Console', 'Lucida Sans Typewriter', monaco, 'Bitstream Vera Sans Mono', monospace;
+  font-size: 30px;
+  line-height: 51px;
+  vertical-align: center;
+  text-align: right;
+  letter-spacing: -2px;
+  background-color: #e5e5e6; }
+
+.cal-sign {
+  float: left;
+  padding-left: 3px; }
+
+.cal-output {
+  float: right;
+  padding-right: 3px; }
+
+.cal-key-container {
+  width: 225px;
+  height: 225px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; }
+
+/* buttons layout
+****************************/
+.cal-button {
+  height: 30px;
+  width: 40px;
+  position: absolute;
+  font-size: 17px; }
+
+.cal-first-col {
+  left: 0; }
+
+.cal-second-col {
+  left: 62px; }
+
+.cal-third-col {
+  left: 124px; }
+
+.cal-fourth-col {
+  right: 0; }
+
+.cal-first-row {
+  top: 0; }
+
+.cal-second-row {
+  top: 49px; }
+
+.cal-third-row {
+  top: 98px; }
+
+.cal-fourth-row {
+  top: 147px; }
+
+.cal-fifth-row {
+  bottom: 0; }
+
+.cal-span-two-cols {
+  width: 102px; }
+
+.cal-span-two-rows {
+  height: 78px; }
+
+/* buttons style
+****************************/
+.cal-button {
+  border-radius: 4px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)); }
+
+.cal-number-keys .cal-button, #equal {
+  background-color: #abb0ba; }
+
+.cal-operand-keys .cal-button {
+  background-color: #bab5ab; }
+
+.cal-clear {
+  background-color: tomato; }
+
+.cal-button:hover {
+  cursor: pointer; }
+
+.cal-button:focus {
+  outline: 0; }

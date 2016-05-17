@@ -18,6 +18,7 @@ gulp.task("concatScripts", function() {
         'scripts/jquery-mobile.js',
         'scripts/helpers.js',
         'scripts/carousel.js',
+        'scripts/widgets/calculator.js',
         'scripts/main.js'
         ])
     .pipe(concat('app.js'))

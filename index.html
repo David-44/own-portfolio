@@ -73,7 +73,7 @@
 
 
 
-<!-- HEADER -->
+<!-- HEADER PANEL -->
 
   <header class="l-panel_superposed header">
   	<section class="header-logo l-panel-left">
@@ -90,8 +90,13 @@
 <!-- WORK PANEL -->
 
   <section class="l-panel_following work">
+
+    <!-- SITES -->
   
     <section class="l-panel-top">
+
+      <!-- SITES LIST -->
+
       <h2 class="work-title hidden-small">My Work</h2>
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
@@ -99,6 +104,8 @@
         <li><a href="#" data-site-num="1">Alpha Clean</a></li>
         <li><a href="#" data-site-num="2">My portfolio</a></li>
       </ul>
+
+      <!-- SITES CAROUSEL -->
 
       <div class="medium-right right-container">
         <div class="carousel-container">
@@ -112,11 +119,13 @@
               <use xlink:href="#circle-right"></use>
             </svg>
           </a>
+
           <ul class="carousel" id="carousel-sites">
-            <li class="carousel-sites-item displayed"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
+            <li class="carousel-sites-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
             <li class="carousel-sites-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
             <li class="carousel-sites-item hidden"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
           </ul>
+
         </div>
       </div>
     </section>
@@ -125,20 +134,61 @@
 	    
     <section class="l-panel-bottom">
       <h3 class="work-subtitle white-to-black">Widgets</h3>
-      <ul class="work-list hidden-small">
-        <li><a href="#">Javascript calculator</a></li>
-        <li><a href="#">Simon Game</a></li>
-        <li><a href="#">Pomodoro Clock</a></li>
-        <li><a href="#">Noughts &amp; Crosses</a></li>
-        <li><a href="#">Weather Widget</a></li>
-        <li><a href="#">Wikipedia Search</a></li>
+      <ul id="widgets-list" class="work-list hidden-small">
+        <li><a href="#" data-widget-num="0">Javascript calculator</a></li>
+        <li><a href="#" data-widget-num="1">Simon Game</a></li>
+        <li><a href="#" data-widget-num="2">Pomodoro Clock</a></li>
+        <li><a href="#" data-widget-num="3">Noughts &amp; Crosses</a></li>
+        <li><a href="#" data-widget-num="4">Weather Widget</a></li>
+        <li><a href="#" data-widget-num="5">Wikipedia Search</a></li>
       </ul>
 
-      <ul class="carousel-container medium-right">
-        <li class="carousel-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
-        <li class="carousel-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
-        <li class="carousel-item hidden"><a href="#">My portfolio</a></li>
-      </ul>
+      <div class="medium-right right-container">
+        <div class="carousel-container">
+          <ul class="carousel" id="carousel-widgets">
+
+            <!-- JAVASCRIPT CALCULATOR -->
+
+            <li class="carousel-item displayed">
+              <div id="cal-calculator" class="cal-calculator">
+                <div id="cal-display" class="cal-display">
+                  <span id="cal-sign" class="cal-sign"></span>
+                  <span id="cal-output" class="cal-output">0</span>
+                </div>
+                <div class="cal-key-container">
+                  <div id="cal-number-keys" class="cal-number-keys">
+                    <button id="cal-number-0" class="cal-first-col cal-fourth-row cal-button">0</button>
+                    <button id="cal-number-1" class="cal-first-col cal-third-row cal-button">1</button>
+                    <button id="cal-number-2" class="cal-second-col cal-third-row cal-button">2</button>
+                    <button id="cal-number-3" class="cal-third-col cal-third-row cal-button">3</button>
+                    <button id="cal-number-4" class="cal-first-col cal-second-row cal-button">4</button>
+                    <button id="cal-number-5" class="cal-second-col cal-second-row cal-button">5</button>
+                    <button id="cal-number-6" class="cal-third-col cal-second-row cal-button">6</button>
+                    <button id="cal-number-7" class="cal-first-col cal-first-row cal-button">7</button>
+                    <button id="cal-number-8" class="cal-second-col cal-first-row cal-button">8</button>
+                    <button id="cal-number-9" class="cal-third-col cal-first-row cal-button">9</button>
+                    <button id="cal-dot-key" class="cal-second-col cal-fourth-row cal-button">.</button>
+                  </div>
+                  <div id="cal-operand-keys" class="cal-operand-keys">
+                    <button id="cal-operand-add" class="cal-fourth-col cal-fifth-row cal-span-two-rows cal-button">+</button>
+                    <button id="cal-operand-sub" class="cal-fourth-col cal-third-row cal-button">-</button>
+                    <button id="cal-operand-mul" class="cal-fourth-col cal-second-row cal-button">*</button>
+                    <button id="cal-operand-div" class="cal-fourth-col cal-first-row cal-button">/</button>
+                  </div>
+                  <div id="cal-finish-keys" class="cal-finish-keys">
+                    <button id="cal-equal" class="cal-third-col cal-fourth-row cal-button">=</button>
+                    <button id="cal-clear" class="cal-clear cal-first-col cal-fifth-row cal-span-two-cols cal-button">C</button>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="carousel-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
+            <li class="carousel-item hidden"><a href="#">My portfolio</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
 
   </section>
