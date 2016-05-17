@@ -1,0 +1,155 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the SIMON GAME
+// -----------------------------------------------------------------------------
+
+/* Base styles
+********************************************/
+
+.sim-wrap {
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+  position: relative;
+  width: 300px;
+  max-width: 500px;
+  height: 300px;
+  max-height: 500px;
+  margin: 100px auto;
+}
+
+.sim-controls, .sim-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+/* Controls styles
+********************************************/
+
+.sim-controls {
+  width: 120px;
+  height: 120px;
+  background-color: hsl(195, 20%, 10%);
+  border-radius: 50%;
+  font-size: 14px;
+  color: white;
+  z-index: 1;
+}
+
+.sim-label {
+  position: absolute;
+  top: 45px;
+}
+
+.sim-label-start {
+  left: 20px;
+}
+
+.sim-label-strict {
+  right: 20px;
+}
+
+.sim-start-btn, .sim-strict-btn {
+  position: absolute;
+  top: 28px;
+  width: 15px;
+  height: 15px;
+  border-width: 0px;
+  border-radius: 50%;
+}
+
+.sim-start-btn {
+  left: 28px;
+  background-color: red;
+}
+
+.sim-strict-btn {
+  right: 28px;
+  background-color: hsl(73, 100%, 45%);
+}
+
+.sim-start-btn:active, .s-strict-btn.active {
+  border: 2px solid white;
+}
+
+
+
+.sim-output {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  font-size: 16px;
+}
+
+
+
+
+/* Color Buttons Styles
+********************************************/
+
+.sim-buttons {
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 400px;
+  border-radius: 50%;
+  border: 10px solid hsl(195, 20%, 10%);
+  box-shadow: 0 0 10px hsl(195, 20%, 10%);
+}
+
+.sim-color-button {
+  position: absolute;
+  border: 10px solid hsl(195, 20%, 10%);
+  width: 50%;
+  height: 50%;
+}
+
+.sim-green-button {
+  left:0;
+  top:0;
+  border-top-left-radius: 100%;
+  background-color: green;
+  background-image: radial-gradient(circle at bottom right, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.4) 100%);
+}
+
+.sim-green-button.active {
+  background-image: radial-gradient(circle at bottom right, hsla(0, 0%, 100%, 0.3) 0%, hsla(0, 0%, 100%, 0.7) 100%);
+}
+
+.sim-red-button {
+  right:0;
+  top:0;
+  border-top-right-radius: 100%;
+  background-color: red;
+  background-image: radial-gradient(circle at bottom left, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.4) 100%);
+}
+
+.sim-red-button.active {
+  background-image: radial-gradient(circle at bottom left, hsla(0, 0%, 100%, 0.3) 0%, hsla(0, 0%, 100%, 0.7) 100%);
+}
+
+.sim-blue-button {
+  right:0;
+  bottom:0;
+  border-bottom-right-radius: 100%;
+  background-color: blue;
+  background-image: radial-gradient(circle at top left, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.4) 100%);
+}
+
+.sim-blue-button.active {
+  background-image: radial-gradient(circle at top left, hsla(0, 0%, 100%, 0.3) 0%, hsla(0, 0%, 100%, 0.7) 100%);
+}
+
+.sim-yellow-button {
+  left:0;
+  bottom:0;
+  border-bottom-left-radius: 100%;
+  background-color: yellow;
+  background-image: radial-gradient(circle at top right, hsla(0, 0%, 100%, 0) 0%, hsla(0, 0%, 100%, 0.4) 100%);
+}
+
+.sim-yellow-button.active {
+  background-image: radial-gradient(circle at top right, hsla(0, 0%, 100%, 0.5) 0%, hsla(0, 0%, 100%, 1) 100%);
+}

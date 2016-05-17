@@ -149,7 +149,7 @@
 
             <!-- JAVASCRIPT CALCULATOR -->
 
-            <li class="carousel-item displayed">
+            <li class="carousel-item hidden">
               <div id="cal-calculator" class="cal-calculator">
                 <div id="cal-display" class="cal-display">
                   <span id="cal-sign" class="cal-sign"></span>
@@ -183,9 +183,28 @@
               </div>
             </li>
 
+            <!-- SIMON GAME -->
 
-            <li class="carousel-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
-            <li class="carousel-item hidden"><a href="#">My portfolio</a></li>
+            <li class="carousel-item displayed">
+              <div class="sim-wrap">
+                <div id="sim-buttons" class="sim-buttons">
+                  <button type="button" id="sim-green" class="sim-color-button sim-green-button"></button>
+                  <button type="button" id="sim-red" class="sim-color-button sim-red-button"></button>
+                  <button type="button" id="sim-blue" class="sim-color-button sim-blue-button"></button>
+                  <button type="button" id="sim-yellow" class="sim-color-button sim-yellow-button"></button>
+                </div>
+
+                <div id="sim-controls" class="sim-controls">
+                  <label for="sim-start" class="sim-label sim-label-start">start</label>
+                  <button type="button" name="sim-start" id="sim-start" class="sim-start-btn"></button>
+                  <label for="sim-start" class="sim-label sim-label-strict">strict</label>
+                  <button type="button" name="sim-strict" id="sim-strict" class="sim-strict-btn"></button>
+                  <div id="sim-streak" class="sim-output">00</div>
+                </div>
+              </div>
+            </li>
+
+            
           </ul>
         </div>
       </div>

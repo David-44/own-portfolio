@@ -19,6 +19,7 @@ gulp.task("concatScripts", function() {
         'scripts/helpers.js',
         'scripts/carousel.js',
         'scripts/widgets/calculator.js',
+        'scripts/widgets/simon.js',
         'scripts/main.js'
         ])
     .pipe(concat('app.js'))
@@ -97,7 +98,7 @@ gulp.task("build", ['minifyScripts', 'compileCompassLive'], function() {
 
 gulp.task('watchFiles', function() {
   gulp.watch('scss/**/*.scss',['autoprefix']);
-  gulp.watch('scripts/*.js', ['concatScripts']);
+  gulp.watch('scripts/**/*.js', ['concatScripts']);
 })
 
 
