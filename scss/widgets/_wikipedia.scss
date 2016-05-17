@@ -1,0 +1,54 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the WIKIPEDIA RESEARCH
+// -----------------------------------------------------------------------------
+
+.wikipedia {
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+  width: 300px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: rgb(246, 246, 246);
+  border-radius: 10px;
+}
+
+.wiki-search {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  width: 300px;
+  position: relative;
+}
+
+.wiki-search-box {
+  border: 1px solid rgb(170, 170, 170);
+  height: 23px;
+}
+
+.wiki-search-button {
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+  position: absolute;
+  border: 0 solid #FFF;
+  background-color: #FFF;
+  right: 90px;
+  top: 23px;
+  height: 19px;
+  width: 19px;
+}
+
+.wiki-item-link {
+  font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
+  color: black;
+  text-decoration: none;
+  
+  display: block;
+  margin: 23px auto;
+  width: 80%;
+
+  &:hover {
+  	font-weight: $font-weight--bold;
+  	font-size: $font-size--base;
+  }
+}
