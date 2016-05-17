@@ -100,9 +100,9 @@
       <h2 class="work-title hidden-small">My Work</h2>
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
-        <li><a class="selected" href="#" data-site-num="0">Rodolf Vanthuyne</a></li>
-        <li><a href="#" data-site-num="1">Alpha Clean</a></li>
-        <li><a href="#" data-site-num="2">My portfolio</a></li>
+        <li><a class="selected" href="#" data-num="0">Rodolf Vanthuyne</a></li>
+        <li><a href="#" data-num="1">Alpha Clean</a></li>
+        <li><a href="#" data-num="2">My portfolio</a></li>
       </ul>
 
       <!-- SITES CAROUSEL -->
@@ -121,33 +121,53 @@
           </a>
 
           <ul class="carousel" id="carousel-sites">
-            <li class="carousel-sites-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
-            <li class="carousel-sites-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
-            <li class="carousel-sites-item hidden"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
+            <li class="carousel-item hidden"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
+            <li class="carousel-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
+            <li class="carousel-item hidden"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
           </ul>
 
         </div>
       </div>
     </section>
 
-    
+
+
+
+
+    <!-- WIDGETS -->
 	    
     <section class="l-panel-bottom">
+
+      <!-- WIDGETS LIST -->
+
       <h3 class="work-subtitle white-to-black">Widgets</h3>
       <ul id="widgets-list" class="work-list hidden-small">
-        <li><a href="#" data-widget-num="0">Javascript calculator</a></li>
-        <li><a href="#" data-widget-num="1">Simon Game</a></li>
-        <li><a href="#" data-widget-num="2">Noughts &amp; Crosses</a></li>
-        <li><a href="#" data-widget-num="3">Wikipedia Search</a></li>
+        <li><a class="selected" href="#" data-num="0">Javascript calculator</a></li>
+        <li><a href="#" data-num="1">Simon Game</a></li>
+        <li><a href="#" data-num="2">Noughts &amp; Crosses</a></li>
+        <li><a href="#" data-num="3">Wikipedia Search</a></li>
       </ul>
+
+      <!-- WIDGETS CAROUSEL -->
 
       <div class="medium-right right-container">
         <div class="carousel-container">
+          <a class="carousel-link carousel-left-link" id="widgets-carousel_left" href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow">
+              <use xlink:href="#circle-left"></use>
+            </svg>
+          </a>
+          <a class="carousel-link carousel-right-link" id="widgets-carousel_right" href="#">
+            <svg viewBox="0 0 16 16" class="svg-icon carousel-arrow">
+              <use xlink:href="#circle-right"></use>
+            </svg>
+          </a>
+
           <ul class="carousel" id="carousel-widgets">
 
             <!-- JAVASCRIPT CALCULATOR -->
 
-            <li class="carousel-item hidden">
+            <li class="carousel-item displayed">
               <div id="cal-calculator" class="cal-calculator">
                 <div id="cal-display" class="cal-display">
                   <span id="cal-sign" class="cal-sign"></span>
@@ -241,7 +261,7 @@
 
             <!-- WIKIPEDIA SEARCH -->
 
-            <li class="carousel-item displayed">
+            <li class="carousel-item hidden">
               <div class="wikipedia">
                 <p class="wiki-search">
                   <input name="search" id="wiki-search" class="wiki-search-box" type="text" value="" />
