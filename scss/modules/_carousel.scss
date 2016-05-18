@@ -10,19 +10,17 @@
 	transform: translate(-50%);
 }
 
-.carousel {
+.carousel,
+.carousel-item,
+.carousel-thumbnail {
 	position: relative;
-	width: 100%;
-}
-
-.carousel-item, .carousel-thumbnail {
 	width: 100%;
 }
 
 .carousel-link {
 	box-sizing: content-box;
 	position: absolute;
-	top: 50%;
+	top: 100%;
 	z-index: 10;
 	width: $font-size--big;
 	height: $font-size--big;
@@ -36,13 +34,11 @@
 }
 
 .carousel-left-link {
-    left: 3%;
-    transform: translate(0, -50%);
+    left: $font-size--base;
 }
 
 .carousel-right-link {
-    right: 3%;
-    transform: translate(0, -50%);
+    right: $font-size--base;
 }
 
 

@@ -205,18 +205,21 @@ button {
   width: 100%;
   text-align: center;
   font-size: 54px;
-  line-height: 81px; }
+  line-height: 81px;
+  margin-top: 16px; }
 
 .subtitle, .work-subtitle {
   width: 100%;
   text-align: center;
   font-size: 54px;
-  line-height: 81px; }
+  line-height: 81px;
+  margin-top: 16px; }
 @media (min-width: 800px) {
   .subtitle, .work-subtitle {
     font-weight: 700;
     font-size: 24px;
-    line-height: 81px; } }
+    line-height: 81px;
+    margin-top: 0; } }
 
 .elem-title {
   font-weight: 700;
@@ -231,17 +234,14 @@ button {
   left: 50%;
   transform: translate(-50%); }
 
-.carousel {
+.carousel, .carousel-item, .carousel-thumbnail {
   position: relative;
-  width: 100%; }
-
-.carousel-item, .carousel-thumbnail {
   width: 100%; }
 
 .carousel-link {
   box-sizing: content-box;
   position: absolute;
-  top: 50%;
+  top: 100%;
   z-index: 10;
   width: 36px;
   height: 36px;
@@ -253,12 +253,10 @@ button {
   border-radius: 50%; }
 
 .carousel-left-link {
-  left: 3%;
-  transform: translate(0, -50%); }
+  left: 16px; }
 
 .carousel-right-link {
-  right: 3%;
-  transform: translate(0, -50%); }
+  right: 16px; }
 
 .widget {
   width: 300px;
@@ -325,7 +323,8 @@ button {
     width: 50%;
     top: 67.5px;
     left: 100%;
-    transform: translate(-100%); } }
+    transform: translate(-100%);
+    background-color: red; } }
 
 .me {
   background-color: #fff;

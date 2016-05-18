@@ -17,12 +17,15 @@
 
 .section-title {
 	@include big_title;
+  margin-top: $font-size--base;
 }
 
 .subtitle {
   @include big_title;
+  margin-top: $font-size--base;
   @include breakpoint(map-get($break, medium)) {
     @include small_title;
+    margin-top: 0;
   }
 }
 
