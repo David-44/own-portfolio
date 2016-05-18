@@ -100,7 +100,7 @@
       <h2 class="work-title hidden-small">My Work</h2>
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
-        <li><a class="selected" href="#" data-num="0">Rodolf Vanthuyne</a></li>
+        <li><a class="selected" href="#" data-num="0">Rodolf Vanthuyne</a>
         <li><a href="#" data-num="1">Alpha Clean</a></li>
         <li><a href="#" data-num="2">My portfolio</a></li>
       </ul>
@@ -120,10 +120,41 @@
             </svg>
           </a>
 
+          <!-- CAROUSEL ITEMS -->
+
           <ul class="carousel" id="carousel-sites">
-            <li class="carousel-item displayed"><a href="http://rodolf-vanthuyne.com"><img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg"></a></li>
-            <li class="carousel-item hidden"><a href="http://alpha-clean.co.uk"><img class="carousel-thumbnail" src="images/alpha-clean.jpg"></a></li>
-            <li class="carousel-item hidden"><a href="#"><img class="carousel-thumbnail" src="images/perso.jpg"></a></li>
+
+            <li class="carousel-item displayed">
+              <h3 class="carousel-item-title hidden-medium">Rodolf Vanthuyne</h3>
+              <a href="http://rodolf-vanthuyne.com">
+                <img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg">
+              </a>
+              <p class="carousel-item-description black-to-white">
+                Website built using HTML, CSS and some javascript with jQuery. It also has a small custom built 
+                PHP CMS for uploading photos and blog posts.</br>
+                Rodolf is a guitar player in the region of Bordeaux, France. Check him out, he's really good!
+              </p>
+            </li>
+
+            <li class="carousel-item hidden">
+              <h3 class="carousel-item-title hidden-medium">Alpha Clean</h3>
+              <!-- <a href="http://alpha-clean.co.uk">link to the site</a> -->
+              <img class="carousel-thumbnail" src="images/alpha-clean.jpg">
+              <p class="carousel-item-description black-to-white">
+                <a href="http://alpha-clean.co.uk">Alex</a> is a Professional Carpet Cleaner operating in the Glasgow and Paisley area. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.</br>
+                This site uses only HTML, CSS with a bit of javascript and PHP for the contact form.
+              </p>
+            </li>
+
+            <li class="carousel-item hidden">
+              <h3 class="carousel-item-title hidden-medium">Portfolio</h3>
+              <a href="#">
+                <img class="carousel-thumbnail" src="images/perso.jpg">
+              </a>
+              <p class="carousel-item-description black-to-white">
+                This site has been built using sass, javascript and jQuery. The built workflow is automated with gulp and NPM.
+              </p>
+            </li>
           </ul>
 
         </div>
@@ -168,7 +199,8 @@
             <!-- JAVASCRIPT CALCULATOR -->
 
             <li class="carousel-item displayed">
-              <div id="cal-calculator" class="cal-calculator">
+              <h3 class="carousel-item-title white hidden-medium">Javascript Calculator</h3>
+              <div id="cal-calculator" class="cal-calculator widget">
                 <div id="cal-display" class="cal-display">
                   <span id="cal-sign" class="cal-sign"></span>
                   <span id="cal-output" class="cal-output">0</span>
@@ -199,12 +231,17 @@
                   </div>
                 </div>
               </div>
+              <a class="white" href="http://codepen.io/David44/pen/Xdxyab">Source on Codepen</a>
+              <p class="carousel-item-description white">
+                A javascript calculator built for the freecodecamp certification.
+              </p>
             </li>
 
             <!-- SIMON GAME -->
 
             <li class="carousel-item hidden">
-              <div class="sim-wrap">
+              <h3 class="carousel-item-title white hidden-medium">Simon Game</h3>
+              <div class="sim-wrap widget">
                 <div id="sim-buttons" class="sim-buttons">
                   <button type="button" id="sim-green" class="sim-color-button sim-green-button"></button>
                   <button type="button" id="sim-red" class="sim-color-button sim-red-button"></button>
@@ -220,12 +257,17 @@
                   <div id="sim-streak" class="sim-output">00</div>
                 </div>
               </div>
+              <a class="white" href="http://codepen.io/David44/pen/MyzzXd">Source on Codepen</a>
+              <p class="carousel-item-description white">
+                The Simon memory game, built with CSS and javascript.
+              </p>
             </li>
 
             <!-- NOUGHTS AND CROSSES -->
 
             <li class="carousel-item hidden">
-              <div class="tic-wrap">
+              <h3 class="carousel-item-title white hidden-medium">Noughts &amp; Crosses</h3>
+              <div class="tic-wrap widget">
                 <div id="tic-rules" class="tic-visible">
                   <p>Crosses go first. Choose: </p>
                   <button class="tic-btn" id="tic-cross">X</button><button class="tic-btn" id="tic-nought">O</button>
@@ -257,17 +299,26 @@
                   </tr>
                 </table>
               </div>
+              <a class="white" href="http://codepen.io/David44/pen/QNJGQq">Source on Codepen</a>
+              <p class="carousel-item-description white">
+                Spoiler alert: You will never win!!!
+              </p>
             </li>
 
             <!-- WIKIPEDIA SEARCH -->
 
             <li class="carousel-item hidden">
-              <div class="wikipedia">
+              <h3 class="carousel-item-title white hidden-medium">Wikipedia Search</h3>
+              <div class="wikipedia widget">
                 <p class="wiki-search">
                   <input name="search" id="wiki-search" class="wiki-search-box" type="text" value="" />
                   <button class="wiki-search-button" type="submit" id="wiki-submit" name="submit" value="search">W</button>
                 </p>
               </div>
+              <a class="white" href="http://codepen.io/David44/pen/KzxQEJ">Source on Codepen</a>
+              <p class="carousel-item-description white">
+                A simple wikipedia search using the wikipedia API and JSONP with jQuery.
+              </p>
             </li>
             
           </ul>

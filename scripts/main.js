@@ -24,7 +24,7 @@ var $sitesContainer = $("#sites-container"),
 /* ABASTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
-var changeSelectedLink = function(event, collection, $container, $links) {
+var changeSelectedLink = function(collection, $container, $links) {
     event.stopPropagation();
     event.preventDefault();
 
@@ -40,11 +40,11 @@ var changeSelectedLink = function(event, collection, $container, $links) {
 };
 
 var changeSelectedSite = function() {
-    changeSelectedLink(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+    changeSelectedLink(sitesCarousel, $widgetsContainer, $sitesLinks);
 };
 
 var changeSelectedWidget = function() {
-    changeSelectedLink(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedLink(widgetsCarousel, $sitesContainer, $widgetsLinks);
 };
 
 

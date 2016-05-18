@@ -114,11 +114,22 @@ button {
 .hidden {
   display: none; }
 
+.hidden-menu {
+  display: none; }
+.selected + .hidden-menu {
+  display: block; }
+
 /*
  * Selects item
  */
 .displayed {
   display: inline-block; }
+
+/*
+ * White text
+ */
+.white {
+  color: #fff; }
 
 /*
  * Changes the background color from white at small size
@@ -238,6 +249,12 @@ button {
   right: 3%;
   transform: translate(0, -50%); }
 
+.widget {
+  width: 300px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto; }
+
 .header {
   background-color: #000;
   color: #fff;
@@ -322,10 +339,6 @@ button {
 /* general layout and style
 ****************************/
 .cal-calculator {
-  width: 300px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
   border: 2px solid #17191c;
   border-radius: 10px;
   background-color: #f0e6d1;
@@ -426,12 +439,7 @@ button {
 ********************************************/
 .sim-wrap {
   font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
-  position: relative;
-  width: 300px;
-  max-width: 500px;
-  height: 300px;
-  max-height: 500px;
-  margin: 100px auto; }
+  position: relative; }
 
 .sim-controls, .sim-buttons {
   position: absolute;
@@ -490,9 +498,7 @@ button {
 ********************************************/
 .sim-buttons {
   width: 100%;
-  height: 100%;
-  max-width: 400px;
-  max-height: 400px;
+  height: 75%;
   border-radius: 50%;
   border: 10px solid #141c1f;
   box-shadow: 0 0 10px #141c1f; }
@@ -547,15 +553,11 @@ button {
   font-size: 30px;
   text-align: center;
   font-family: Georgia, Times, 'Times New Roman', serif;
-  width: 300px;
-  height: 300px;
-  margin-left: auto;
-  margin-right: auto;
   color: white; }
 
 .tic-table {
   width: 100%;
-  height: 100%;
+  height: 75%;
   text-align: center;
   font-size: 80px;
   /* <trolling the designer> */
@@ -586,10 +588,6 @@ button {
 
 .wikipedia {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
-  width: 300px;
-  height: 400px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
   background-color: #f6f6f6;
   border-radius: 10px; }

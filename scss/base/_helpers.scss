@@ -38,6 +38,16 @@
   display: none;
 }
 
+.hidden-menu {
+  display: none;
+
+  .selected + & {
+    display: block;
+  }
+}
+
+
+
 /*
  * Selects item
  */
@@ -45,6 +55,14 @@
  .displayed {
   display: inline-block;
  }
+
+
+/*
+ * White text
+ */
+.white {
+  color: $white;
+}
 
 /*
  * Changes the background color from white at small size
