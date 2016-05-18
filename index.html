@@ -113,23 +113,13 @@
           <!-- CAROUSEL ITEMS -->
 
           <ul class="carousel" id="carousel-sites">
-            <a class="carousel-link carousel-left-link no-hover" id="sites-carousel_left" href="#">
-              <svg viewBox="0 0 16 16" class="carousel-arrow">
-                <use xlink:href="#circle-left"></use>
-              </svg>
-            </a>
-            <a class="carousel-link carousel-right-link no-hover" id="sites-carousel_right" href="#">
-              <svg viewBox="0 0 16 16" class="carousel-arrow">
-                <use xlink:href="#circle-right"></use>
-              </svg>
-            </a>
 
             <li class="carousel-item displayed">
               <h3 class="elem-title hidden-medium">Rodolf Vanthuyne</h3>
               <a class="no-hover" href="http://rodolf-vanthuyne.com">
                 <img class="carousel-thumbnail" src="images/rodolf-vanthuyne.jpg">
               </a>
-              <p class="carousel-item-description black-to-white">
+              <p class="work-description black-to-white">
                 Website built using HTML, CSS and some javascript with jQuery. It also has a small custom built 
                 PHP CMS for uploading photos and blog posts.</br>
                 Rodolf is a guitar player in the region of Bordeaux, France. Check him out, he's really good!
@@ -138,11 +128,12 @@
 
             <li class="carousel-item hidden">
               <h3 class="elem-title hidden-medium">Alpha Clean</h3>
-              <!-- <a href="http://alpha-clean.co.uk">link to the site</a> -->
-              <img class="carousel-thumbnail" src="images/alpha-clean.jpg">
-              <p class="carousel-item-description black-to-white">
-                <a class="no-hover" href="http://alpha-clean.co.uk">Alex</a> is a Professional Carpet Cleaner operating in the Glasgow and Paisley area. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.</br>
-                This site uses only HTML, CSS with a bit of javascript and PHP for the contact form.
+              <a class="no-hover" href="http://alpha-clean.co.uk">
+                <img class="carousel-thumbnail" src="images/alpha-clean.jpg">
+              </a>
+              <p class="work-description black-to-white">
+                Alex is a Professional Carpet Cleaner operating in the Glasgow and Paisley area. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.</br>
+                This site is made with HTML, CSS with a bit of javascript and PHP for the contact form.
               </p>
             </li>
 
@@ -151,14 +142,28 @@
               <a class="no-hover" href="#">
                 <img class="carousel-thumbnail" src="images/perso.jpg">
               </a>
-              <p class="carousel-item-description black-to-white">
+              <p class="work-description black-to-white">
                 This site has been built using sass, javascript and jQuery. The built workflow is automated with gulp and NPM.
               </p>
             </li>
           </ul>
 
+          <a class="carousel-link carousel-left-link no-hover" id="sites-carousel_left" href="#">
+            <svg viewBox="0 0 16 16" class="carousel-arrow">
+              <use xlink:href="#circle-left"></use>
+            </svg>
+          </a>
+          <a class="carousel-link carousel-right-link no-hover" id="sites-carousel_right" href="#">
+            <svg viewBox="0 0 16 16" class="carousel-arrow">
+              <use xlink:href="#circle-right"></use>
+            </svg>
+          </a>
+
         </div>
       </div>
+
+      
+
     </section>
 
 
@@ -183,16 +188,6 @@
 
       <div id="widgets-container" class="right-container hidden-medium">
         <div class="carousel-container">
-          <a class="carousel-link carousel-left-link no-hover" id="widgets-carousel_left" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-left"></use>
-            </svg>
-          </a>
-          <a class="carousel-link carousel-right-link no-hover" id="widgets-carousel_right" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-right"></use>
-            </svg>
-          </a>
 
           <ul class="carousel" id="carousel-widgets">
 
@@ -231,8 +226,8 @@
                   </div>
                 </div>
               </div>
-              <a class="white" href="http://codepen.io/David44/pen/Xdxyab">Source on Codepen</a>
-              <p class="carousel-item-description white">
+              <a class="white source-link" href="http://codepen.io/David44/pen/Xdxyab">Source on Codepen</a>
+              <p class="work-description white">
                 A javascript calculator built for the freecodecamp certification.
               </p>
             </li>
@@ -257,8 +252,8 @@
                   <div id="sim-streak" class="sim-output">00</div>
                 </div>
               </div>
-              <a class="white" href="http://codepen.io/David44/pen/MyzzXd">Source on Codepen</a>
-              <p class="carousel-item-description white">
+              <a class="white source-link" href="http://codepen.io/David44/pen/MyzzXd">Source on Codepen</a>
+              <p class="work-description white">
                 The Simon memory game, built with CSS and javascript.
               </p>
             </li>
@@ -299,8 +294,8 @@
                   </tr>
                 </table>
               </div>
-              <a class="white" href="http://codepen.io/David44/pen/QNJGQq">Source on Codepen</a>
-              <p class="carousel-item-description white">
+              <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">Source on Codepen</a>
+              <p class="work-description white">
                 Spoiler alert: You will never win!!!
               </p>
             </li>
@@ -315,13 +310,25 @@
                   <button class="wiki-search-button" type="submit" id="wiki-submit" name="submit" value="search">W</button>
                 </p>
               </div>
-              <a class="white" href="http://codepen.io/David44/pen/KzxQEJ">Source on Codepen</a>
-              <p class="carousel-item-description white">
+              <a class="white source-link" href="http://codepen.io/David44/pen/KzxQEJ">Source on Codepen</a>
+              <p class="work-description white">
                 A simple wikipedia search using the wikipedia API and JSONP with jQuery.
               </p>
             </li>
             
           </ul>
+
+          <a class="carousel-link carousel-left-link no-hover" id="widgets-carousel_left" href="#">
+            <svg viewBox="0 0 16 16" class="carousel-arrow">
+              <use xlink:href="#circle-left"></use>
+            </svg>
+          </a>
+          <a class="carousel-link carousel-right-link no-hover" id="widgets-carousel_right" href="#">
+            <svg viewBox="0 0 16 16" class="carousel-arrow">
+              <use xlink:href="#circle-right"></use>
+            </svg>
+          </a>
+
         </div>
       </div>
     </section>

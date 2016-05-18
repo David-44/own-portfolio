@@ -24,6 +24,21 @@
     }
 }
 
+.work-description {
+    width: 66%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: $font-size--large;
+}
+
+.source-link {
+    display: block;
+    width: 66%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 // Moving content to the right at medium size
 .right-container {
     position: relative;

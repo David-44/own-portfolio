@@ -241,7 +241,6 @@ button {
 .carousel-link {
   box-sizing: content-box;
   position: absolute;
-  top: 100%;
   z-index: 10;
   width: 36px;
   height: 36px;
@@ -253,10 +252,10 @@ button {
   border-radius: 50%; }
 
 .carousel-left-link {
-  left: 16px; }
+  left: 33%; }
 
 .carousel-right-link {
-  right: 16px; }
+  right: 33%; }
 
 .widget {
   width: 300px;
@@ -313,6 +312,19 @@ button {
     width: 50%;
     text-align: left;
     text-indent: 100px; } }
+
+.work-description {
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 24px; }
+
+.source-link {
+  display: block;
+  width: 66%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 .right-container {
   position: relative;
