@@ -22,9 +22,18 @@
 }
 
 /*
+ * Hide elements at small viewport size
+ */
+.hidden-medium {
+  display: block;
+  @include breakpoint(map-get($break, medium)) {
+    display: none;
+  }
+}
+
+/*
  * Hides item
  */
-
 .hidden {
   display: none;
 }

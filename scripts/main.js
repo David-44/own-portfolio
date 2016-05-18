@@ -4,33 +4,39 @@
 
 
 
+
+
+/* CAROUSEL ELEMENTS
+************************************************************************/
+
+var $sitesContainer = $("#sites-container"),
+      sitesCarousel = carousel($("#carousel-sites .carousel-item")),
+        $sitesLinks = $("#sites-list a"),
+
+  $widgetsContainer = $("#widgets-container"),
+    widgetsCarousel = carousel($("#carousel-widgets .carousel-item")),
+      $widgetsLinks = $("#widgets-list a");
+
+
+
+
+
 /* ABASTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
-var moveL = function(event, collection, $linkCollection) {
+var changeSelected = function(event, collection, $container, $links) {
     event.stopPropagation();
     event.preventDefault();
-    collection.moveLeft();
-    $linkCollection.removeClass("selected");
-    $linkCollection.eq(collection.currentItemNumber).addClass("selected");
-};
 
-var moveR = function(event, collection, $linkCollection) {
-    event.stopPropagation();
-    event.preventDefault();
-    collection.moveRight();
-    $linkCollection.removeClass("selected");
-    $linkCollection.eq(collection.currentItemNumber).addClass("selected");
-};
+    $widgetsLinks.removeClass("selected");
+    $sitesLinks.removeClass("selected");
+    $links.eq(collection.currentItemNumber).addClass("selected");
 
-var changeItem = function(event, collection, $linkCollection) {
-    event.stopPropagation();
-    event.preventDefault();
-    var $nextImage = $(event.target);
-    collection.changeItem($nextImage.data("num"));
-    $nextImage.removeClass("selected")
-    $linkCollection.removeClass("selected");
-    $nextImage.addClass("selected");
+    if (!$container.hasClass("hidden-medium")) {
+        $sitesContainer.removeClass("hidden-medium");
+        $widgetsContainer.removeClass("hidden-medium");
+        $container.addClass("hidden-medium");
+    }
 };
 
 
@@ -40,56 +46,61 @@ var changeItem = function(event, collection, $linkCollection) {
 /* SITES CAROUSEL
 ************************************************************************/
 
-var sitesCarousel = carousel($("#carousel-sites .carousel-item"));
-var $sitesLinks = $("#sites-list a");
-
-/* Events Listeners for sites carousel */
 $("#sites-carousel_left").click(function(event) {
-    moveL(event, sitesCarousel, $sitesLinks);
+    sitesCarousel.moveLeft();
+    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
 });
 
 $("#carousel-sites").on( "swipeleft", function(event) {
-    moveL(event, sitesCarousel, $sitesLinks);
+    sitesCarousel.moveLeft();
+    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
 });
 
 $("#sites-carousel_right").click(function(event) {
-	moveR(event, sitesCarousel, $sitesLinks);
+    sitesCarousel.moveRight();
+	changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
 });
 
 $("#carousel-sites").on( "swiperight", function(event) {
-    moveR(event, sitesCarousel, $sitesLinks);
+    sitesCarousel.moveRight();
+    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
 });
 
 $sitesLinks.click(function(event) {
-    changeItem(event, sitesCarousel, $sitesLinks);
+    sitesCarousel.changeItem($(event.target).data("num"));
+    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
 });
+
+
+
 
 
 /* WIDGETS CAROUSEL
 ************************************************************************/
 
-var widgetsCarousel = carousel($("#carousel-widgets .carousel-item"));
-var $widgetsLinks = $("#widgets-list a");
-
-/* Events Listeners for sites carousel */
 $("#widgets-carousel_left").click(function(event) {
-    moveL(event, widgetsCarousel, $widgetsLinks);
+    widgetsCarousel.moveLeft();
+    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
 });
 
 $("#carousel-widgets").on( "swipeleft", function(event) {
-    moveL(eevent, widgetsCarousel, $widgetsLinks);
+    widgetsCarousel.moveLeft();
+    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
 });
 
 $("#widgets-carousel_right").click(function(event) {
-    moveR(event, widgetsCarousel, $widgetsLinks);
+    widgetsCarousel.moveRight();
+    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
 });
 
 $("#carousel-widgets").on( "swiperight", function(event) {
-    moveR(event, widgetsCarousel, $widgetsLinks);
+    widgetsCarousel.moveRight();
+    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
 });
 
 $widgetsLinks.click(function(event) {
-    changeItem(event, widgetsCarousel, $widgetsLinks);
+    widgetsCarousel.changeItem($(event.target).data("num"));
+    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
 });
 
 

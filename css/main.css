@@ -100,6 +100,15 @@ button {
     display: block; } }
 
 /*
+ * Hide elements at small viewport size
+ */
+.hidden-medium {
+  display: block; }
+@media (min-width: 800px) {
+  .hidden-medium {
+    display: none; } }
+
+/*
  * Hides item
  */
 .hidden {
