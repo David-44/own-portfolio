@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 .contact-img {
-    @include banner('contact.jpg');
+    @include banner-dark('contact.jpg');
 }
 
 .contact-list {

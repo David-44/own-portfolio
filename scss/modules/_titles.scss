@@ -1,0 +1,32 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to general titles
+// -----------------------------------------------------------------------------
+
+@mixin big_title {
+  width: 100%;
+  text-align: center;
+  font-size: $font-size--huge;
+  line-height: $font-size--title;
+}
+
+@mixin small_title {
+  font-weight: $font-weight--bold;
+  font-size: $font-size--large;
+  line-height: $font-size--title;
+}
+
+.section-title {
+	@include big_title;
+}
+
+.subtitle {
+  @include big_title;
+  @include breakpoint(map-get($break, medium)) {
+    @include small_title;
+  }
+}
+
+.elem-title {
+  @include small_title;
+  text-align: center;
+}

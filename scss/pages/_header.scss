@@ -9,7 +9,10 @@
 }
 
 .header-img {
-    @include banner('banner-grey.jpg');
+    @include banner-dark('banner-grey.jpg');
+    @include breakpoint(map-get($break, medium)) {
+        @include banner-light('banner-grey.jpg');
+    }
 }
 
 .header-logo {
@@ -26,8 +29,6 @@
 	    font-size: $font-size--huge;
 	    line-height: $font-size--title;
 	}
-	
-
 }
 
 .header-subtitle { 

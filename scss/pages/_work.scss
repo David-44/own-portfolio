@@ -10,29 +10,19 @@
 	}
 }
 
-.work-title {
-	width: 100%;
-	text-align: center;
-	font-size: $font-size--huge;
-	margin: $font-size--big 0;
-}
-
-.work-subtitle {
-	@extend .subtitle;
-	@include breakpoint(map-get($break, medium)) {
-        width: 50%;
-        text-align: left;
-        text-indent: 100px;
-	}
-}
-
 .work-list {
 	width: 100%;
 	text-align: center;
 }
 
-
-
+.work-subtitle {
+    @extend .subtitle;
+    @include breakpoint(map-get($break, medium)) {
+        width: 50%;
+        text-align: left;
+        text-indent: 100px;
+    }
+}
 
 // Moving content to the right at medium size
 .right-container {
@@ -41,7 +31,7 @@
     @include breakpoint(map-get($break, medium)) {
         position: absolute;
         width: 50%;
-        top: $font-size--huge + 2 * $font-size--big;
+        top: $font-size--huge + ($font-size--title -$font-size--huge)/2;
         left: 100%;
         transform: translate(-100%);
     }

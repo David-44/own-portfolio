@@ -37,8 +37,7 @@ a {
   text-decoration: none;
   line-height: $font-size--big;
 
-  &:hover, &.selected {
-    text-decoration: none;
+  &:not(.no-hover):hover, &.selected {
     font-size: $font-size--large;  
   }
 } 
@@ -50,19 +49,6 @@ a {
 button {
   outline: none;
   cursor: pointer;
-}
-
-/*
- * General subtitles used mostly by h3 tags
- */
-
-.subtitle {
-  width: 100%;
-  text-align: center;
-  font-weight: $font-weight--bold;
-  font-size: $font-size--large;
-  line-height: $font-size--huge;
-  margin-top: $font-size--huge;
 }
 
 
