@@ -24,7 +24,7 @@ var $sitesContainer = $("#sites-container"),
 /* ABASTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
-var changeSelected = function(event, collection, $container, $links) {
+var changeSelectedLink = function(event, collection, $container, $links) {
     event.stopPropagation();
     event.preventDefault();
 
@@ -39,6 +39,13 @@ var changeSelected = function(event, collection, $container, $links) {
     }
 };
 
+var changeSelectedSite = function() {
+    changeSelectedLink(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+};
+
+var changeSelectedWidget = function() {
+    changeSelectedLink(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+};
 
 
 
@@ -48,27 +55,27 @@ var changeSelected = function(event, collection, $container, $links) {
 
 $("#sites-carousel_left").click(function(event) {
     sitesCarousel.moveLeft();
-    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+    changeSelectedSite();
 });
 
 $("#carousel-sites").on( "swipeleft", function(event) {
     sitesCarousel.moveLeft();
-    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+    changeSelectedSite();
 });
 
 $("#sites-carousel_right").click(function(event) {
     sitesCarousel.moveRight();
-	changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+	changeSelectedSite();
 });
 
 $("#carousel-sites").on( "swiperight", function(event) {
     sitesCarousel.moveRight();
-    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+    changeSelectedSite();
 });
 
 $sitesLinks.click(function(event) {
     sitesCarousel.changeItem($(event.target).data("num"));
-    changeSelected(event, sitesCarousel, $widgetsContainer, $sitesLinks);
+    changeSelectedSite();
 });
 
 
@@ -80,27 +87,27 @@ $sitesLinks.click(function(event) {
 
 $("#widgets-carousel_left").click(function(event) {
     widgetsCarousel.moveLeft();
-    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedWidget();
 });
 
 $("#carousel-widgets").on( "swipeleft", function(event) {
     widgetsCarousel.moveLeft();
-    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedWidget();
 });
 
 $("#widgets-carousel_right").click(function(event) {
     widgetsCarousel.moveRight();
-    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedWidget();
 });
 
 $("#carousel-widgets").on( "swiperight", function(event) {
     widgetsCarousel.moveRight();
-    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedWidget();
 });
 
 $widgetsLinks.click(function(event) {
     widgetsCarousel.changeItem($(event.target).data("num"));
-    changeSelected(event, widgetsCarousel, $sitesContainer, $widgetsLinks);
+    changeSelectedWidget();
 });
 
 
