@@ -46,7 +46,7 @@
     @include breakpoint(map-get($break, medium)) {
         position: absolute;
         width: 50%;
-        top: $font-size--huge + ($font-size--title -$font-size--huge)/2;
+        top: $font-size--huge + ($font-size--title - $font-size--huge)/2;
         left: 100%;
         transform: translate(-100%);
         background-color: red;

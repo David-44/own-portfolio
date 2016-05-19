@@ -7,10 +7,35 @@
 }
 
 .contact-list {
+	position: relative;
 	z-index: 1;
+	width: 66%;
+	min-width: 300px;
+	max-width: 600px;
+	left: 50%;
+	transform: translate(-50%);
+
+	@include breakpoint(map-get($break, medium))  {
+        width: 33%;
+        left: 25%;
+	}
 }
 
-.temp {
-	width: 100%;
-	text-align: center;
+.contact-item {
+	line-height: $font-size--title;
+}
+
+.contact-detail {
+	line-height: $font-size--title;
+	vertical-align: middle;
+}
+
+.contact-icon {
+	width: $font-size--big;
+	height: $font-size--big;
+	vertical-align: middle;
+	fill: $white;
+	@include breakpoint(map-get($break, medium))  {
+        fill: $black;
+	}
 }

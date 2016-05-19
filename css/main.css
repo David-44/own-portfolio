@@ -155,7 +155,8 @@ button {
   top: 0;
   position: absolute;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: scroll; }
 @media (min-width: 800px) {
   .l-panel-left {
     width: 50%;
@@ -165,7 +166,8 @@ button {
   bottom: 0;
   position: absolute;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: scroll; }
 @media (min-width: 800px) {
   .l-panel-right {
     width: 50%;
@@ -174,7 +176,8 @@ button {
 .l-panel-bottom, .l-panel-top {
   position: absolute;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  overflow: scroll; }
 @media (min-width: 800px) {
   .l-panel-bottom, .l-panel-top {
     width: 50%;
@@ -352,11 +355,33 @@ button {
   background-repeat: no-repeat; }
 
 .contact-list {
-  z-index: 1; }
+  position: relative;
+  z-index: 1;
+  width: 66%;
+  min-width: 300px;
+  max-width: 600px;
+  left: 50%;
+  transform: translate(-50%); }
+@media (min-width: 800px) {
+  .contact-list {
+    width: 33%;
+    left: 25%; } }
 
-.temp {
-  width: 100%;
-  text-align: center; }
+.contact-item {
+  line-height: 81px; }
+
+.contact-detail {
+  line-height: 81px;
+  vertical-align: middle; }
+
+.contact-icon {
+  width: 36px;
+  height: 36px;
+  vertical-align: middle;
+  fill: #fff; }
+@media (min-width: 800px) {
+  .contact-icon {
+    fill: #000; } }
 
 /* general layout and style
 ****************************/
