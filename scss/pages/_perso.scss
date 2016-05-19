@@ -2,10 +2,23 @@
 // This file contains all styles related to the personal part of the site/application.
 // -----------------------------------------------------------------------------
 
-.me {
+.perso {
     background-color: $white;
 	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to left, $white 50%, $black 50%);
 	}
+}
+
+.skill-subtitle {
+	@include small-title;
+	text-align: left;
+    text-indent: 100px;
+}
+
+.skill-paragraph {
+	width: 83%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
 }

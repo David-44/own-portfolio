@@ -15,6 +15,11 @@
 	text-align: center;
 }
 
+.work-title {
+    @extend .section-title;
+    width: 50%;
+}
+
 .work-subtitle {
     @extend .subtitle;
     @include breakpoint(map-get($break, medium)) {

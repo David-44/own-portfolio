@@ -204,7 +204,7 @@ button {
   .footer {
     font-size: 16px; } }
 
-.section-title {
+.section-title, .work-title {
   width: 100%;
   text-align: center;
   font-size: 54px;
@@ -310,6 +310,9 @@ button {
   width: 100%;
   text-align: center; }
 
+.work-title {
+  width: 50%; }
+
 @media (min-width: 800px) {
   .work-subtitle {
     width: 50%;
@@ -341,12 +344,25 @@ button {
     transform: translate(-100%);
     background-color: red; } }
 
-.me {
+.perso {
   background-color: #fff;
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
-  .me {
+  .perso {
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
+
+.skill-subtitle {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 81px;
+  text-align: left;
+  text-indent: 100px; }
+
+.skill-paragraph {
+  width: 83%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto; }
 
 .contact-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");
