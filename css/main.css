@@ -649,6 +649,14 @@ button {
   margin-right: 20px;
   margin-left: 20px; }
 
+.tic-rules {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.tic-message {
+  margin-bottom: 50px; }
+
 .wikipedia {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
   text-align: center;

@@ -30,7 +30,7 @@
   height: 100px;
 }
 
-.tic-hidden {
+.tic-hidden { 
   display: none;
 }
 
@@ -45,3 +45,14 @@
   margin-right: 20px;
   margin-left: 20px;
 }
+
+.tic-rules {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.tic-message {
+  margin-bottom: 50px;
+}
+

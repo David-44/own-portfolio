@@ -527,7 +527,7 @@ var carousel = function($collection) {
       turn = false;
       aiPlay();
     }
-    rules.className = "tic-hidden";
+    rules.classList.add("tic-hidden");
     table.classList.remove("tic-hidden");
     table.classList.add("tic-visible");
     for (var i = 0; i < 9; i++) {
@@ -564,11 +564,11 @@ var carousel = function($collection) {
     player1 = "X";
     player2 = "O";
     
-     draw.className = "tic-hidden";
-     lose.className = "tic-hidden";
+     draw.className = "tic-hidden tic-message";
+     lose.className = "tic-hidden tic-message";
     table.classList.remove("tic-visible");
     table.classList.add("tic-hidden");
-    rules.className = "tic-visible";
+    rules.className = "tic-visible tic-rules";
     window.removeEventListener("click", endGameEvent);
   };
       
@@ -647,7 +647,7 @@ var carousel = function($collection) {
   };
 
   
-  
+
   
   /* Play turn :
      Puts the symbol at the right position then starts the other players turn.
@@ -668,7 +668,7 @@ var carousel = function($collection) {
     // Checks for player loss
     if (checkForLoss()) {
       setTimeout(function() {
-        lose.className = "tic-visible";
+        lose.className = "tic-visible tic-message";
         window.addEventListener("click", endGameEvent);
       }, 10);
       return ;
@@ -677,7 +677,7 @@ var carousel = function($collection) {
     // Check for draw
     if (checkForDraw()) {
       setTimeout(function() {
-        draw.className = "tic-visible";
+        draw.className = "tic-visible tic-message";
         window.addEventListener("click", endGameEvent);
       }, 10);
     } else {
