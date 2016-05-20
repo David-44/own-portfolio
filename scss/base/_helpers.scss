@@ -113,9 +113,9 @@
   @include breakpoint(map-get($break, medium)) {
       filter: url(#greyscale);
 
-    &:hover {
-      filter: none;
-    }
+      &:hover {
+        filter: none;
+      }
     }
 }
 

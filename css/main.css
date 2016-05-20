@@ -239,8 +239,7 @@ button {
   width: 100%;
   text-align: center;
   font-size: 54px;
-  line-height: 81px;
-  margin-top: 16px; }
+  line-height: 81px; }
 @media (min-width: 800px) {
   .subtitle, .work-subtitle {
     font-weight: 700;
@@ -265,10 +264,14 @@ button {
   position: relative;
   width: 100%; }
 
+@media (min-width: 800px) {
+  .carousel-item {
+    margin-top: 16px; } }
+
 .carousel-nav {
   position: absolute;
   width: 300px;
-  top: 110px;
+  top: 93px;
   left: 50%;
   transform: translate(-50%);
   z-index: 10; }
@@ -348,11 +351,16 @@ button {
     text-align: left;
     text-indent: 100px; } }
 
-.work-description {
+.work-description, .widget-description {
   width: 66%;
   margin-left: auto;
   margin-right: auto;
-  line-height: 24px; }
+  line-height: 24px;
+  margin-top: 16px; }
+
+.widget-description {
+  width: 300px;
+  text-align: center; }
 
 .work-item {
   position: relative; }
@@ -365,7 +373,7 @@ button {
 @media (min-width: 800px) {
   .source-link {
     position: absolute;
-    left: 66%; } }
+    left: 270px; } }
 
 .right-container {
   position: relative;

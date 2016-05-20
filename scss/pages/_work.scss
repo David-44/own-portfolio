@@ -38,6 +38,13 @@
     margin-left: auto;
     margin-right: auto;
     line-height: $font-size--large;
+    margin-top: $font-size--base;
+}
+
+.widget-description {
+    @extend .work-description;
+    width: 300px;
+    text-align: center;
 }
 
 .work-item {
@@ -51,7 +58,7 @@
     vertical-align: text-bottom;
     @include breakpoint(map-get($break, medium)) {
         position: absolute;
-        left: 66%;
+        left: 270px;
     }
 }
 

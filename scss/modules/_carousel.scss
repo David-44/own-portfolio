@@ -17,10 +17,16 @@
 	width: 100%;
 }
 
+.carousel-item {
+	@include breakpoint(map-get($break, medium)) {
+	    margin-top: $font-size--base;
+	}
+}
+
 .carousel-nav {
 	position: absolute;
 	width: 300px;
-	top: 110px;
+	top: 93px;  // Magic number
 	left: 50%;
 	transform: translate(-50%);
 	z-index: 10;
