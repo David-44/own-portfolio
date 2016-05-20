@@ -450,11 +450,27 @@ button {
     text-align: left;
     text-indent: 100px; } }
 
+.contact-title {
+  width: 100%;
+  text-align: center;
+  font-size: 54px;
+  line-height: 81px; }
+@media (min-width: 800px) {
+  .contact-title {
+    width: 50%; } }
+
 .contact-img {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/contact.jpg");
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  z-index: -1; }
+@media (min-width: 800px) {
+  .contact-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; } }
 
 .contact-list {
   position: relative;
@@ -462,8 +478,13 @@ button {
   width: 66%;
   min-width: 300px;
   max-width: 600px;
+  height: auto;
   left: 50%;
-  transform: translate(-50%); }
+  transform: translate(-50%);
+  text-indent: 16px; }
+@media (min-width: 450px) {
+  .contact-list {
+    text-indent: 0; } }
 @media (min-width: 800px) {
   .contact-list {
     width: 33%;
@@ -479,11 +500,7 @@ button {
 .contact-icon {
   width: 36px;
   height: 36px;
-  vertical-align: middle;
-  fill: #fff; }
-@media (min-width: 800px) {
-  .contact-icon {
-    fill: #000; } }
+  vertical-align: middle; }
 
 /* general layout and style
 ****************************/

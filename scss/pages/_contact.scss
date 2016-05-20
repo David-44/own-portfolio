@@ -2,8 +2,19 @@
 // This file contains all styles related to the Contact of the site/application.
 // -----------------------------------------------------------------------------
 
+.contact-title {
+	@include big_title;
+	@include breakpoint(map-get($break, medium))  {
+        width: 50%;
+	}
+}
+
 .contact-img {
-    @include banner-dark('contact.jpg');
+    @include banner-light('contact.jpg');
+    z-index: -1;
+    @include breakpoint(map-get($break, medium))  {
+        @include banner-dark('contact.jpg');
+    }
 }
 
 .contact-list {
@@ -12,8 +23,14 @@
 	width: 66%;
 	min-width: 300px;
 	max-width: 600px;
+	height: auto;
 	left: 50%;
 	transform: translate(-50%);
+	text-indent: $font-size--base;
+
+	@include breakpoint(map-get($break, small))  {
+        text-indent: 0;
+	}
 
 	@include breakpoint(map-get($break, medium))  {
         width: 33%;
@@ -34,8 +51,4 @@
 	width: $font-size--big;
 	height: $font-size--big;
 	vertical-align: middle;
-	fill: $white;
-	@include breakpoint(map-get($break, medium))  {
-        fill: $black;
-	}
 }
