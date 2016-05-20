@@ -78,6 +78,8 @@ button {
   content: '';
   display: table; }
 
+/* Styles used for hiding or showing elements
+***************************************************/
 /*
  * Hide elements at small viewport size
  */
@@ -113,6 +115,8 @@ button {
 .displayed {
   display: inline-block; }
 
+/* Styles used for modifying colours
+***************************************************/
 /*
  * White text
  */
@@ -138,6 +142,18 @@ button {
 @media (min-width: 800px) {
   .black-to-white {
     color: #fff; } }
+
+/*
+ * Applies the svg greyscale filter at large vieport size
+ * and removes it on hover
+ */
+@media (min-width: 800px) {
+  .hover-color {
+    -webkit-filter: url(#greyscale);
+    filter: url(#greyscale); }
+  .hover-color:hover {
+    -webkit-filter: none;
+    filter: none; } }
 
 .l-panel_superposed, .l-panel_following {
   overflow: scroll;

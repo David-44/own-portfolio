@@ -2,6 +2,8 @@
 // This file contains CSS helper classes.
 // -----------------------------------------------------------------------------
 
+
+
 /**
  * Clear inner floats
  */
@@ -10,6 +12,10 @@
   content: '';
   display: table;
 }
+
+
+/* Styles used for hiding or showing elements
+***************************************************/
 
 /*
  * Hide elements at small viewport size
@@ -57,6 +63,9 @@
  }
 
 
+/* Styles used for modifying colours
+***************************************************/
+
 /*
  * White text
  */
@@ -86,7 +95,20 @@
   }
 }
 
+/*
+ * Applies the svg greyscale filter at large vieport size
+ * and removes it on hover
+ */
 
+.hover-color {
+  @include breakpoint(map-get($break, medium)) {
+      filter: url(#greyscale);
+
+    &:hover {
+      filter: none;
+    }
+    }
+}
 
 
 
