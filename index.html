@@ -33,15 +33,15 @@
   <symbol id="arrow-up" viewBox="0 0 16 16">
     <path d="M13.707 6.293l-5-5c-0.39-0.391-1.024-0.391-1.414 0l-5 5c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l3.293-3.293v9.586c0 0.552 0.448 1 1 1s1-0.448 1-1v-9.586l3.293 3.293c0.195 0.195 0.451 0.293 0.707 0.293s0.512-0.098 0.707-0.293c0.391-0.391 0.391-1.024 0-1.414z"></path>
   </symbol>
-
-  <symbol id="circle-left" viewBox="0 0 16 16">
-    <path d="M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zM8 1.5c3.59 0 6.5 2.91 6.5 6.5s-2.91 6.5-6.5 6.5-6.5-2.91-6.5-6.5 2.91-6.5 6.5-6.5z"></path>
-    <path d="M10.457 4.957l-1.414-1.414-4.457 4.457 4.457 4.457 1.414-1.414-3.043-3.043z"></path>
+    
+  <symbol id="arrow-left" viewBox="0 0 477.175 477.175">
+    <path d="M145.188,238.575l215.5-215.5c5.3-5.3,5.3-13.8,0-19.1s-13.8-5.3-19.1,0l-225.1,225.1c-5.3,5.3-5.3,13.8,0,19.1l225.1,225c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4c5.3-5.3,5.3-13.8,0-19.1L145.188,238.575z"></path>
   </symbol>
 
-  <symbol id="circle-right" viewBox="0 0 16 16">
-    <path d="M8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"></path>
-    <path d="M5.543 11.043l1.414 1.414 4.457-4.457-4.457-4.457-1.414 1.414 3.043 3.043z"></path>
+  <symbol id="arrow-right" viewBox="0 0 477.175 477.175">
+    <path d="M360.731,229.075l-225.1-225.1c-5.3-5.3-13.8-5.3-19.1,0s-5.3,13.8,0,19.1l215.5,215.5l-215.5,215.5
+    c-5.3,5.3-5.3,13.8,0,19.1c2.6,2.6,6.1,4,9.5,4c3.4,0,6.9-1.3,9.5-4l225.1-225.1C365.931,242.875,365.931,234.275,360.731,229.075z
+    "></path>
   </symbol>
 
   <symbol id="mail" viewBox="0 0 16 16">
@@ -106,7 +106,19 @@
     <section class="l-panel-top">
 
       <!-- SITES LIST -->
-
+      
+      <div class="carousel-nav hidden-medium">
+        <a class="carousel-left-link" id="sites-carousel_left" href="#">
+          <svg viewBox="0 0 477.175 477.175" class="carousel-arrow">
+            <use xlink:href="#arrow-left"></use>
+          </svg>
+        </a>
+        <a class="carousel-right-link" id="sites-carousel_right" href="#">
+          <svg viewbox="0 0 477.175 477.175" class="carousel-arrow">
+            <use xlink:href="#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
       
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
@@ -157,18 +169,6 @@
               </p>
             </li>
           </ul>
-
-          <a class="carousel-link carousel-left-link no-hover" id="sites-carousel_left" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-left"></use>
-            </svg>
-          </a>
-          <a class="carousel-link carousel-right-link no-hover" id="sites-carousel_right" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-right"></use>
-            </svg>
-          </a>
-
         </div>
       </div>
 
@@ -185,6 +185,19 @@
     <section class="l-panel-bottom">
 
       <!-- WIDGETS LIST -->
+
+      <div class="carousel-nav hidden-medium">
+        <a class="carousel-left-link white" id="widgets-carousel_left" href="#">
+          <svg viewBox="0 0 477.175 477.175" class="carousel-arrow">
+            <use xlink:href="#arrow-left"></use>
+          </svg>
+        </a>
+        <a class="carousel-right-link white" id="widgets-carousel_right" href="#">
+          <svg viewBox="0 0 477.175 477.175" class="carousel-arrow">
+            <use xlink:href="#arrow-right"></use>
+          </svg>
+        </a>
+      </div>
 
       <h3 class="work-subtitle white-to-black">Widgets</h3>
       <ul id="widgets-list" class="work-list hidden-small">
@@ -205,7 +218,7 @@
           </a>
         </li>
         <li class="work-item">
-          <a class="js-work-link" href="#" data-num="2">Noughts &amp; Crosses</a>
+          <a class="js-work-link" href="#" data-num="2">Tic Tac Toe</a>
           <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">
             <svg viewBox="0 0 16 16" class="contact-icon">
               <use xlink:href="#codepen"></use>
@@ -317,7 +330,7 @@
                     <use xlink:href="#codepen"></use>
                   </svg>
                 </a>
-                Noughts &amp; Crosses
+                Tic Tac Toe
               </h3>
               <div class="tic-wrap widget">
                 <div id="tic-rules" class="tic-visible tic-rules">
@@ -380,18 +393,6 @@
             </li>
             
           </ul>
-
-          <a class="carousel-link carousel-left-link no-hover" id="widgets-carousel_left" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-left"></use>
-            </svg>
-          </a>
-          <a class="carousel-link carousel-right-link no-hover" id="widgets-carousel_right" href="#">
-            <svg viewBox="0 0 16 16" class="carousel-arrow">
-              <use xlink:href="#circle-right"></use>
-            </svg>
-          </a>
-
         </div>
       </div>
     </section>
@@ -523,8 +524,8 @@
 <!-- FOOTER -->
 
   <footer class="footer">
-    <p>Design &amp; Development by David Morisset. That's me!</p>
-    <p>&copy; 2016 David Morisset</p>
+    <p>Design &amp; Development by David Morisset. &copy; 2016 David Morisset</p>
+    <p>Svg icons designed by <a href="http://www.freepik.com/">freepik</a> and <a href="https://icomoon.io/">Icomoon</a></p>
   </footer>
 
   

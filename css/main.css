@@ -118,10 +118,18 @@ button {
 /* Styles used for modifying colours
 ***************************************************/
 /*
- * White text
+ * White text or svg
  */
 .white {
-  color: #fff; }
+  color: #fff;
+  fill: #fff; }
+
+/*
+ * Black text or svg
+ */
+.black {
+  color: #000;
+  fill: #000; }
 
 /*
  * Changes the background color from white at small size
@@ -257,24 +265,25 @@ button {
   position: relative;
   width: 100%; }
 
-.carousel-link {
-  box-sizing: content-box;
+.carousel-nav {
   position: absolute;
-  z-index: 10;
+  width: 300px;
+  top: 110px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 10; }
+
+.carousel-left-link, .carousel-right-link {
+  position: absolute;
   width: 36px;
   height: 36px;
-  padding: 10px; }
-
-.carousel-arrow {
-  fill: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%; }
+  padding: 10px 0; }
 
 .carousel-left-link {
-  left: 33%; }
+  left: 0; }
 
 .carousel-right-link {
-  right: 33%; }
+  right: 0; }
 
 .widget {
   width: 300px;

@@ -67,10 +67,19 @@
 ***************************************************/
 
 /*
- * White text
+ * White text or svg
  */
 .white {
   color: $white;
+  fill: $white;
+}
+
+/*
+ * Black text or svg
+ */
+.black {
+  color: $black;
+  fill: $black;
 }
 
 /*
