@@ -165,8 +165,8 @@ button {
  */
 @media (min-width: 800px) {
   .hover-color {
-    -webkit-filter: url(#greyscale);
-    filter: url(#greyscale); }
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
   .hover-color:hover {
     -webkit-filter: none;
     filter: none; } }
@@ -275,6 +275,7 @@ button {
   width: 100%;
   max-width: 600px;
   left: 50%;
+  -webkit-transform: translate(-50%);
   transform: translate(-50%); }
 
 .carousel, .carousel-item, .carousel-thumbnail {
@@ -290,6 +291,7 @@ button {
   width: 300px;
   top: 93px;
   left: 50%;
+  -webkit-transform: translate(-50%);
   transform: translate(-50%);
   z-index: 10; }
 
@@ -317,12 +319,14 @@ button {
   overflow: hidden; }
 
 .header-img {
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-grey.jpg");
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-grey.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
 @media (min-width: 800px) {
   .header-img {
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/banner-grey.jpg");
     background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/banner-grey.jpg");
     background-size: cover;
     background-position: center center;
@@ -346,9 +350,11 @@ button {
 
 .work {
   background-color: #fff;
+  background-image: -webkit-linear-gradient(top, #ffffff 50%, #000000 50%);
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
   .work {
+    background-image: -webkit-linear-gradient(left, #ffffff 50%, #000000 50%);
     background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
 
 .work-list {
@@ -401,14 +407,17 @@ button {
     width: 50%;
     top: 67.5px;
     left: 100%;
+    -webkit-transform: translate(-100%);
     transform: translate(-100%);
     background-color: red; } }
 
 .perso {
   background-color: #fff;
+  background-image: -webkit-linear-gradient(top, #ffffff 50%, #000000 50%);
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
   .perso {
+    background-image: -webkit-linear-gradient(right, #ffffff 50%, #000000 50%);
     background-image: linear-gradient(to left, #ffffff 50%, #000000 50%); } }
 
 .skill-subtitle {
@@ -460,6 +469,7 @@ button {
     width: 50%; } }
 
 .contact-img {
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/contact.jpg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/contact.jpg");
   background-size: cover;
   background-position: center center;
@@ -467,6 +477,7 @@ button {
   z-index: -1; }
 @media (min-width: 800px) {
   .contact-img {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");
     background-size: cover;
     background-position: center center;
@@ -480,6 +491,7 @@ button {
   max-width: 600px;
   height: auto;
   left: 50%;
+  -webkit-transform: translate(-50%);
   transform: translate(-50%);
   text-indent: 16px; }
 @media (min-width: 450px) {
@@ -508,6 +520,7 @@ button {
   border: 2px solid #17191c;
   border-radius: 10px;
   background-color: #f0e6d1;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
   background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0));
   box-shadow: 2px 4px 4px #0d1526, inset 1px 2px 2px #f9f4ec, inset -1px -2px 2px #f9f4ec; }
 
@@ -584,6 +597,7 @@ button {
 ****************************/
 .cal-button {
   border-radius: 4px;
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0));
   background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0)); }
 
 .cal-number-keys .cal-button, #equal {
@@ -611,6 +625,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 
 /* Controls styles
@@ -656,6 +671,7 @@ button {
 .sim-output {
   position: absolute;
   left: 50%;
+  -webkit-transform: translate(-50%);
   transform: translate(-50%);
   bottom: 20px;
   font-size: 16px; }
@@ -680,9 +696,11 @@ button {
   top: 0;
   border-top-left-radius: 100%;
   background-color: green;
+  background-image: -webkit-radial-gradient(bottom right circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
   background-image: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%); }
 
 .sim-green-button.active {
+  background-image: -webkit-radial-gradient(bottom right circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%);
   background-image: radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%); }
 
 .sim-red-button {
@@ -690,9 +708,11 @@ button {
   top: 0;
   border-top-right-radius: 100%;
   background-color: red;
+  background-image: -webkit-radial-gradient(bottom left circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
   background-image: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%); }
 
 .sim-red-button.active {
+  background-image: -webkit-radial-gradient(bottom left circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%);
   background-image: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%); }
 
 .sim-blue-button {
@@ -700,9 +720,11 @@ button {
   bottom: 0;
   border-bottom-right-radius: 100%;
   background-color: blue;
+  background-image: -webkit-radial-gradient(top left circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
   background-image: radial-gradient(circle at top left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%); }
 
 .sim-blue-button.active {
+  background-image: -webkit-radial-gradient(top left circle, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%);
   background-image: radial-gradient(circle at top left, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.7) 100%); }
 
 .sim-yellow-button {
@@ -710,9 +732,11 @@ button {
   bottom: 0;
   border-bottom-left-radius: 100%;
   background-color: yellow;
+  background-image: -webkit-radial-gradient(top right circle, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
   background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%); }
 
 .sim-yellow-button.active {
+  background-image: -webkit-radial-gradient(top right circle, rgba(255, 255, 255, 0.5) 0%, #ffffff 100%);
   background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0.5) 0%, #ffffff 100%); }
 
 .tic-wrap {
@@ -755,6 +779,7 @@ button {
 .tic-rules {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   line-height: 2em; }
 

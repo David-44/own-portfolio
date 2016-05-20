@@ -846,7 +846,7 @@ var $sitesContainer = $("#sites-container"),
 /* ABSTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
-var changeSelectedLink = function(collection, $container, $links) {
+var changeSelectedLink = function(collection, $container, $links, event) {
     event.stopPropagation();
     event.preventDefault();
 
@@ -861,12 +861,12 @@ var changeSelectedLink = function(collection, $container, $links) {
     }
 };
 
-var changeSelectedSite = function() {
-    changeSelectedLink(sitesCarousel, $widgetsContainer, $sitesLinks);
+var changeSelectedSite = function(event) {
+    changeSelectedLink(sitesCarousel, $widgetsContainer, $sitesLinks, event);
 };
 
-var changeSelectedWidget = function() {
-    changeSelectedLink(widgetsCarousel, $sitesContainer, $widgetsLinks);
+var changeSelectedWidget = function(event) {
+    changeSelectedLink(widgetsCarousel, $sitesContainer, $widgetsLinks, event);
 };
 
 
@@ -876,28 +876,28 @@ var changeSelectedWidget = function() {
 ************************************************************************/
 
 $("#sites-carousel_left").click(function(event) {
-    sitesCarousel.moveLeft();
-    changeSelectedSite();
+    sitesCarousel.moveLeft(event);
+    changeSelectedSite(event);
 });
 
 $("#carousel-sites").on( "swipeleft", function(event) {
-    sitesCarousel.moveLeft();
-    changeSelectedSite();
+    sitesCarousel.moveLeft(event);
+    changeSelectedSite(event);
 });
 
 $("#sites-carousel_right").click(function(event) {
-    sitesCarousel.moveRight();
-	changeSelectedSite();
+    sitesCarousel.moveRight(event);
+	changeSelectedSite(event);
 });
 
 $("#carousel-sites").on( "swiperight", function(event) {
-    sitesCarousel.moveRight();
-    changeSelectedSite();
+    sitesCarousel.moveRight(event);
+    changeSelectedSite(event);
 });
 
 $sitesLinks.click(function(event) {
     sitesCarousel.changeItem($(event.target).data("num"));
-    changeSelectedSite();
+    changeSelectedSite(event);
 });
 
 
@@ -908,28 +908,28 @@ $sitesLinks.click(function(event) {
 ************************************************************************/
 
 $("#widgets-carousel_left").click(function(event) {
-    widgetsCarousel.moveLeft();
-    changeSelectedWidget();
+    widgetsCarousel.moveLeft(event);
+    changeSelectedWidget(event);
 });
 
 $("#carousel-widgets").on( "swipeleft", function(event) {
-    widgetsCarousel.moveLeft();
-    changeSelectedWidget();
+    widgetsCarousel.moveLeft(event);
+    changeSelectedWidget(event);
 });
 
 $("#widgets-carousel_right").click(function(event) {
-    widgetsCarousel.moveRight();
-    changeSelectedWidget();
+    widgetsCarousel.moveRight(event);
+    changeSelectedWidget(event);
 });
 
 $("#carousel-widgets").on( "swiperight", function(event) {
-    widgetsCarousel.moveRight();
-    changeSelectedWidget();
+    widgetsCarousel.moveRight(event);
+    changeSelectedWidget(event);
 });
 
 $widgetsLinks.click(function(event) {
     widgetsCarousel.changeItem($(event.target).data("num"));
-    changeSelectedWidget();
+    changeSelectedWidget(event);
 });
 
 

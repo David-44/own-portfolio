@@ -72,7 +72,7 @@ gulp.task('compileCompassLive', function() {
 gulp.task('autoprefix', ["compileCompass"], function() {
   return gulp.src('css/main.css')
     .pipe(autoprefixer({
-      browsers: ['last 2 versions'],
+      browsers: ['> 1%'],
       cascade: false
     }))
     .pipe(gulp.dest('css'));

@@ -111,7 +111,7 @@
 
 .hover-color {
   @include breakpoint(map-get($break, medium)) {
-      filter: url(#greyscale);
+    @include filter(grayscale(100%));
 
       &:hover {
         filter: none;
