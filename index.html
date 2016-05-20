@@ -110,9 +110,9 @@
       
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
-        <li><a class="selected" href="#" data-num="0">Rodolf Vanthuyne</a>
-        <li><a href="#" data-num="1">Alpha Clean</a></li>
-        <li><a href="#" data-num="2">My portfolio</a></li>
+        <li class="work-item"><a class="js-work-link selected" href="#" data-num="0">Rodolf Vanthuyne</a>
+        <li class="work-item"><a class="js-work-link" href="#" data-num="1">Alpha Clean</a></li>
+        <li class="work-item"><a class="js-work-link" href="#" data-num="2">My portfolio</a></li>
       </ul>
 
       <!-- SITES CAROUSEL -->
@@ -126,7 +126,7 @@
 
             <li class="carousel-item displayed">
               <h3 class="elem-title hidden-medium">Rodolf Vanthuyne</h3>
-              <a class="" href="http://rodolf-vanthuyne.com">
+              <a href="http://rodolf-vanthuyne.com">
                 <img class="carousel-thumbnail hover-color" src="images/rodolf-vanthuyne.jpg" alt="screenshot of Rodolf Vanthuyne's website">
               </a>
               <p class="work-description black-to-white">
@@ -138,7 +138,7 @@
 
             <li class="carousel-item hidden">
               <h3 class="elem-title hidden-medium">Alpha Clean</h3>
-              <a class="" href="http://alpha-clean.co.uk">
+              <a href="http://alpha-clean.co.uk">
                 <img class="carousel-thumbnail hover-color" src="images/alpha-clean.jpg" alt="screenshot of Alpha Clean's website">
               </a>
               <p class="work-description black-to-white">
@@ -149,7 +149,7 @@
 
             <li class="carousel-item hidden">
               <h3 class="elem-title hidden-medium">Portfolio</h3>
-              <a class="" href="#">
+              <a href="#">
                 <img class="carousel-thumbnail hover-color" src="images/perso.jpg" alt="screenshot of David Morisset's website">
               </a>
               <p class="work-description black-to-white">
@@ -188,10 +188,38 @@
 
       <h3 class="work-subtitle white-to-black">Widgets</h3>
       <ul id="widgets-list" class="work-list hidden-small">
-        <li><a href="#" data-num="0">Javascript calculator</a></li>
-        <li><a href="#" data-num="1">Simon Game</a></li>
-        <li><a href="#" data-num="2">Noughts &amp; Crosses</a></li>
-        <li><a href="#" data-num="3">Wikipedia Search</a></li>
+        <li class="work-item">
+          <a class="js-work-link" href="#" data-num="0">Calculator</a>
+          <a class="white source-link" href="http://codepen.io/David44/pen/Xdxyab">
+            <svg viewBox="0 0 16 16" class="contact-icon">
+              <use xlink:href="#codepen"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="work-item">
+          <a class="js-work-link" href="#" data-num="1">Simon Game</a>
+          <a class="white source-link" href="http://codepen.io/David44/pen/MyzzXd">
+            <svg viewBox="0 0 16 16" class="contact-icon">
+              <use xlink:href="#codepen"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="work-item">
+          <a class="js-work-link" href="#" data-num="2">Noughts &amp; Crosses</a>
+          <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">
+            <svg viewBox="0 0 16 16" class="contact-icon">
+              <use xlink:href="#codepen"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="work-item">
+          <a class="js-work-link" href="#" data-num="3">Wiki Search</a>
+          <a class="white source-link" href="http://codepen.io/David44/pen/KzxQEJ">
+            <svg viewBox="0 0 16 16" class="contact-icon">
+              <use xlink:href="#codepen"></use>
+            </svg>
+          </a>
+        </li>
       </ul>
 
       <!-- WIDGETS CAROUSEL -->
@@ -204,7 +232,14 @@
             <!-- JAVASCRIPT CALCULATOR -->
 
             <li class="carousel-item displayed">
-              <h3 class="elem-title white hidden-medium">Javascript Calculator</h3>
+              <h3 class="elem-title white hidden-medium">
+                <a class="white source-link" href="http://codepen.io/David44/pen/Xdxyab">
+                  <svg viewBox="0 0 16 16" class="contact-icon">
+                    <use xlink:href="#codepen"></use>
+                  </svg>
+                </a>
+                Calculator
+              </h3>
               <div id="cal-calculator" class="cal-calculator widget">
                 <div id="cal-display" class="cal-display">
                   <span id="cal-sign" class="cal-sign"></span>
@@ -236,7 +271,6 @@
                   </div>
                 </div>
               </div>
-              <a class="white source-link" href="http://codepen.io/David44/pen/Xdxyab">Source on Codepen</a>
               <p class="work-description white">
                 A javascript calculator built for the freecodecamp certification.
               </p>
@@ -245,7 +279,14 @@
             <!-- SIMON GAME -->
 
             <li class="carousel-item hidden">
-              <h3 class="elem-title white hidden-medium">Simon Game</h3>
+              <h3 class="elem-title white hidden-medium">
+                <a class="white source-link" href="http://codepen.io/David44/pen/MyzzXd">
+                  <svg viewBox="0 0 16 16" class="contact-icon">
+                    <use xlink:href="#codepen"></use>
+                  </svg>
+                </a>
+                Simon Game
+              </h3>
               <div class="sim-wrap widget">
                 <div id="sim-buttons" class="sim-buttons">
                   <button type="button" id="sim-green" class="sim-color-button sim-green-button"></button>
@@ -262,7 +303,6 @@
                   <div id="sim-streak" class="sim-output">00</div>
                 </div>
               </div>
-              <a class="white source-link" href="http://codepen.io/David44/pen/MyzzXd">Source on Codepen</a>
               <p class="work-description white">
                 The Simon memory game, built with <abbr>CSS</abbr> and javascript.
               </p>
@@ -271,7 +311,14 @@
             <!-- NOUGHTS AND CROSSES -->
 
             <li class="carousel-item hidden">
-              <h3 class="elem-title white hidden-medium">Noughts &amp; Crosses</h3>
+              <h3 class="elem-title white hidden-medium">
+                <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">
+                  <svg viewBox="0 0 16 16" class="contact-icon">
+                    <use xlink:href="#codepen"></use>
+                  </svg>
+                </a>
+                Noughts &amp; Crosses
+              </h3>
               <div class="tic-wrap widget">
                 <div id="tic-rules" class="tic-visible tic-rules">
                   <p>Crosses go first. Choose: </p>
@@ -304,7 +351,6 @@
                   </tr>
                 </table>
               </div>
-              <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">Source on Codepen</a>
               <p class="work-description white">
                 Spoiler alert: You will never win!!!
               </p>
@@ -313,14 +359,21 @@
             <!-- WIKIPEDIA SEARCH -->
 
             <li class="carousel-item hidden">
-              <h3 class="elem-title white hidden-medium">Wikipedia Search</h3>
+              <h3 class="elem-title white hidden-medium">
+                <a class="white source-link" href="http://codepen.io/David44/pen/KzxQEJ">
+                  <svg viewBox="0 0 16 16" class="contact-icon">
+                    <use xlink:href="#codepen"></use>
+                  </svg>
+                </a>
+                Wiki Search
+              </h3>
               <div class="wikipedia widget">
                 <p class="wiki-search">
                   <input name="search" id="wiki-search" class="wiki-search-box" type="text" value="" />
                   <button class="wiki-search-button" type="submit" id="wiki-submit" name="submit" value="search">W</button>
                 </p>
+                <div id="wiki-output" class="wiki-output"></div>
               </div>
-              <a class="white source-link" href="http://codepen.io/David44/pen/KzxQEJ">Source on Codepen</a>
               <p class="work-description white">
                 A simple wikipedia search using the wikipedia API and JSONP with jQuery.
               </p>

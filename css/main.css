@@ -325,6 +325,10 @@ button {
 .work-list {
   width: 100%;
   text-align: center; }
+@media (min-width: 800px) {
+  .work-list {
+    text-align: left;
+    text-indent: 75px; } }
 
 .work-title {
   width: 50%; }
@@ -341,12 +345,18 @@ button {
   margin-right: auto;
   line-height: 24px; }
 
+.work-item {
+  position: relative; }
+
 .source-link {
-  display: block;
-  width: 66%;
+  display: inline;
+  width: 24px;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto; }
+  vertical-align: text-bottom; }
+@media (min-width: 800px) {
+  .source-link {
+    position: absolute;
+    left: 66%; } }
 
 .right-container {
   position: relative;
@@ -691,6 +701,8 @@ button {
 .wiki-search-box {
   border: 1px solid #aaaaaa;
   height: 23px; }
+.wiki-search-box:focus {
+  outline: none; }
 
 .wiki-search-button {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
@@ -706,6 +718,7 @@ button {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
   color: black;
   text-decoration: none;
+  line-height: 24px;
   display: block;
   margin: 23px auto;
   width: 80%; }
@@ -716,4 +729,5 @@ button {
 #wiki-output {
   background-color: #fff;
   margin: 16px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  height: 320px; }

@@ -13,6 +13,10 @@
 .work-list {
 	width: 100%;
 	text-align: center;
+    @include breakpoint(map-get($break, medium)) {
+        text-align: left;
+        text-indent: 75px;
+    }
 }
 
 .work-title {
@@ -36,12 +40,19 @@
     line-height: $font-size--large;
 }
 
+.work-item {
+    position: relative;
+}
+
 .source-link {
-    display: block;
-    width: 66%;
+    display: inline;
+    width: $font-size--large;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    vertical-align: text-bottom;
+    @include breakpoint(map-get($break, medium)) {
+        position: absolute;
+        left: 66%;
+    }
 }
 
 // Moving content to the right at medium size

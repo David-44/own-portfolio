@@ -783,14 +783,15 @@ var carousel = function($collection) {
     return resultLink;
   }
   
-  var results = 5;
+  var results = 5,
+      output = $("#wiki-output");
   
   /* Main event listener */
   
   $("#wiki-submit").on("click", function(){
     
     // removes previous outputs if they're present
-    $("#wiki-output").remove();
+    output.empty();
     
     // building the search URL for the wikipedia API
     var searchQuery = $("#wiki-search").val();
@@ -799,8 +800,7 @@ var carousel = function($collection) {
 
     // Launching the search and building the output
     $.getJSON(url, function(json){
-      var data = json.query.search,
-        output = $("<div id='wiki-output'></div>");
+      var data = json.query.search;
       for (var i = 0 ; i < results ; i++) {
         output.append(buildResult(data[i].title)); 
       }
@@ -833,17 +833,17 @@ var carousel = function($collection) {
 
 var $sitesContainer = $("#sites-container"),
       sitesCarousel = carousel($("#carousel-sites .carousel-item")),
-        $sitesLinks = $("#sites-list a"),
+        $sitesLinks = $("#sites-list .js-work-link"),
 
   $widgetsContainer = $("#widgets-container"),
     widgetsCarousel = carousel($("#carousel-widgets .carousel-item")),
-      $widgetsLinks = $("#widgets-list a");
+      $widgetsLinks = $("#widgets-list .js-work-link");
 
 
 
 
 
-/* ABASTRACTING LINKS AND CAROUSELS
+/* ABSTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
 var changeSelectedLink = function(collection, $container, $links) {

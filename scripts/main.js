@@ -11,17 +11,17 @@
 
 var $sitesContainer = $("#sites-container"),
       sitesCarousel = carousel($("#carousel-sites .carousel-item")),
-        $sitesLinks = $("#sites-list a"),
+        $sitesLinks = $("#sites-list .js-work-link"),
 
   $widgetsContainer = $("#widgets-container"),
     widgetsCarousel = carousel($("#carousel-widgets .carousel-item")),
-      $widgetsLinks = $("#widgets-list a");
+      $widgetsLinks = $("#widgets-list .js-work-link");
 
 
 
 
 
-/* ABASTRACTING LINKS AND CAROUSELS
+/* ABSTRACTING LINKS AND CAROUSELS
 ************************************************************************/
 
 var changeSelectedLink = function(collection, $container, $links) {

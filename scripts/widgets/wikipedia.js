@@ -18,14 +18,15 @@
     return resultLink;
   }
   
-  var results = 5;
+  var results = 5,
+      output = $("#wiki-output");
   
   /* Main event listener */
   
   $("#wiki-submit").on("click", function(){
     
     // removes previous outputs if they're present
-    $("#wiki-output").remove();
+    output.empty();
     
     // building the search URL for the wikipedia API
     var searchQuery = $("#wiki-search").val();
@@ -34,8 +35,7 @@
 
     // Launching the search and building the output
     $.getJSON(url, function(json){
-      var data = json.query.search,
-        output = $("<div id='wiki-output'></div>");
+      var data = json.query.search;
       for (var i = 0 ; i < results ; i++) {
         output.append(buildResult(data[i].title)); 
       }
