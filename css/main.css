@@ -60,7 +60,7 @@ a {
   display: inline-block;
   text-decoration: none;
   line-height: 36px; }
-a:not(.no-hover):hover, a.selected {
+a.selected {
   font-size: 24px; }
 
 /*
@@ -652,7 +652,8 @@ button {
 .tic-rules {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%); }
+  transform: translateY(-50%);
+  line-height: 2em; }
 
 .tic-message {
   margin-bottom: 50px; }
@@ -667,7 +668,7 @@ button {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 16px;
   width: 300px;
   position: relative; }
 
@@ -681,7 +682,7 @@ button {
   border: 0 solid #FFF;
   background-color: #FFF;
   right: 90px;
-  top: 23px;
+  top: 19px;
   height: 19px;
   width: 19px; }
 
@@ -695,3 +696,8 @@ button {
 .wiki-item-link:hover {
   font-weight: 700;
   font-size: 16px; }
+
+#wiki-output {
+  background-color: #fff;
+  margin: 16px;
+  border-radius: 10px; }

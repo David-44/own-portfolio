@@ -37,7 +37,7 @@ a {
   text-decoration: none;
   line-height: $font-size--big;
 
-  &:not(.no-hover):hover, &.selected {
+  &.selected {
     font-size: $font-size--large;  
   }
 } 

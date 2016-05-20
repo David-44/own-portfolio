@@ -776,9 +776,9 @@ var carousel = function($collection) {
      </a>
   */
   function buildResult(title) {
-    var link = "https://en.wikipedia.org/wiki/" + title.replace(/\s/g, "_");
-    var resultLink = $("<a></a>").addClass("wiki-item-link").attr("href", link).attr("target", "_blank");
-    var resultTitle  = $("<h2></h2>").html(title).addClass("wiki-item-title");
+    var link = "https://en.wikipedia.org/wiki/" + title.replace(/\s/g, "_"),
+        resultLink = $("<a></a>").addClass("wiki-item-link").attr("href", link).attr("target", "_blank"),
+        resultTitle  = $("<h2></h2>").html(title).addClass("wiki-item-title");
     resultLink.append(resultTitle);
     return resultLink;
   }
@@ -799,8 +799,8 @@ var carousel = function($collection) {
 
     // Launching the search and building the output
     $.getJSON(url, function(json){
-      var data = json.query.search;
-      var output = $("<div id='wiki-output'></div>");
+      var data = json.query.search,
+        output = $("<div id='wiki-output'></div>");
       for (var i = 0 ; i < results ; i++) {
         output.append(buildResult(data[i].title)); 
       }

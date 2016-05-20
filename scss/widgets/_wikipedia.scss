@@ -13,7 +13,7 @@
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 16px;
   width: 300px;
   position: relative;
 }
@@ -29,7 +29,7 @@
   border: 0 solid #FFF;
   background-color: #FFF;
   right: 90px;
-  top: 23px;
+  top: 19px;
   height: 19px;
   width: 19px;
 }
@@ -48,3 +48,11 @@
   	font-size: $font-size--base;
   }
 }
+
+#wiki-output {
+  background-color: $white;
+  margin: 16px;
+  border-radius: 10px;
+}
+
+
