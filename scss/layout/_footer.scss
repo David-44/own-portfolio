@@ -3,18 +3,27 @@
 // -----------------------------------------------------------------------------
  
  .footer {
- 	height: 10vh;
+ 	height: 3 * $font-size--base;
  	width: 100%;
  	position: absolute;
  	bottom: 0;
  	z-index: 2;
  	text-align: center;
- 	line-height: 5vh;
+ 	line-height: $font-size--base;
  	vertical-align: middle;
  	color: $white;
  	background-color: $black;
  	font-size: $font-size--small;
+ 	margin-bottom: 0;
+
  	@include breakpoint(map-get($break, small))  {
+        height: 3 * $font-size--large;
         font-size: $font-size--base;
+        line-height: $font-size--large;
  	}
- }
+
+}
+
+.footer a {
+	line-height: $font-size--base;
+}

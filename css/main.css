@@ -52,6 +52,14 @@ body {
 h1, h2, h3 {
   font-family: "Bodoni MT", Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif; }
 
+q {
+  font-style: italic;
+  font-weight: 100; }
+q:before {
+  content: "\201C"; }
+q:after {
+  content: "\201D"; }
+
 /**
  * Basic styles for links
  */
@@ -180,7 +188,8 @@ button {
   position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-bottom: 54px; }
 @media (min-width: 800px) {
   .l-panel-left {
     width: 50%;
@@ -191,7 +200,8 @@ button {
   position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-bottom: 54px; }
 @media (min-width: 800px) {
   .l-panel-right {
     width: 50%;
@@ -201,7 +211,8 @@ button {
   position: absolute;
   width: 100%;
   height: 100vh;
-  overflow: scroll; }
+  overflow: scroll;
+  padding-bottom: 54px; }
 @media (min-width: 800px) {
   .l-panel-bottom, .l-panel-top {
     width: 50%;
@@ -213,20 +224,26 @@ button {
   top: 100vh; }
 
 .footer {
-  height: 10vh;
+  height: 48px;
   width: 100%;
   position: absolute;
   bottom: 0;
   z-index: 2;
   text-align: center;
-  line-height: 5vh;
+  line-height: 16px;
   vertical-align: middle;
   color: #fff;
   background-color: #000;
-  font-size: 10.66667px; }
+  font-size: 10.66667px;
+  margin-bottom: 0; }
 @media (min-width: 450px) {
   .footer {
-    font-size: 16px; } }
+    height: 72px;
+    font-size: 16px;
+    line-height: 24px; } }
+
+.footer a {
+  line-height: 16px; }
 
 .section-title, .work-title {
   width: 100%;
@@ -398,14 +415,40 @@ button {
   font-weight: 700;
   font-size: 24px;
   line-height: 81px;
-  text-align: left;
-  text-indent: 100px; }
+  text-align: center; }
+@media (min-width: 1200px) {
+  .skill-subtitle {
+    text-align: left;
+    text-indent: 100px; } }
 
-.skill-paragraph {
+.about-paragraph, .skill-paragraph, .skill-intro {
   width: 83%;
-  text-align: center;
+  line-height: 24px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  text-align: left;
+  text-indent: 2.25em; }
+@media (min-width: 450px) {
+  .about-paragraph, .skill-paragraph, .skill-intro {
+    width: 66%; } }
+@media (min-width: 800px) {
+  .about-paragraph, .skill-paragraph, .skill-intro {
+    width: 83%; } }
+@media (min-width: 1200px) {
+  .about-paragraph, .skill-paragraph, .skill-intro {
+    width: 66%;
+    text-align: left; } }
+
+.about-paragraph {
+  margin-bottom: 16px; }
+
+.skills-list {
+  text-align: center;
+  line-height: 24px; }
+@media (min-width: 1200px) {
+  .skills-list {
+    text-align: left;
+    text-indent: 100px; } }
 
 .contact-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/contact.jpg");

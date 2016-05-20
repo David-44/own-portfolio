@@ -26,6 +26,18 @@ h1, h2, h3 {
     font-family: $font-family--titles;
 }
 
+q {
+  font-style: italic;
+  font-weight: $font-weight--thin;
+
+  &:before {
+    content:"\201C";
+  }
+
+  &:after {
+    content: "\201D";
+  }
+}
 
 
 /**

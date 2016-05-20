@@ -12,13 +12,50 @@
 
 .skill-subtitle {
 	@include small-title;
-	text-align: left;
-    text-indent: 100px;
+	text-align: center;
+    
+    @include breakpoint(map-get($break, large)) {
+        text-align: left;
+        text-indent: 100px;
+    }
 }
 
-.skill-paragraph {
+.about-paragraph,
+.skill-paragraph,
+.skill-intro {
 	width: 83%;
-	text-align: center;
+	line-height: $font-size--large;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: left;
+	text-indent: 2.25em;
+	@include breakpoint(map-get($break, small)) {
+        width: 66%;
+	}
+	@include breakpoint(map-get($break, medium)) {
+        width: 83%;
+	}
+	@include breakpoint(map-get($break, large)) {
+        width: 66%;
+        text-align: left;
+	}
 }
+
+.about-paragraph {
+	margin-bottom: $font-size--base;
+}
+
+.skills-list {
+	text-align: center;
+	line-height: $font-size--large;
+	@include breakpoint(map-get($break, large)) {
+		text-align: left;
+		text-indent: 100px;
+    }
+}
+
+
+
+
+
+
