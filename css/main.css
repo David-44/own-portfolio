@@ -278,21 +278,16 @@ button {
 
 .nav-indicator {
   position: fixed;
-  top: calc(39% + 12px);
-  height: 22%;
+  height: 100%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
   width: 10.66667px;
-  background-color: #999;
-  border-radius: 5.33333px; }
+  background-color: #999; }
 
 .nav-slider {
   position: relative;
   top: 0%;
   width: 100%;
   height: 25%;
-  border-radius: 5.33333px;
   background-color: #DDD; }
 
 .section-title, .work-title {
