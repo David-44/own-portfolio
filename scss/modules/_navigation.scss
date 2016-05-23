@@ -1,0 +1,49 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the navigation component.
+// -----------------------------------------------------------------------------
+
+.nav {
+	position: fixed;
+	height: 100vh;
+	z-index: 100;
+	@include breakpoint(map-get($break, medium)) {
+        left: 50%;
+        transform: translate(-50%);
+	}
+}
+
+.nav-link {
+	box-sizing: content-box;
+	position: fixed;
+	width: $font-size--large;
+	height: $font-size--large;
+	padding: 10px 0;
+	transform: translate(-150%);
+
+}
+
+.nav-arrow {
+	fill: gray;
+	width: 100%;
+
+}
+
+.nav-down {
+	top: calc(66.66% - 12px); // Sass doesn't compile variables inside of calc, so I have to use 12px
+}
+
+.nav-up {
+	top: calc(33.33% - 12px); // Same here
+}
+
+/* Styling the range nav */
+
+.nav-indicator {
+	position: fixed;
+	transform-origin: 0;
+	top: 39%;  // 50% - 22% / 2
+	width: 22vh;
+	transform: rotate(90deg) translateY($font-size--large);
+	-webkit-appearance: none;
+}
+

@@ -245,6 +245,46 @@ button {
 .footer a {
   line-height: 16px; }
 
+.nav {
+  position: fixed;
+  height: 100vh;
+  z-index: 100; }
+@media (min-width: 800px) {
+  .nav {
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%); } }
+
+.nav-link {
+  box-sizing: content-box;
+  position: fixed;
+  width: 24px;
+  height: 24px;
+  padding: 10px 0;
+  -webkit-transform: translate(-150%);
+  transform: translate(-150%); }
+
+.nav-arrow {
+  fill: gray;
+  width: 100%; }
+
+.nav-down {
+  top: calc(66.66% - 12px); }
+
+.nav-up {
+  top: calc(33.33% - 12px); }
+
+/* Styling the range nav */
+.nav-indicator {
+  position: fixed;
+  -webkit-transform-origin: 0;
+  transform-origin: 0;
+  top: 39%;
+  width: 22vh;
+  -webkit-transform: rotate(90deg) translateY(24px);
+  transform: rotate(90deg) translateY(24px);
+  -webkit-appearance: none; }
+
 .section-title, .work-title {
   width: 100%;
   text-align: center;
