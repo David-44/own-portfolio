@@ -273,6 +273,7 @@ button {
   top: calc(66.66% - 12px); }
 
 .nav-up {
+  display: none;
   top: calc(33.33% - 12px); }
 
 .nav-indicator {

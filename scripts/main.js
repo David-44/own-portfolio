@@ -120,45 +120,47 @@ $widgetsLinks.click(function(event) {
  ***************************************************************************/
 
 var slider = $("#nav-slider"),
-     navUp = $("#nav-up"),
-   navDown = $("#nav-down");
+   //   navUp = $("#nav-up"),
+   // navDown = $("#nav-down"),
 
-var wintop = 0;
+    wintop = 0;
 
 $(window).scroll(function(event) {
     wintop = Math.round($(window).scrollTop() / $(document).height() * 100);
     slider.css("top", wintop + "%");
-    if (wintop <= 12) {
-        navUp.hide();
-    } else if (wintop >= 63) {
-        navDown.hide();
-    } else {
-        navUp.show();
-        navDown.show();
-    }
+    // if (wintop <= 12) {
+    //     navUp.hide();
+    // }
+    // if (wintop >= 63) {
+    //     navDown.hide();
+    // }
+    // if (wintop > 12 && wintop < 63) {
+    //     navUp.show();
+    //     navDown.show();
+    // }
 });
 
-navUp.click(function() {
-    event.preventDefault();
-    if (wintop <= 25) {
-        $(window).scrollTop(0);
-    } else if (wintop <= 50) {
-        $(window).scrollTop($(document).height() * 0.25);
-    } else {
-        $(window).scrollTop($(document).height() * 0.5);
-    }
-});
+// navUp.click(function() {
+//     event.preventDefault();
+//     if (wintop <= 25) {
+//         $(window).scrollTop(0);
+//     } else if (wintop <= 50) {
+//         $(window).scrollTop($(document).height() * 0.25);
+//     } else {
+//         $(window).scrollTop($(document).height() * 0.5);
+//     }
+// });
 
-navDown.click(function() {
-    event.preventDefault();
-    if (wintop >= 50) {
-        $(window).scrollTop($(document).height() * 0.75);
-    } else if (wintop >= 25) {
-        $(window).scrollTop($(document).height() * 0.5);
-    } else {
-        $(window).scrollTop($(document).height() * 0.25);
-    }
-});
+// navDown.click(function() {
+//     event.preventDefault();
+//     if (wintop >= 50) {
+//         $(window).scrollTop($(document).height() * 0.75);
+//     } else if (wintop >= 25) {
+//         $(window).scrollTop($(document).height() * 0.5);
+//     } else {
+//         $(window).scrollTop($(document).height() * 0.25);
+//     }
+// });
 
 
 
