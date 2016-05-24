@@ -1,6 +1,10 @@
-// -----------------------------------------------------------------------------
-// This file contains very basic styles.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * BASE STYLES
+ ***************************************************************************/
+
+
+
+
 
 /**
  * Set up a decent box model on the root element
@@ -12,6 +16,9 @@ html {
 *, *::before, *::after {
   box-sizing: inherit; 
 }
+
+
+
 
 
 /**
@@ -39,6 +46,25 @@ q {
   }
 }
 
+span {
+  vertical-align: middle;
+}
+
+
+
+
+
+/*
+ * Basic positions
+ */
+
+section, header{
+  position: relative;
+}
+
+
+
+
 
 /**
  * Basic styles for links
@@ -48,19 +74,10 @@ a {
   display: inline-block;
   text-decoration: none;
   line-height: $font-size--big;
-
-  &.selected {
-    font-size: $font-size--large;  
-  }
 } 
 
-/*
- * Basic positions
- */
 
-section, header, div {
-  position: relative;
-}
+
 
 
 /*

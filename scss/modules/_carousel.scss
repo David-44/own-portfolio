@@ -1,13 +1,12 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the carousel component.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * CAROUSEL STYLES
+ ***************************************************************************/
 
 .carousel-container {
 	position: absolute;
 	width: 100%;
 	max-width: 600px;
-	left: 50%;
-	transform: translate(-50%);
+	@include horizontal-center();
 }
 
 .carousel,
@@ -27,9 +26,8 @@
 	position: absolute;
 	width: 300px;
 	top: 93px;  // Magic number
-	left: 50%;
-	transform: translate(-50%);
 	z-index: 10;
+	@include horizontal-center();
 }
 
 .carousel-left-link,

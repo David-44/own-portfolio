@@ -33,6 +33,15 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
+/***************************************************************************
+ * SASS VARIABLES
+ ***************************************************************************/
+/***************************************************************************
+ * SASS MIXINS
+ ***************************************************************************/
+/***************************************************************************
+ * BASE STYLES
+ ***************************************************************************/
 /**
  * Set up a decent box model on the root element
  */
@@ -60,6 +69,15 @@ q:before {
 q:after {
   content: "\201D"; }
 
+span {
+  vertical-align: middle; }
+
+/*
+ * Basic positions
+ */
+section, header {
+  position: relative; }
+
 /**
  * Basic styles for links
  */
@@ -68,14 +86,6 @@ a {
   display: inline-block;
   text-decoration: none;
   line-height: 36px; }
-a.selected {
-  font-size: 24px; }
-
-/*
- * Basic positions
- */
-section, header, div {
-  position: relative; }
 
 /*
  * Basic button styles
@@ -84,6 +94,9 @@ button {
   outline: none;
   cursor: pointer; }
 
+/***************************************************************************
+ * HELPERS STYLES
+ ***************************************************************************/
 /* Styles used for hiding or showing elements
 ***************************************************/
 /*
@@ -110,13 +123,8 @@ button {
 .hidden {
   display: none; }
 
-.hidden-menu {
-  display: none; }
-.selected + .hidden-menu {
-  display: block; }
-
 /*
- * Selects item
+ * Displays item
  */
 .displayed {
   display: inline-block; }
@@ -169,6 +177,9 @@ button {
     -webkit-filter: none;
     filter: none; } }
 
+/***************************************************************************
+ * LAYOUT STYLES
+ ***************************************************************************/
 .l-panel_superposed, .l-panel_following {
   overflow: scroll;
   position: relative;
@@ -221,19 +232,22 @@ button {
 .l-panel-bottom {
   top: 100vh; }
 
+/***************************************************************************
+ * FOOTER STYLES
+ ***************************************************************************/
 .footer {
   height: 48px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  z-index: 20;
+  z-index: 100;
+  margin-bottom: 0;
   text-align: center;
+  font-size: 10.66667px;
   line-height: 16px;
   vertical-align: middle;
   color: #fff;
-  background-color: #000;
-  font-size: 10.66667px;
-  margin-bottom: 0; }
+  background-color: #000; }
 @media (min-width: 450px) {
   .footer {
     height: 72px;
@@ -243,21 +257,24 @@ button {
 .footer a {
   line-height: 16px; }
 
-.nav-container {
+/***************************************************************************
+ * NAVIGATION INDICATOR STYLES
+ ***************************************************************************/
+.indicator-container {
   display: none; }
 @media (min-width: 800px) {
-  .nav-container {
+  .indicator-container {
     display: block;
     position: fixed;
     height: 100vh;
     width: 7.11111px;
     z-index: 10;
     left: 50%;
-    -webkit-transform: translate(-25%);
-    transform: translate(-25%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
     background-color: #999; } }
 
-.nav-slider {
+.indicator-slider {
   position: fixed;
   top: 0%;
   width: 100%;
@@ -274,6 +291,9 @@ button {
   .page-indicator {
     display: none; } }
 
+/***************************************************************************
+ * TITLES STYLES
+ ***************************************************************************/
 .section-title, .work-title {
   width: 100%;
   text-align: center;
@@ -299,13 +319,16 @@ button {
   line-height: 81px;
   text-align: center; }
 
+/***************************************************************************
+ * CAROUSEL STYLES
+ ***************************************************************************/
 .carousel-container {
   position: absolute;
   width: 100%;
   max-width: 600px;
   left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%); }
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 .carousel, .carousel-item, .carousel-thumbnail {
   position: relative;
@@ -319,10 +342,10 @@ button {
   position: absolute;
   width: 300px;
   top: 93px;
+  z-index: 10;
   left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
-  z-index: 10; }
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%); }
 
 .carousel-left-link, .carousel-right-link {
   position: absolute;
@@ -336,12 +359,18 @@ button {
 .carousel-right-link {
   right: 0; }
 
+/***************************************************************************
+ * WIDGET STYLES
+ ***************************************************************************/
 .widget {
   width: 300px;
   height: 400px;
   margin-left: auto;
   margin-right: auto; }
 
+/***************************************************************************
+ * HEADER PANEL STYLES
+ ***************************************************************************/
 .header {
   background-color: #000;
   color: #fff;
@@ -377,6 +406,9 @@ button {
 .header-subtitle {
   font-size: 16px; }
 
+/***************************************************************************
+ * WORK PANEL STYLES
+ ***************************************************************************/
 .work {
   background-color: #fff;
   background-image: -webkit-linear-gradient(top, #ffffff 50%, #000000 50%);
@@ -441,6 +473,9 @@ button {
     transform: translate(-100%);
     background-color: red; } }
 
+/***************************************************************************
+ * PERSO PANEL STYLES
+ ***************************************************************************/
 .perso {
   background-color: #fff;
   background-image: -webkit-linear-gradient(top, #ffffff 50%, #000000 50%);
@@ -461,12 +496,12 @@ button {
     text-indent: 100px; } }
 
 .about-paragraph, .skill-paragraph, .skill-intro {
-  width: 83%;
   line-height: 24px;
   margin-left: auto;
   margin-right: auto;
   text-align: left;
-  text-indent: 2.25em; }
+  text-indent: 2.25em;
+  width: 83%; }
 @media (min-width: 450px) {
   .about-paragraph, .skill-paragraph, .skill-intro {
     width: 66%; } }
@@ -489,6 +524,9 @@ button {
     text-align: left;
     text-indent: 100px; } }
 
+/***************************************************************************
+ * CONTACT PANEL STYLES
+ ***************************************************************************/
 .contact-title {
   width: 100%;
   text-align: center;
@@ -521,8 +559,8 @@ button {
   max-width: 600px;
   height: auto;
   left: 50%;
-  -webkit-transform: translate(-50%);
-  transform: translate(-50%);
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
   text-indent: 16px; }
 @media (min-width: 450px) {
   .contact-list {
@@ -533,9 +571,6 @@ button {
     left: 25%; } }
 
 .contact-item {
-  line-height: 81px; }
-
-.contact-detail {
   line-height: 81px;
   vertical-align: middle; }
 
@@ -544,6 +579,9 @@ button {
   height: 36px;
   vertical-align: middle; }
 
+/***************************************************************************
+ * CALCULATOR STYLES
+ ***************************************************************************/
 /* general layout and style
 ****************************/
 .cal-calculator {
@@ -645,6 +683,9 @@ button {
 .cal-button:focus {
   outline: 0; }
 
+/***************************************************************************
+ * SIMON GAME STYLES
+ ***************************************************************************/
 /* Base styles
 ********************************************/
 .sim-wrap {
@@ -769,6 +810,9 @@ button {
   background-image: -webkit-radial-gradient(top right circle, rgba(255, 255, 255, 0.5) 0%, #ffffff 100%);
   background-image: radial-gradient(circle at top right, rgba(255, 255, 255, 0.5) 0%, #ffffff 100%); }
 
+/***************************************************************************
+ * NOUGHT & CROSSES STYLES
+ ***************************************************************************/
 .tic-wrap {
   font-size: 30px;
   text-align: center;
@@ -816,6 +860,9 @@ button {
 .tic-message {
   margin-bottom: 50px; }
 
+/***************************************************************************
+ * CALCULATOR STYLES
+ ***************************************************************************/
 .wikipedia {
   font-family: TimesNewRoman, 'Times New Roman', Times, Baskerville, Georgia, serif;
   text-align: center;

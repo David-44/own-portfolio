@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the work panel of the site/application.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * WORK PANEL STYLES
+ ***************************************************************************/
 
 .work {
 	background-color: $white;
@@ -33,16 +33,15 @@
     }
 }
 
-.work-description {
+.work-description,
+.widget-description {
     width: 66%;
-    margin-left: auto;
-    margin-right: auto;
+    @include margin-center();
     line-height: $font-size--large;
     margin-top: $font-size--base;
 }
 
 .widget-description {
-    @extend .work-description;
     width: 300px;
     text-align: center;
 }

@@ -18,6 +18,8 @@ gulp.task("concatScripts", function() {
         'scripts/jquery-mobile.js',
         'scripts/helpers.js',
         'scripts/carousel.js',
+        'scripts/work-panel.js',
+        'scripts/indicators.js',
 
         'scripts/widgets/calculator.js',
         'scripts/widgets/simon.js',

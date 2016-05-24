@@ -1,47 +1,10 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass mixins.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * SASS MIXINS
+ ***************************************************************************/
 
-/// Event wrapper
-/// @author Harry Roberts
-/// @param {Bool} $self [false] - Whether or not to include current selector
-/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
-@mixin on-event($self: false) {
-  @if $self {
-    &,
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  } @else {
-    &:hover,
-    &:active,
-    &:focus {
-      @content;
-    }
-  }
-}
 
-/// Make a context based selector a little more friendly
-/// @author Hugo Giraudel
-/// @param {String} $context
-@mixin when-inside($context) {
-  #{$context} & {
-    @content;
-  }
-}
 
-// Generate modifier color classes.
-// Refers to the $ui_colors in the _variables sheet
 
-@mixin bg-colors($map) {
-  @each $theme, $color in $map {
-    &--#{$theme} {
-      background-color: $color;    
-    }
-  }
-}
 
 // Positions and adds effect to a banner image
 @mixin banner-dark($image) {
@@ -59,6 +22,35 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+
+
+
+
+
+// Centers an absolutely positioned element vertically or horizontally
+@mixin horizontal-center() {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin vertical-center() {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// Centers an element using margins auto :
+@mixin margin-center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+
+
+
 
 
 

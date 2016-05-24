@@ -1,6 +1,9 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the Contact of the site/application.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * CONTACT PANEL STYLES
+ ***************************************************************************/
+
+
+
 
 .contact-title {
 	@include big_title;
@@ -24,10 +27,9 @@
 	min-width: 300px;
 	max-width: 600px;
 	height: auto;
-	left: 50%;
-	transform: translate(-50%);
-	text-indent: $font-size--base;
+	@include horizontal-center();
 
+	text-indent: $font-size--base;
 	@include breakpoint(map-get($break, small))  {
         text-indent: 0;
 	}
@@ -40,10 +42,6 @@
 
 .contact-item {
 	line-height: $font-size--title;
-}
-
-.contact-detail {
-	line-height: $font-size--title;
 	vertical-align: middle;
 }
 
@@ -52,3 +50,5 @@
 	height: $font-size--big;
 	vertical-align: middle;
 }
+
+

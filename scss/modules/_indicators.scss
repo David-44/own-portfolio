@@ -1,8 +1,8 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the navigation component.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * NAVIGATION INDICATOR STYLES
+ ***************************************************************************/
 
-.nav-container {
+.indicator-container {
 	display: none;
 	@include breakpoint(map-get($break, medium)) {
 		display: block;
@@ -10,13 +10,12 @@
 	    height: 100vh;
 	    width: $font-size--x-small;
 	    z-index: 10;
-        left: 50%;
-        transform: translate(-25%);
+        @include horizontal-center();
         background-color: $gray;
 	}
 }
 
-.nav-slider {
+.indicator-slider {
 	position: fixed;
 	top: 0%;
 	width: 100%;

@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the personal part of the site/application.
-// -----------------------------------------------------------------------------
+/***************************************************************************
+ * PERSO PANEL STYLES
+ ***************************************************************************/
 
 .perso {
     background-color: $white;
@@ -23,12 +23,12 @@
 .about-paragraph,
 .skill-paragraph,
 .skill-intro {
-	width: 83%;
 	line-height: $font-size--large;
-	margin-left: auto;
-	margin-right: auto;
+	@include margin-center();
 	text-align: left;
 	text-indent: 2.25em;
+
+	width: 83%;
 	@include breakpoint(map-get($break, small)) {
         width: 66%;
 	}

@@ -2,6 +2,8 @@
  * CAROUSEL
  ***************************************************************************/
 
+/* Takes a jQuery collection of objects as argument */
+
 var carousel = function($collection) {
 
     'use strict';
