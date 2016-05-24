@@ -5,25 +5,19 @@
 .header {
     background-color: $black;
     color: $white;
-    overflow: hidden; 
-}
-
-.header-img {
-    @include banner-dark('banner-grey.jpg');
-    @include breakpoint(map-get($break, medium)) {
-        @include banner-light('banner-grey.jpg');
-    }
+    overflow: hidden;
 }
 
 .header-logo {
-	z-index: 1;
-	top: 33.33%;
 	text-align: center;
 }
 
-.header-title { 
+
+.header-title {
+	margin-top: 16.7vh;
 	font-size: $font-size--big;
 	line-height: $font-size--huge;
+
 	
 	@include breakpoint(map-get($break, small))  {
 	    font-size: $font-size--huge;
@@ -35,6 +29,23 @@
 	font-size: $font-size--base;
 }
 
+.header-photo {
+    @include margin-center();
+    margin-top: $font-size--title;
+
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 6px solid $bright-orange;
+}
+
+
+.header-banner {
+    @include banner-dark('banner-grey.jpg');
+    @include breakpoint(map-get($break, medium)) {
+        @include banner-light('banner-grey.jpg');
+    }
+}
 
 
 

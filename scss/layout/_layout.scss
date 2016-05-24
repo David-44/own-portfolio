@@ -45,6 +45,7 @@
 // Left half panel, on top
 .l-panel-left {
     top: 0;
+    z-index: 1;
     @include panel-half {
     	left: 0;
     }

@@ -61,7 +61,7 @@ $bright-orange: #ff8000 !default; // hsla(30, 100%, 50%, 1)
 $bright-blue  : #007fff !default; // hsla(210, 100%, 50%, 1)
 
 // Color Usage
-
+$header-blue: lighten(adjust-saturation($bright-blue, -50%), 20%);
 
 
 
