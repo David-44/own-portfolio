@@ -52,10 +52,13 @@ $font-size--title      : $font-size--base * 1.5 * 1.5 * 1.5 * 1.5 !default;
 
 // Descriptive Base Colors
 
-$white : #fff !default;
-$black : #000 !default;
-$gray  : #999 !default;
+$white     : #fff !default;
+$black     : #000 !default;
+$gray      : #999 !default;
 $light-gray: #DDD !default;
+
+$bright-orange: #ff8000 !default; // hsla(30, 100%, 50%, 1)
+$bright-blue  : #007fff !default; // hsla(210, 100%, 50%, 1)
 
 // Color Usage
 

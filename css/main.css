@@ -510,8 +510,7 @@ button {
     width: 83%; } }
 @media (min-width: 1200px) {
   .about-paragraph, .skill-paragraph, .skill-intro {
-    width: 66%;
-    text-align: left; } }
+    width: 66%; } }
 
 .about-paragraph {
   margin-bottom: 16px; }
@@ -522,7 +521,7 @@ button {
 @media (min-width: 1200px) {
   .skills-list {
     text-align: left;
-    text-indent: 100px; } }
+    text-indent: 150px; } }
 
 /***************************************************************************
  * CONTACT PANEL STYLES
