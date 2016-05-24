@@ -72,19 +72,17 @@ a.selected {
   font-size: 24px; }
 
 /*
+ * Basic positions
+ */
+section, header, div {
+  position: relative; }
+
+/*
  * Basic button styles
  */
 button {
   outline: none;
   cursor: pointer; }
-
-/**
- * Clear inner floats
- */
-.clearfix::after {
-  clear: both;
-  content: '';
-  display: table; }
 
 /* Styles used for hiding or showing elements
 ***************************************************/
@@ -228,7 +226,7 @@ button {
   width: 100%;
   position: absolute;
   bottom: 0;
-  z-index: 2;
+  z-index: 20;
   text-align: center;
   line-height: 16px;
   vertical-align: middle;
@@ -245,50 +243,36 @@ button {
 .footer a {
   line-height: 16px; }
 
-.nav {
+.nav-container {
   display: none; }
 @media (min-width: 800px) {
-  .nav {
+  .nav-container {
     display: block;
     position: fixed;
     height: 100vh;
-    width: 24px;
-    z-index: 100;
+    width: 7.11111px;
+    z-index: 10;
     left: 50%;
-    -webkit-transform: translate(-150%);
-    transform: translate(-150%); } }
-
-.nav-link {
-  box-sizing: content-box;
-  position: fixed;
-  width: 24px;
-  height: 24px;
-  padding: 10px 0; }
-
-.nav-arrow {
-  fill: #999;
-  width: 100%; }
-
-.nav-down {
-  top: calc(66.66% - 12px); }
-
-.nav-up {
-  display: none;
-  top: calc(33.33% - 12px); }
-
-.nav-indicator {
-  position: fixed;
-  height: 100%;
-  left: 50%;
-  width: 10.66667px;
-  background-color: #999; }
+    -webkit-transform: translate(-25%);
+    transform: translate(-25%);
+    background-color: #999; } }
 
 .nav-slider {
-  position: relative;
+  position: fixed;
   top: 0%;
   width: 100%;
-  height: 25%;
+  height: 0%;
   background-color: #DDD; }
+
+.page-indicator {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  color: #999;
+  z-index: 1; }
+@media (min-width: 800px) {
+  .page-indicator {
+    display: none; } }
 
 .section-title, .work-title {
   width: 100%;

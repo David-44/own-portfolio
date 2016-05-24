@@ -55,6 +55,15 @@ a {
 } 
 
 /*
+ * Basic positions
+ */
+
+section, header, div {
+  position: relative;
+}
+
+
+/*
  * Basic button styles
  */
 

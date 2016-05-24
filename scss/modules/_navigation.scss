@@ -2,62 +2,40 @@
 // This file contains all styles related to the navigation component.
 // -----------------------------------------------------------------------------
 
-.nav {
+.nav-container {
 	display: none;
 	@include breakpoint(map-get($break, medium)) {
 		display: block;
 		position: fixed;
 	    height: 100vh;
-	    width: $font-size--large;
-	    z-index: 100;
+	    width: $font-size--x-small;
+	    z-index: 10;
         left: 50%;
-        transform: translate(-150%);
+        transform: translate(-25%);
+        background-color: $gray;
 	}
 }
 
-.nav-link {
-	box-sizing: content-box;
-	position: fixed;
-	width: $font-size--large;
-	height: $font-size--large;
-	padding: 10px 0;
-}
-
-.nav-arrow {
-	fill: $gray;
-	width: 100%;
-
-}
-
-.nav-down {
-	top: calc(66.66% - 12px); // Sass doesn't compile variables inside of calc, so I have to use 12px
-}
-
-.nav-up {
-	display: none;
-	top: calc(33.33% - 12px); // Same here
-}
-
-
-.nav-indicator {
-	position: fixed;
-	// top: calc(39% + 12px);  // 50% - 22% / 2, 12px, same as before...
-	height: 100%;
-	left: 50%;
-	// transform: translate(-50%);
-	width: $font-size--small;
-	background-color: $gray;
-	// border-radius: $font-size--small / 2;
-}
-
 .nav-slider {
-	position: relative;
+	position: fixed;
 	top: 0%;
 	width: 100%;
-	height: 25%;
-	// border-radius: $font-size--small / 2;
+	height: 0%;
 	background-color: $light-gray;
 }
+
+.page-indicator {
+	position: fixed;
+	top: $font-size--base;
+	right: $font-size--base;
+	color: $gray;
+	z-index: 1;
+	@include breakpoint(map-get($break, medium)) {
+		display: none;
+	}
+}
+
+
 
 
 
