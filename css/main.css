@@ -178,6 +178,39 @@ button {
     filter: none; } }
 
 /***************************************************************************
+ * GENRAL ANIMATIONS
+ ***************************************************************************/
+@-webkit-keyframes transparency {
+  to {
+    opacity: 0; } }
+@keyframes transparency {
+  to {
+    opacity: 0; } }
+@-webkit-keyframes opacity {
+  to {
+    opacity: 1; } }
+@keyframes opacity {
+  to {
+    opacity: 1; } }
+@-webkit-keyframes blurout {
+  0% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  100% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); } }
+@keyframes blurout {
+  0% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  100% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); } }
+/***************************************************************************
  * LAYOUT STYLES
  ***************************************************************************/
 .l-panel_superposed, .l-panel_following {
@@ -378,14 +411,33 @@ button {
   overflow: hidden; }
 
 .header-logo {
+  position: relative;
+  text-align: center;
+  height: 50vh; }
+
+.header-title, .header-subtitle {
+  position: relative;
+  opacity: 0;
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  -webkit-animation: blurin 3s 2.5s forwards;
+  animation: blurin 3s 2.5s forwards; }
+
+.temp-title {
+  position: absolute;
+  -webkit-animation: blurout 1s 2s forwards;
+  animation: blurout 1s 2s forwards; }
+
+.header-title, .temp-title, .header-subtitle {
+  top: 16.7vh;
+  width: 100%;
   text-align: center; }
 
-.header-title {
-  margin-top: 16.7vh;
+.header-title, .temp-title {
   font-size: 36px;
   line-height: 54px; }
 @media (min-width: 450px) {
-  .header-title {
+  .header-title, .temp-title {
     font-size: 54px;
     line-height: 81px; } }
 
@@ -393,13 +445,19 @@ button {
   font-size: 16px; }
 
 .header-photo {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 81px;
-  width: 200px;
-  height: 200px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  opacity: 0;
+  max-width: 50vh;
+  max-height: 50vh;
   border-radius: 50%;
-  border: 6px solid #ff8000; }
+  border: 8px solid #999;
+  -webkit-animation: size 4.5s 1s forwards;
+  animation: size 4.5s 1s forwards; }
 
 .header-banner {
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/banner-grey.jpg");
@@ -415,6 +473,100 @@ button {
     background-position: center center;
     background-repeat: no-repeat; } }
 
+.header-banner::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: " ";
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  -webkit-animation: transparency 1s 0.5s forwards;
+  animation: transparency 1s 0.5s forwards;
+  background-color: #000; }
+@media (min-width: 800px) {
+  .header-banner::after {
+    background-color: #fff; } }
+
+@-webkit-keyframes size {
+  10% {
+    opacity: 0; }
+  20% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0; }
+  80% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    border: 8px solid #999; }
+  100% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    border-color: #ff8000; } }
+
+@keyframes size {
+  10% {
+    opacity: 0; }
+  20% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0; }
+  80% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    border: 8px solid #999; }
+  100% {
+    opacity: 1;
+    width: 200px;
+    height: 200px;
+    top: 0;
+    border-color: #ff8000; } }
+@-webkit-keyframes blurin {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); }
+  33% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  66% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    text-shadow: none; }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff; } }
+@keyframes blurin {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); }
+  33% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
+  66% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    text-shadow: none; }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff; } }
 /***************************************************************************
  * WORK PANEL STYLES
  ***************************************************************************/

@@ -9,15 +9,37 @@
 }
 
 .header-logo {
+	position: relative;
 	text-align: center;
+	height: 50vh;
 }
 
 
-.header-title {
-	margin-top: 16.7vh;
+.header-title,
+.header-subtitle {
+	position: relative;
+	opacity: 0;
+    filter: blur(20px);
+    animation: blurin 3s 2.5s forwards;
+}
+
+.temp-title {
+	position: absolute;
+	animation: blurout 1s 2s forwards;
+}
+
+.header-title,
+.temp-title,
+.header-subtitle {
+	top: 16.7vh;
+	width: 100%;
+    text-align: center;
+}
+
+.header-title,
+.temp-title {
 	font-size: $font-size--big;
 	line-height: $font-size--huge;
-
 	
 	@include breakpoint(map-get($break, small))  {
 	    font-size: $font-size--huge;
@@ -25,18 +47,24 @@
 	}
 }
 
-.header-subtitle { 
+.header-subtitle {
 	font-size: $font-size--base;
 }
 
 .header-photo {
-    @include margin-center();
-    margin-top: $font-size--title;
+	position: relative;
+    @include horizontal-center();
 
-	width: 200px;
-	height: 200px;
+	width: 0;
+	height: 0;
+    opacity: 0;
+    max-width: 50vh;
+    max-height: 50vh;
+
 	border-radius: 50%;
-	border: 6px solid $bright-orange;
+	border: 8px solid $gray;
+
+    animation: size 4.5s 1s forwards;
 }
 
 
@@ -46,6 +74,79 @@
         @include banner-light('banner-grey.jpg');
     }
 }
+
+.header-banner::after {
+	position: absolute;
+	top: 0;
+	right: 0;
+	content: " ";
+	width: 100%;
+	height: 100vh;
+	z-index: 5;
+	animation: transparency 1s 0.5s forwards;
+
+	background-color: $black;
+	@include breakpoint(map-get($break, medium))  {
+        background-color: $white;
+	}
+}
+
+
+
+
+// Animations specific to the header
+
+@keyframes size {
+    10% {
+    	opacity: 0;
+    }
+
+	20% {
+		opacity: 1;
+		width: 200px;
+		height: 200px;
+		top: 0;
+	}
+    80% {
+    	opacity: 1;
+		width: 200px;
+		height: 200px;
+		top: 0;
+		border: 8px solid $gray;
+    }
+
+	100% {
+		opacity: 1;
+		width: 200px;
+		height: 200px;
+		top: 0;
+		border-color: $bright-orange;
+	}
+}
+
+@keyframes blurin {
+	0% {
+		opacity: 0;
+	    filter: blur(20px);
+	}
+	33% {
+		opacity: 1;
+		filter: blur(0px);
+	}
+	66% {
+		opacity: 1;
+		filter: blur(0px);
+		text-shadow: none;
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0px);
+		text-shadow: 0 0 5px $bright-blue, 0 0 10px $bright-blue, 0 0 15px $bright-blue;;
+	}
+}
+
+
+
 
 
 
