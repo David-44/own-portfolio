@@ -2,19 +2,28 @@
  * OPERATING THE CAROUSEL AND LINKS ON THE WORK PANEL
  ***************************************************************************
 
+/* OPERATION VARIABLES
+************************************************************************/
+
+var timing = 500;
+
+
+
+
+
 
 /* CAROUSEL ELEMENTS
 ************************************************************************/
 
-var $sitesContainer = $("#sites-container"),
-      sitesCarousel = carousel($("#carousel-sites .carousel-item")),
+    $sitesContainer = $("#sites-container"),
+      sitesCarousel = new Carousel($("#carousel-sites .carousel-item"), timing),
         $sitesLinks = $("#sites-list .js-work-link"),
 
   $widgetsContainer = $("#widgets-container"),
-    widgetsCarousel = carousel($("#carousel-widgets .carousel-item")),
-      $widgetsLinks = $("#widgets-list .js-work-link");
+    widgetsCarousel = new Carousel($("#carousel-widgets .carousel-item"), timing),
+      $widgetsLinks = $("#widgets-list .js-work-link"),
 
- 
+    currentCarousel = sitesCarousel;
 
 
 
@@ -30,11 +39,13 @@ var changeSelectedLink = function(collection, $container, $links, event) {
     $sitesLinks.removeClass("is-selected");
     $links.eq(collection.currentItemNumber).addClass("is-selected");
 
-    if (!$container.hasClass("hidden-medium")) {
-        $sitesContainer.removeClass("hidden-medium");
-        $widgetsContainer.removeClass("hidden-medium");
-        $container.addClass("hidden-medium");
-    }
+    // if (!$container.hasClass("hidden-medium")) {
+    //     setTimeout(function() {
+    //         $sitesContainer.removeClass("hidden-medium");
+    //         $widgetsContainer.removeClass("hidden-medium");
+    //         $container.addClass("hidden-medium");
+    //     }, 500);
+    // }
 };
 
 var changeSelectedSite = function(event) {
@@ -72,8 +83,16 @@ $("#carousel-sites").on( "swiperight", function(event) {
 });
 
 $sitesLinks.click(function(event) {
-    sitesCarousel.changeItem($(event.target).data("num"));
     changeSelectedSite(event);
+    sitesCarousel.changeItem($(event.target).data("num"), "blur-out", "blur-in");
+    if (sitesCarousel !== currentCarousel) {
+        widgetsCarousel.blurCurrentItem("blur-out");
+        setTimeout(function() {
+            $widgetsContainer.addClass("hidden-medium");
+            $sitesContainer.removeClass("hidden-medium");
+        }, timing);
+        currentCarousel = sitesCarousel;
+    }
 });
 
 
@@ -104,8 +123,16 @@ $("#carousel-widgets").on( "swiperight", function(event) {
 });
 
 $widgetsLinks.click(function(event) {
-    widgetsCarousel.changeItem($(event.target).data("num"));
-    changeSelectedWidget(event);
+    changeSelectedSite(event);
+    widgetsCarousel.changeItem($(event.target).data("num"), "blur-out", "blur-in");
+    if (widgetsCarousel !== currentCarousel) {
+        sitesCarousel.blurCurrentItem("blur-out");
+        setTimeout(function() {
+            $sitesContainer.addClass("hidden-medium");
+            $widgetsContainer.removeClass("hidden-medium");
+        }, timing);
+        currentCarousel = widgetsCarousel;
+    }
 });
 
 

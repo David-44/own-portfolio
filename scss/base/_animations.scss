@@ -14,6 +14,17 @@
 	}
 }
 
+@keyframes blurin {
+	0% {
+		opacity: 0;
+	    filter: blur(20px);
+	}
+	100% {
+		opacity: 1;
+		filter: blur(0px);
+	}
+}
+
 @keyframes blurout {
 	0% {
 		opacity: 1;
@@ -23,4 +34,12 @@
 		opacity: 0;
 		filter: blur(20px);
 	}
+}
+
+.blur-in {
+	animation: blurin 1s forwards;
+}
+
+.blur-out {
+	animation: blurout 1s forwards;
 }

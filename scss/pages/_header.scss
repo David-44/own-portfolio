@@ -20,7 +20,7 @@
 	position: relative;
 	opacity: 0;
     filter: blur(20px);
-    animation: blurin 3s 2.5s forwards;
+    animation: headerin 3s 2.5s forwards;
 }
 
 .temp-title {
@@ -124,7 +124,7 @@
 	}
 }
 
-@keyframes blurin {
+@keyframes headerin {
 	0% {
 		opacity: 0;
 	    filter: blur(20px);

@@ -192,6 +192,24 @@ button {
 @keyframes opacity {
   to {
     opacity: 1; } }
+@-webkit-keyframes blurin {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); } }
+@keyframes blurin {
+  0% {
+    opacity: 0;
+    -webkit-filter: blur(20px);
+    filter: blur(20px); }
+  100% {
+    opacity: 1;
+    -webkit-filter: blur(0px);
+    filter: blur(0px); } }
 @-webkit-keyframes blurout {
   0% {
     opacity: 1;
@@ -210,6 +228,14 @@ button {
     opacity: 0;
     -webkit-filter: blur(20px);
     filter: blur(20px); } }
+.blur-in {
+  -webkit-animation: blurin 1s forwards;
+  animation: blurin 1s forwards; }
+
+.blur-out {
+  -webkit-animation: blurout 1s forwards;
+  animation: blurout 1s forwards; }
+
 /***************************************************************************
  * LAYOUT STYLES
  ***************************************************************************/
@@ -420,8 +446,8 @@ button {
   opacity: 0;
   -webkit-filter: blur(20px);
   filter: blur(20px);
-  -webkit-animation: blurin 3s 2.5s forwards;
-  animation: blurin 3s 2.5s forwards; }
+  -webkit-animation: headerin 3s 2.5s forwards;
+  animation: headerin 3s 2.5s forwards; }
 
 .temp-title {
   position: absolute;
@@ -529,7 +555,7 @@ button {
     height: 200px;
     top: 0;
     border-color: #ff8000; } }
-@-webkit-keyframes blurin {
+@-webkit-keyframes headerin {
   0% {
     opacity: 0;
     -webkit-filter: blur(20px);
@@ -548,7 +574,7 @@ button {
     -webkit-filter: blur(0px);
     filter: blur(0px);
     text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff; } }
-@keyframes blurin {
+@keyframes headerin {
   0% {
     opacity: 0;
     -webkit-filter: blur(20px);

@@ -1,49 +1,67 @@
 /***************************************************************************
- * CAROUSEL
+ * CAROUSEL CONSTRUCTOR
  ***************************************************************************/
 
 /* Takes a jQuery collection of objects as argument */
 
-var carousel = function($collection) {
-
-    'use strict';
-
-    var exports = {};
-	exports.currentItemNumber = 0; // Index of the current item in the jQUery object
-
-    
-   
-
-    /* Exports the change image functions */
-
-    exports.changeItem = function(newItemNumber) {
-        $collection.eq(exports.currentItemNumber).removeClass("displayed");
-        $collection.eq(exports.currentItemNumber).addClass("hidden");
-
-        exports.currentItemNumber = newItemNumber;
-
-        $collection.eq(exports.currentItemNumber).removeClass("hidden");
-        $collection.eq(exports.currentItemNumber).addClass("displayed");
-    };
-
-    exports.moveLeft = function(event) {
-    	if (exports.currentItemNumber === 0) {
-    		exports.changeItem($collection.length - 1);
-    	} else {
-    		exports.changeItem(exports.currentItemNumber - 1);
-    	}
-    };
-
-    exports.moveRight = function(event) {
-    	if (exports.currentItemNumber === $collection.length - 1) {
-    		exports.changeItem(0);
-    	} else {
-    		exports.changeItem(exports.currentItemNumber + 1);
-    	}
-    };
-
-    
-    return exports;
-
+var Carousel = function($collection, timing) {
+    this.$collection       = $collection; // The jQuery collection of items
+    this.timing            = timing;     // timing of blur functions
+    this.currentItemNumber = 0;          // Current item
 };
+
+// Blurs the current item using a blur CSS animation
+Carousel.prototype.blurCurrentItem = function(blurClass) {
+    var that = this;
+    this.$collection.eq(this.currentItemNumber).addClass(blurClass);
+    setTimeout(function() {
+        that.$collection.eq(that.currentItemNumber).removeClass("displayed " + blurClass);
+        that.$collection.eq(that.currentItemNumber).addClass("hidden");
+    }, this.timing);
+};
+
+// Shows the new item using a show CSS animation
+Carousel.prototype.showItem = function(itemNumber, showClass) {
+    var that = this;
+    this.currentItemNumber = itemNumber;
+    this.$collection.eq(this.currentItemNumber).addClass(showClass);
+    this.$collection.eq(this.currentItemNumber).removeClass("hidden");
+
+    setTimeout(function() {
+        that.$collection.eq(that.currentItemNumber).removeClass(showClass);
+        that.$collection.eq(that.currentItemNumber).addClass("displayed");
+    }, this.timing);
+};
+
+// Blurs the current item and shows the new one
+Carousel.prototype.changeItem = function(newItem, blurClass, showClass) {
+    var that = this;
+    this.blurCurrentItem(blurClass);
+    setTimeout(function() {
+        that.showItem(newItem, showClass);
+    }, this.timing);
+};
+
+// Changes to the previous item in the collection
+Carousel.prototype.moveLeft = function(event) {
+    if (this.currentItemNumber === 0) {
+        this.changeItem(this.$collection.length - 1, "blur-out", "blur-in");
+    } else {
+        this.changeItem(this.currentItemNumber - 1, "blur-out", "blur-in");
+    }
+};
+
+// Changes to the next item in the collection
+Carousel.prototype.moveRight = function(event) {
+    if (this.currentItemNumber === this.$collection.length - 1) {
+        this.changeItem(0, "blur-out", "blur-in");
+    } else {
+        this.changeItem(this.currentItemNumber + 1, "blur-out", "blur-in");
+    }
+};
+
+
+
+
+
 
