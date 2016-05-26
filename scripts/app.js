@@ -96,11 +96,11 @@ var timing = 500;
 ************************************************************************/
 
     $sitesContainer = $("#sites-container"), // Used only to add or remove hidden-medium class
-      sitesCarousel = new Carousel($("#carousel-sites .carousel-item"), timing),
+      sitesCarousel = new Carousel($("#carousel-sites .js-carousel-item"), timing),
         $sitesLinks = $("#sites-list .js-work-link"),
 
   $widgetsContainer = $("#widgets-container"), // Used only to add or remove hidden-medium class
-    widgetsCarousel = new Carousel($("#carousel-widgets .carousel-item"), timing),
+    widgetsCarousel = new Carousel($("#carousel-widgets .js-carousel-item"), timing),
       $widgetsLinks = $("#widgets-list .js-work-link");
 
 

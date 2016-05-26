@@ -50,7 +50,23 @@
     position: relative;
 }
 
+// Links styles
+
+.work-link {
+    transition: font-size $trans-duration, text-indent $trans-duration;
+}
+
+.work-link:not(.is-selected):hover,
+.work-link.is-selected {
+    font-size: $font-size--large;
+    text-indent: 75px - ($font-size--large - $font-size--base) / 2;
+}
+
+// Source links styles
+
 .source-link {
+    position: relative;
+    top: -2px;                  // The icon doesn't look centered by default
     display: inline;
     width: $font-size--large;
     text-align: center;
@@ -59,8 +75,33 @@
         position: absolute;
         left: 250px;
         fill: $black;
+        transition: fill $trans-duration;
     }
 }
+
+.work-helper {
+    color: black;
+    line-height: $font-size--large;
+    position: absolute;
+    left: 120px;
+    top: 9px;
+    width: 110px;
+    text-indent: 0;
+    border: 1px solid $bright-orange;
+    border-radius: 6px;
+    opacity: 0;
+    transition: opacity $trans-duration;
+}
+
+.source-link:hover {
+    fill: $bright-orange;
+
+    .work-helper {
+        opacity: 1;
+    }
+}
+
+
 
 // Moving content to the right at medium size
 .right-container {

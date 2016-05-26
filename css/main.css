@@ -636,7 +636,17 @@ button {
 .work-item {
   position: relative; }
 
+.work-link {
+  -webkit-transition: font-size 0.3s, text-indent 0.3s;
+  transition: font-size 0.3s, text-indent 0.3s; }
+
+.work-link:not(.is-selected):hover, .work-link.is-selected {
+  font-size: 24px;
+  text-indent: 71px; }
+
 .source-link {
+  position: relative;
+  top: -2px;
   display: inline;
   width: 24px;
   text-align: center;
@@ -645,7 +655,28 @@ button {
   .source-link {
     position: absolute;
     left: 250px;
-    fill: #000; } }
+    fill: #000;
+    -webkit-transition: fill 0.3s;
+    transition: fill 0.3s; } }
+
+.work-helper {
+  color: black;
+  line-height: 24px;
+  position: absolute;
+  left: 120px;
+  top: 9px;
+  width: 110px;
+  text-indent: 0;
+  border: 1px solid #ff8000;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s; }
+
+.source-link:hover {
+  fill: #ff8000; }
+.source-link:hover .work-helper {
+  opacity: 1; }
 
 .right-container {
   position: relative;
