@@ -10,6 +10,12 @@
 	}
 }
 
+
+
+
+
+/* Lists of links */
+
 .work-list {
 	width: 100%;
 	text-align: center;
@@ -18,6 +24,16 @@
         text-indent: 75px;
     }
 }
+
+.work-list-item {
+    position: relative;
+}
+
+
+
+
+
+/* titles */
 
 .work-title {
     @extend .section-title;
@@ -33,12 +49,45 @@
     }
 }
 
+
+
+
+/* Styling sites thumbnails */
+
+.sites-item-link {
+    display: block;
+    margin-bottom: -3px;
+}
+
+.sites-item {
+    position: relative;
+    border: 5px solid $bright-blue;
+    border-radius: 16px;
+    overflow: hidden;
+    @include horizontal-center();
+    margin-bottom: 50px;
+    width: 83%;
+    transition: border-color;
+    @include breakpoint(map-get($break, medium)) {
+        border: 5px solid $gray;
+    }
+    @include breakpoint(map-get($break, large)) {
+        width: 66%;
+    }
+}
+
+
+
+
+/* Styling the descriptions */
+
 .work-description,
 .widget-description {
     width: 66%;
     @include margin-center();
     line-height: $font-size--large;
     margin-top: $font-size--base;
+    margin-bottom: $font-size--base;
 }
 
 .widget-description {
@@ -46,14 +95,32 @@
     text-align: center;
 }
 
-.work-item {
-    position: relative;
+.work-description {
+    @include breakpoint(map-get($break, medium)) {
+        height: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
 }
 
-// Links styles
+.sites-item:hover {
+    border: 5px solid $bright-blue;
+
+    .work-description {
+        max-height: 500px;
+    }
+}
+
+
+
+
+
+/* Styling work links */
 
 .work-link {
-    transition: font-size $trans-duration, text-indent $trans-duration;
+    line-height: $font-size--big;
+    transition: font-size $trans-duration, text-indent $trans-duration, color $trans-duration;
 }
 
 .work-link:not(.is-selected):hover,
@@ -62,7 +129,11 @@
     text-indent: 75px - ($font-size--large - $font-size--base) / 2;
 }
 
-// Source links styles
+.work-link:not(.is-selected) {
+    color: $gray;
+}
+
+/* Styling source links */
 
 .source-link {
     position: relative;
@@ -79,6 +150,12 @@
     }
 }
 
+.title-text {
+    position: relative;
+    bottom: $font-size--large;
+}
+
+// Mostly magic numbers here...
 .work-helper {
     color: black;
     line-height: $font-size--large;
@@ -103,7 +180,8 @@
 
 
 
-// Moving content to the right at medium size
+/* Moving content to the right at medium size */
+
 .right-container {
     position: relative;
     margin-bottom: $font-size--huge;

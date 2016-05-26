@@ -118,9 +118,9 @@
       
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list hidden-small">
-        <li class="work-item"><a class="js-work-link work-link is-selected" href="#" data-num="0">Rodolf Vanthuyne</a>
-        <li class="work-item"><a class="js-work-link work-link" href="#" data-num="1">Alpha Clean</a></li>
-        <li class="work-item"><a class="js-work-link work-link" href="#" data-num="2">My portfolio</a></li>
+        <li class="work-list-item"><a class="js-work-link work-link is-selected" href="#" data-num="0">Rodolf Vanthuyne</a>
+        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="1">Alpha Clean</a></li>
+        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="2">My portfolio</a></li>
       </ul>
 
       <!-- SITES CAROUSEL -->
@@ -134,35 +134,41 @@
 
             <li class="carousel-item js-carousel-item displayed">
               <h3 class="elem-title hidden-medium">Rodolf Vanthuyne</h3>
-              <a href="http://rodolf-vanthuyne.com">
-                <img class="carousel-thumbnail hover-color" src="images/rodolf-vanthuyne.jpg" alt="screenshot of Rodolf Vanthuyne's website">
-              </a>
-              <p class="work-description black-to-white">
-                Website built using <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Stylesheet">CSS</abbr> and some javascript with jQuery. It also has a small custom built 
-                PHP <abbr title="Content Management System">CMS</abbr> for uploading photos and blog posts.<br>
-                Rodolf is a guitar player in the region of Bordeaux, France. Check him out, he's really good!
-              </p>
+              <div class="sites-item">
+                <a class="sites-item-link" href="http://rodolf-vanthuyne.com">
+                  <img class="carousel-thumbnail hover-color" src="images/rodolf-vanthuyne.jpg" alt="screenshot of Rodolf Vanthuyne's website">
+                </a>
+                <p class="work-description black-to-white">
+                  Website built using <abbr title="Hypertext Markup Language">HTML</abbr>, <abbr title="Cascading Stylesheet">CSS</abbr> and some javascript with jQuery. It also has a small custom built 
+                  PHP <abbr title="Content Management System">CMS</abbr> for uploading photos and blog posts.<br>
+                  Rodolf is a guitar player in the region of Bordeaux, France. Check him out, he's really good!
+                </p>
+              </div>
             </li>
 
             <li class="carousel-item js-carousel-item hidden">
               <h3 class="elem-title hidden-medium">Alpha Clean</h3>
-              <a href="http://alpha-clean.co.uk">
-                <img class="carousel-thumbnail hover-color" src="images/alpha-clean.jpg" alt="screenshot of Alpha Clean's website">
-              </a>
-              <p class="work-description black-to-white">
-                Alex is a Professional Carpet Cleaner operating in the Glasgow and Paisley area. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.<br>
-                This site is made with <abbr>HTML</abbr>, <abbr>CSS</abbr> with a bit of javascript and PHP for the contact form.
-              </p>
+              <div class="sites-item">
+                <a class="sites-item-link" href="http://alpha-clean.co.uk">
+                  <img class="carousel-thumbnail hover-color" src="images/alpha-clean.jpg" alt="screenshot of Alpha Clean's website">
+                </a>
+                <p class="work-description black-to-white">
+                  Alex is a Professional Carpet Cleaner operating in the Glasgow and Paisley area. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.<br>
+                  This site is made with <abbr>HTML</abbr>, <abbr>CSS</abbr> with a bit of javascript and PHP for the contact form.
+                </p>
+              </div>
             </li>
 
             <li class="carousel-item js-carousel-item hidden">
               <h3 class="elem-title hidden-medium">Portfolio</h3>
-              <a href="#">
-                <img class="carousel-thumbnail hover-color" src="images/perso.jpg" alt="screenshot of David Morisset's website">
-              </a>
-              <p class="work-description black-to-white">
-                This site has been built using sass, javascript and jQuery. The built workflow is automated with gulp and NPM.
-              </p>
+              <div class="sites-item">
+                <a class="sites-item-link" href="#">
+                  <img class="carousel-thumbnail hover-color" src="images/perso.jpg" alt="screenshot of David Morisset's website">
+                </a>
+                <p class="work-description black-to-white">
+                  This site has been built using sass, javascript and jQuery. The built workflow is automated with gulp and NPM.
+                </p>
+              </div>
             </li>
           </ul>
         </div>
@@ -195,7 +201,7 @@
 
       <h3 class="work-subtitle white-to-black">Widgets</h3>
       <ul id="widgets-list" class="work-list hidden-small">
-        <li class="work-item">
+        <li class="work-list-item">
           <a class="js-work-link work-link" href="#" data-num="0">Calculator</a>
           <a class="white source-link" href="http://codepen.io/David44/pen/Xdxyab">
             <svg viewBox="0 0 16 16" class="contact-icon">
@@ -204,7 +210,7 @@
             <p class="work-helper">View Source</p>
           </a>
         </li>
-        <li class="work-item">
+        <li class="work-list-item">
           <a class="js-work-link work-link" href="#" data-num="1">Simon Game</a>
           <a class="white source-link" href="http://codepen.io/David44/pen/MyzzXd">
             <svg viewBox="0 0 16 16" class="contact-icon">
@@ -213,7 +219,7 @@
             <p class="work-helper">View Source</p>
           </a>
         </li>
-        <li class="work-item">
+        <li class="work-list-item">
           <a class="js-work-link work-link" href="#" data-num="2">Tic Tac Toe</a>
           <a class="white source-link" href="http://codepen.io/David44/pen/QNJGQq">
             <svg viewBox="0 0 16 16" class="contact-icon">
@@ -222,7 +228,7 @@
             <p class="work-helper">View Source</p>
           </a>
         </li>
-        <li class="work-item">
+        <li class="work-list-item">
           <a class="js-work-link work-link" href="#" data-num="3">Wiki Search</a>
           <a class="white source-link" href="http://codepen.io/David44/pen/KzxQEJ">
             <svg viewBox="0 0 16 16" class="contact-icon">
@@ -249,7 +255,7 @@
                     <use xlink:href="#codepen"></use>
                   </svg>
                 </a>
-                Calculator
+                <span class="title-text">Calculator</span>
               </h3>
               <div id="cal-calculator" class="cal-calculator widget">
                 <div id="cal-display" class="cal-display">
@@ -296,7 +302,7 @@
                     <use xlink:href="#codepen"></use>
                   </svg>
                 </a>
-                Simon Game
+                <span class="title-text">Simon Game</span>
               </h3>
               <div class="sim-wrap widget">
                 <div id="sim-buttons" class="sim-buttons">
@@ -328,7 +334,7 @@
                     <use xlink:href="#codepen"></use>
                   </svg>
                 </a>
-                Tic Tac Toe
+                <span class="title-text">Tic Tac Toe</span>
               </h3>
               <div class="tic-wrap widget">
                 <div id="tic-rules" class="tic-visible tic-rules">
@@ -376,7 +382,7 @@
                     <use xlink:href="#codepen"></use>
                   </svg>
                 </a>
-                Wiki Search
+                <span class="title-text">Wiki Search</span>
               </h3>
               <div class="wikipedia widget">
                 <p class="wiki-search">

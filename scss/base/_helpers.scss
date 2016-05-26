@@ -20,6 +20,7 @@
  */
 .hidden-medium {
   display: block;
+
   @include breakpoint(map-get($break, medium)) {
     display: none;
   }
