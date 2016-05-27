@@ -42,6 +42,9 @@
  }
 
 
+
+
+
 /* Styles used for modifying colours
 ***************************************************/
 
@@ -83,20 +86,6 @@
   }
 }
 
-/*
- * Applies the svg greyscale filter at large vieport size
- * and removes it on hover
- */
-
-.hover-color {
-  @include breakpoint(map-get($break, medium)) {
-    @include filter(grayscale(100%));
-
-      &:hover {
-        filter: none;
-      }
-    }
-}
 
 
 
