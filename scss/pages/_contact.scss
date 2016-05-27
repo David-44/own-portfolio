@@ -20,7 +20,7 @@
 
 // Main title for the section
 .contact-title {
-	@include big_title;
+	@extend .section-title;
 	@include breakpoint(map-get($break, medium))  {
         width: 50%;
 	}

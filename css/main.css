@@ -487,7 +487,7 @@ button {
 /***************************************************************************
  * TITLES STYLES
  ***************************************************************************/
-.section-title, .work-title {
+.section-title, .work-title, .contact-title {
   width: 100%;
   text-align: center;
   font-size: 54px;
@@ -942,11 +942,6 @@ button {
     background-repeat: no-repeat;
     background-color: #000; } }
 
-.contact-title {
-  width: 100%;
-  text-align: center;
-  font-size: 54px;
-  line-height: 81px; }
 @media (min-width: 800px) {
   .contact-title {
     width: 50%; } }
