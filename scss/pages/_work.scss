@@ -2,12 +2,37 @@
  * WORK PANEL STYLES
  ***************************************************************************/
 
+// Sets the background of the whole panel
 .work {
-	background-color: $white;
 	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to right, $white 50%, $black 50%);
 	}
+}
+
+
+
+
+
+/* titles */
+
+.work-title {
+    @extend .section-title;
+    width: 50%;
+}
+
+.work-subtitle {
+    @extend .subtitle;
+    @include breakpoint(map-get($break, medium)) {
+        width: 50%;
+        text-align: left;
+        text-indent: 100px;
+    }
+}
+
+.title-text {
+    position: relative;
+    bottom: $font-size--large;
 }
 
 
@@ -33,35 +58,11 @@
 
 
 
-/* titles */
-
-.work-title {
-    @extend .section-title;
-    width: 50%;
-}
-
-.work-subtitle {
-    @extend .subtitle;
-    @include breakpoint(map-get($break, medium)) {
-        width: 50%;
-        text-align: left;
-        text-indent: 100px;
-    }
-}
-
-
-
-
 /* Styling sites thumbnails */
-
-.sites-item-link {
-    display: block;
-    margin-bottom: -3px;
-}
 
 .sites-item {
     position: relative;
-    border: 5px solid $bright-blue;
+    border: 2px solid $bright-orange;
     border-radius: 16px;
     overflow: hidden;
     @include horizontal-center();
@@ -69,12 +70,13 @@
     width: 83%;
     transition: border-color;
     @include breakpoint(map-get($break, medium)) {
-        border: 5px solid $gray;
+        // border: 2px solid $gray;
     }
     @include breakpoint(map-get($break, large)) {
         width: 66%;
     }
 }
+
 
 
 
@@ -105,8 +107,6 @@
 }
 
 .sites-item:hover {
-    border: 5px solid $bright-blue;
-
     .work-description {
         max-height: 500px;
     }
@@ -126,12 +126,17 @@
 .work-link:not(.is-selected):hover,
 .work-link.is-selected {
     font-size: $font-size--large;
+    color: $black;
     text-indent: 75px - ($font-size--large - $font-size--base) / 2;
 }
 
 .work-link:not(.is-selected) {
     color: $gray;
 }
+
+
+
+
 
 /* Styling source links */
 
@@ -150,11 +155,6 @@
     }
 }
 
-.title-text {
-    position: relative;
-    bottom: $font-size--large;
-}
-
 // Mostly magic numbers here...
 .work-helper {
     color: black;
@@ -164,14 +164,14 @@
     top: 9px;
     width: 110px;
     text-indent: 0;
-    border: 1px solid $bright-orange;
+    border: 1px solid $bright-blue;
     border-radius: 6px;
     opacity: 0;
     transition: opacity $trans-duration;
 }
 
 .source-link:hover {
-    fill: $bright-orange;
+    fill: $bright-blue;
 
     .work-helper {
         opacity: 1;

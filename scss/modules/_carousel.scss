@@ -14,11 +14,19 @@
 	width: 100%;
 }
 
-// .carousel-item {
-// 	@include breakpoint(map-get($break, medium)) {
-// 	    margin-top: $font-size--base;
-// 	}
-// }
+// Aligns the item with the main section title
+.carousel-item {
+	@include breakpoint(map-get($break, medium)) {
+	    margin-top: $font-size--base;
+	}
+}
+
+
+
+
+
+
+/* Styles the arrows for small viewports */
 
 .carousel-nav {
 	position: absolute;

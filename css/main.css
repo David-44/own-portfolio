@@ -389,6 +389,11 @@ button {
   position: relative;
   width: 100%; }
 
+@media (min-width: 800px) {
+  .carousel-item {
+    margin-top: 16px; } }
+
+/* Styles the arrows for small viewports */
 .carousel-nav {
   position: absolute;
   width: 300px;
@@ -588,13 +593,26 @@ button {
  * WORK PANEL STYLES
  ***************************************************************************/
 .work {
-  background-color: #fff;
   background-image: -webkit-linear-gradient(top, #ffffff 50%, #000000 50%);
   background-image: linear-gradient(to bottom, #ffffff 50%, #000000 50%); }
 @media (min-width: 800px) {
   .work {
     background-image: -webkit-linear-gradient(left, #ffffff 50%, #000000 50%);
     background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
+
+/* titles */
+.work-title {
+  width: 50%; }
+
+@media (min-width: 800px) {
+  .work-subtitle {
+    width: 50%;
+    text-align: left;
+    text-indent: 100px; } }
+
+.title-text {
+  position: relative;
+  bottom: 24px; }
 
 /* Lists of links */
 .work-list {
@@ -608,24 +626,10 @@ button {
 .work-list-item {
   position: relative; }
 
-/* titles */
-.work-title {
-  width: 50%; }
-
-@media (min-width: 800px) {
-  .work-subtitle {
-    width: 50%;
-    text-align: left;
-    text-indent: 100px; } }
-
 /* Styling sites thumbnails */
-.sites-item-link {
-  display: block;
-  margin-bottom: -3px; }
-
 .sites-item {
   position: relative;
-  border: 5px solid #007fff;
+  border: 2px solid #ff8000;
   border-radius: 16px;
   overflow: hidden;
   left: 50%;
@@ -635,9 +639,6 @@ button {
   width: 83%;
   -webkit-transition: border-color;
   transition: border-color; }
-@media (min-width: 800px) {
-  .sites-item {
-    border: 5px solid #999; } }
 @media (min-width: 1200px) {
   .sites-item {
     width: 66%; } }
@@ -663,8 +664,6 @@ button {
     -webkit-transition: max-height 0.5s;
     transition: max-height 0.5s; } }
 
-.sites-item:hover {
-  border: 5px solid #007fff; }
 .sites-item:hover .work-description {
   max-height: 500px; }
 
@@ -676,6 +675,7 @@ button {
 
 .work-link:not(.is-selected):hover, .work-link.is-selected {
   font-size: 24px;
+  color: #000;
   text-indent: 71px; }
 
 .work-link:not(.is-selected) {
@@ -697,10 +697,6 @@ button {
     -webkit-transition: fill 0.3s;
     transition: fill 0.3s; } }
 
-.title-text {
-  position: relative;
-  bottom: 24px; }
-
 .work-helper {
   color: black;
   line-height: 24px;
@@ -709,14 +705,14 @@ button {
   top: 9px;
   width: 110px;
   text-indent: 0;
-  border: 1px solid #ff8000;
+  border: 1px solid #007fff;
   border-radius: 6px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
 .source-link:hover {
-  fill: #ff8000; }
+  fill: #007fff; }
 .source-link:hover .work-helper {
   opacity: 1; }
 
