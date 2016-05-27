@@ -179,6 +179,7 @@ button {
 /***************************************************************************
  * GENRAL ANIMATIONS
  ***************************************************************************/
+/* fade-in and fade-out */
 @-webkit-keyframes transparency {
   to {
     opacity: 0; } }
@@ -186,11 +187,24 @@ button {
   to {
     opacity: 0; } }
 @-webkit-keyframes opacity {
-  to {
+  0% {
+    opacity: 0; }
+  100% {
     opacity: 1; } }
 @keyframes opacity {
-  to {
+  0% {
+    opacity: 0; }
+  100% {
     opacity: 1; } }
+.fade-out {
+  -webkit-animation: transparency 0.5s ease-in forwards;
+  animation: transparency 0.5s ease-in forwards; }
+
+.fade-in {
+  -webkit-animation: opacity 0.5s ease-in forwards;
+  animation: opacity 0.5s ease-in forwards; }
+
+/* Blur in and out */
 @-webkit-keyframes blurin {
   0% {
     opacity: 0;
@@ -265,12 +279,12 @@ button {
     opacity: 1;
     left: 0; } }
 .fade-left {
-  -webkit-animation: fadeleft 0.5s forwards;
-  animation: fadeleft 0.5s forwards; }
+  -webkit-animation: fadeleft 0.5s ease-in forwards;
+  animation: fadeleft 0.5s ease-in forwards; }
 
 .appear-left {
-  -webkit-animation: appearleft 0.5s forwards;
-  animation: appearleft 0.5s forwards; }
+  -webkit-animation: appearleft 0.5s ease-out forwards;
+  animation: appearleft 0.5s ease-out forwards; }
 
 /* Fade and appear right */
 @-webkit-keyframes faderight {
@@ -302,12 +316,49 @@ button {
     opacity: 1;
     right: 0; } }
 .fade-right {
-  -webkit-animation: faderight 0.5s forwards;
-  animation: faderight 0.5s forwards; }
+  -webkit-animation: faderight 0.5s ease-in forwards;
+  animation: faderight 0.5s ease-in forwards; }
 
 .appear-right {
-  -webkit-animation: appearright 0.5s forwards;
-  animation: appearright 0.5s forwards; }
+  -webkit-animation: appearright 0.5s ease-out forwards;
+  animation: appearright 0.5s ease-out forwards; }
+
+/* Fade down and appear up */
+@-webkit-keyframes fadedown {
+  0% {
+    opacity: 1;
+    top: 0; }
+  100% {
+    opacity: 0;
+    top: 200px; } }
+@keyframes fadedown {
+  0% {
+    opacity: 1;
+    top: 0; }
+  100% {
+    opacity: 0;
+    top: 200px; } }
+@-webkit-keyframes appearup {
+  0% {
+    opacity: 0;
+    top: -200px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+@keyframes appearup {
+  0% {
+    opacity: 0;
+    top: -200px; }
+  100% {
+    opacity: 1;
+    top: 0; } }
+.fade-down {
+  -webkit-animation: fadedown 0.5s ease-in forwards;
+  animation: fadedown 0.5s ease-in forwards; }
+
+.appear-up {
+  -webkit-animation: appearup 0.5s ease-out forwards;
+  animation: appearup 0.5s ease-out forwards; }
 
 /***************************************************************************
  * LAYOUT STYLES
@@ -703,19 +754,30 @@ button {
 /* Styling sites thumbnails */
 .sites-item {
   position: relative;
-  border: 2px solid #ff8000;
-  border-radius: 16px;
   overflow: hidden;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   margin-bottom: 50px;
   width: 83%;
-  -webkit-transition: border-color;
-  transition: border-color; }
+  border: 2px solid transparent;
+  border-radius: 16px;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s; }
 @media (min-width: 1200px) {
   .sites-item {
-    width: 66%; } }
+    width: 66%;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: border-color 0.3s, -webkit-filter 0.3s;
+    transition: border-color 0.3s, -webkit-filter 0.3s;
+    transition: border-color 0.3s, filter 0.3s;
+    transition: border-color 0.3s, filter 0.3s, -webkit-filter 0.3s; } }
+.sites-item:hover {
+  border-color: #007fff;
+  color: #007fff;
+  -webkit-filter: none;
+  filter: none; }
 
 /* Styling the descriptions */
 .work-description, .widget-description {
@@ -724,22 +786,19 @@ button {
   margin-right: auto;
   line-height: 24px;
   margin-top: 16px;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+  height: 100%;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.5s;
+  transition: max-height 0.5s; }
+.displayed .work-description, .displayed .widget-description {
+  -webkit-animation: growin 2s forwards;
+  animation: growin 2s forwards; }
 
 .widget-description {
   width: 300px;
   text-align: center; }
-
-@media (min-width: 800px) {
-  .work-description {
-    height: 100%;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: max-height 0.5s;
-    transition: max-height 0.5s; } }
-
-.sites-item:hover .work-description {
-  max-height: 500px; }
 
 /* Styling work links */
 .work-link {
@@ -779,14 +838,14 @@ button {
   top: 9px;
   width: 110px;
   text-indent: 0;
-  border: 1px solid #007fff;
+  border: 1px solid #ff8000;
   border-radius: 6px;
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s; }
 
 .source-link:hover {
-  fill: #007fff; }
+  fill: #ff8000; }
 .source-link:hover .work-helper {
   opacity: 1; }
 

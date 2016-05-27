@@ -134,7 +134,7 @@ $("#carousel-sites").on("swiperight", function(event) {
 /* Event for click on a link, only on large viewports */
 $sitesLinks.click(function(event) {
     changeSelectedLink(event, $(event.target));
-    sitesCarousel.changeItem($(event.target).data("num"), "blur-out", "blur-in");
+    sitesCarousel.changeItem($(event.target).data("num"), "fade-down", "appear-up");
     toggleMedium($widgetsContainer, $sitesContainer, timing);
 });
 
@@ -173,7 +173,7 @@ $("#carousel-widgets").on("swiperight", function(event) {
 /* Event for click on a link, only on large viewports */
 $widgetsLinks.click(function(event) {
     changeSelectedLink(event, $(event.target));
-    widgetsCarousel.changeItem($(event.target).data("num"), "blur-out", "blur-in");
+    widgetsCarousel.changeItem($(event.target).data("num"), "fade-down", "appear-up");
     toggleMedium($sitesContainer, $widgetsContainer, timing);
 });
 

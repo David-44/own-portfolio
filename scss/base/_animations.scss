@@ -2,6 +2,12 @@
  * GENRAL ANIMATIONS
  ***************************************************************************/
 
+
+
+
+
+/* fade-in and fade-out */
+
 @keyframes transparency {
 	to {
 		opacity: 0;
@@ -9,14 +15,27 @@
 }
 
 @keyframes opacity {
-	to {
+    0% {
+    	opacity: 0;
+    }
+	100% {
 		opacity: 1;
 	}
+}
+
+.fade-out {
+	animation: transparency 0.5s ease-in forwards;
+}
+
+.fade-in {
+	animation: opacity 0.5s ease-in forwards;
 }
 
 
 
 
+
+/* Blur in and out */
 
 @keyframes blurin {
 	0% {
@@ -50,6 +69,8 @@
 
 
 
+
+
 /* Fade and appear left */
 
 @keyframes fadeleft {
@@ -76,11 +97,11 @@
 }
 
 .fade-left {
-	animation: fadeleft 0.5s forwards;
+	animation: fadeleft 0.5s ease-in forwards;
 }
 
 .appear-left {
-	animation: appearleft 0.5s forwards;
+	animation: appearleft 0.5s ease-out forwards;
 }
 
 
@@ -113,12 +134,52 @@
 }
 
 .fade-right {
-	animation: faderight 0.5s forwards;
+	animation: faderight 0.5s ease-in forwards;
 }
 
 .appear-right {
-	animation: appearright 0.5s forwards;
+	animation: appearright 0.5s ease-out forwards;
 }
+
+
+
+
+
+/* Fade down and appear up */
+
+@keyframes fadedown {
+	0% {
+    	opacity: 1;
+    	top: 0;
+    }
+	100% {
+		opacity: 0;
+		top: 200px;
+	}
+}
+
+@keyframes appearup {
+    0% {
+    	opacity: 0;
+    	top: -200px;
+    }
+
+	100% {
+		opacity: 1;
+		top: 0;
+	}
+}
+
+.fade-down {
+	animation: fadedown 0.5s ease-in forwards;
+}
+
+.appear-up {
+	animation: appearup 0.5s ease-out forwards;
+}
+
+
+
 
 
 
