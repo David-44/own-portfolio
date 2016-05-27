@@ -43,10 +43,10 @@ var timing = 500;
  */
 var toggleMedium = function($item1, $item2, tTiming) {
     if(!$item1.hasClass("hidden-medium")){
-        $item1.addClass("blur-out");
+        $item1.addClass("fade-out");
         setTimeout(function() {
             $item1.addClass("hidden-medium");
-            $item1.removeClass("blur-out");
+            $item1.removeClass("fade-out");
             $item2.removeClass("hidden-medium");
         }, tTiming);
     }

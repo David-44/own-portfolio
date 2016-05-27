@@ -20,6 +20,7 @@ gulp.task("concatScripts", function() {
         'scripts/carousel.js',
         'scripts/work-panel.js',
         'scripts/indicators.js',
+        'scripts/easter.js',
 
         'scripts/widgets/calculator.js',
         'scripts/widgets/simon.js',

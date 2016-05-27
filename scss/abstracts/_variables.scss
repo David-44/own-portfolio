@@ -1,6 +1,6 @@
-/***************************************************************************
- * SASS VARIABLES
- ***************************************************************************/
+/////////////////////////////////////////////////////////////////////////////
+// SASS VARIABLES
+/////////////////////////////////////////////////////////////////////////////
 
 
 
@@ -47,10 +47,12 @@ $font-size--title      : $font-size--base * 1.5 * 1.5 * 1.5 * 1.5 !default;
 
 
 
+
+
 // COLORS
 // -----------------------------------------------------------------------------
 
-// Descriptive Base Colors
+// Descriptive Colors
 
 $white     : #fff !default;
 $black     : #000 !default;
@@ -60,8 +62,9 @@ $light-gray: #DDD !default;
 $bright-orange: #ff8000 !default; // hsla(30, 100%, 50%, 1)
 $bright-blue  : #007fff !default; // hsla(210, 100%, 50%, 1)
 
-// Color Usage
-$header-blue: lighten(adjust-saturation($bright-blue, -50%), 20%);
+$dark-orange: darken($bright-orange, 20%);
+$dark-blue: darken($bright-blue, 20%);
+
 
 
 
@@ -70,9 +73,6 @@ $header-blue: lighten(adjust-saturation($bright-blue, -50%), 20%);
 // -----------------------------------------------------------------------------
 
 /// Breakpoints map
-/// @prop {String} keys - Keys are identifiers mapped to a given length
-/// @prop {Map} values - Values are actual breakpoints expressed in pixels
-/// @see {mixin} respond-to
 
 $break: (
   small:  450px,
@@ -89,21 +89,14 @@ $break: (
 // RANDOM STUFF
 // -----------------------------------------------------------------------------
 
-
-// Border radius
-
-$br-carousel--thumb    : 16px;
-
 // Transitions
 
 $trans-duration  : 0.3s;
 
-/// Container's maximum width
-/// @type Length
-$max-width: 2000px !default;
-
-/// Relative or absolute URL where all assets are served from
-/// @type String
-/// @example scss - When using a CDN
-/// $base-url: 'http://cdn.example.com/assets/';
+// $base-url: 'http://cdn.example.com/assets/';
 $base-url: '../images/' !default;
+
+
+
+
+

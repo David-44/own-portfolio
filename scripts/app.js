@@ -119,10 +119,10 @@ var timing = 500;
  */
 var toggleMedium = function($item1, $item2, tTiming) {
     if(!$item1.hasClass("hidden-medium")){
-        $item1.addClass("blur-out");
+        $item1.addClass("fade-out");
         setTimeout(function() {
             $item1.addClass("hidden-medium");
-            $item1.removeClass("blur-out");
+            $item1.removeClass("fade-out");
             $item2.removeClass("hidden-medium");
         }, tTiming);
     }
@@ -275,6 +275,32 @@ var pageUpdate = function() {
 $(window).scroll(pageUpdate);
 $(window).resize(pageUpdate);
 
+/***************************************************************************
+ * EASTER
+ ***************************************************************************/
+
+var contactImage = $("#contact-image");
+
+ $("#goose-link").click(function(event) {
+	event.preventDefault();
+
+    contactImage.fadeOut(500);
+    setTimeout( function() {
+        contactImage.removeClass("contact-img");
+        contactImage.addClass("contact-goose");
+        contactImage.fadeIn(500);
+    }, 500);
+
+    setTimeout(function() {
+    	contactImage.fadeOut(500);
+    	setTimeout(function() {
+            contactImage.removeClass("contact-goose");
+            contactImage.addClass("contact-img");
+            contactImage.fadeIn(500);
+    	}, 500);
+    }, 3000);
+ 
+});
 /***************************************************************************
  * CALCULATOR
  ***************************************************************************/
@@ -1045,11 +1071,9 @@ $(window).resize(pageUpdate);
  * MAIN FILE
  ***************************************************************************/
 
-
-
-
-
 $(document).ready(pageUpdate);
+
+
 
 
 

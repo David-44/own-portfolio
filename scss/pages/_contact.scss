@@ -2,9 +2,23 @@
  * CONTACT PANEL STYLES
  ***************************************************************************/
 
+// Sets the background colour for the panel
+.contact {
+	@include breakpoint(map-get($break, medium))  {
+	    background-image: linear-gradient(to right, $white 50%, black 50%);
+	}
+}
 
+// Banner on the right side
+.contact-img {
+    @include banner-light('contact.jpg');
+    @include breakpoint(map-get($break, medium))  {
+        @include banner-dark('contact.jpg');
+        background-color: $black;
+    }
+}
 
-
+// Main title for the section
 .contact-title {
 	@include big_title;
 	@include breakpoint(map-get($break, medium))  {
@@ -12,23 +26,22 @@
 	}
 }
 
-.contact-img {
-    @include banner-light('contact.jpg');
-    z-index: -1;
-    @include breakpoint(map-get($break, medium))  {
-        @include banner-dark('contact.jpg');
-    }
-}
 
+
+
+
+// List containing all contacts
 .contact-list {
 	position: relative;
 	z-index: 1;
+
 	width: 66%;
 	min-width: 300px;
 	max-width: 600px;
-	height: auto;
+	height: auto;     // Makes sure the list scrolls until the bottom
 	@include horizontal-center();
 
+	// indents text at very small size to avoid the icons being stuck to the left of the display.
 	text-indent: $font-size--base;
 	@include breakpoint(map-get($break, small))  {
         text-indent: 0;
@@ -40,15 +53,91 @@
 	}
 }
 
+
+
+
+
+// Each list item
 .contact-item {
 	line-height: $font-size--title;
 	vertical-align: middle;
 }
 
+// Each icon
 .contact-icon {
 	width: $font-size--big;
 	height: $font-size--big;
 	vertical-align: middle;
 }
+
+// The text that appears when contact links are hovered
+.contact-helper {
+    position: relative;
+    display: inline-block;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    left: 10px;
+    line-height: $font-size--large;
+
+    color: $black;
+    border: 1px solid $bright-orange;
+    border-radius: 6px;
+
+    // Hidden when not hovered upon
+    opacity: 0;
+    transition: opacity $trans-duration;
+}
+
+
+
+
+// Actions when the links are hovered
+
+// When hovered, social media links become orange and the helper appears
+.contact-link:not(.direct-link) {
+	transition: color $trans-duration, fill $trans-duration;
+	&:hover {
+		color: $dark-orange;
+		fill: $dark-orange;
+
+		@include breakpoint(map-get($break, medium))  {
+            color: $bright-orange;
+		    fill: $bright-orange;
+		}
+
+		.contact-helper {
+			opacity: 1;
+		}
+	}
+}
+
+// When hovered, direct contact (phones and email) become blue
+.direct-link {
+	transition: color $trans-duration, fill $trans-duration;
+	&:hover {
+		color: $dark-blue;
+		fill: $dark-blue;
+
+		@include breakpoint(map-get($break, medium))  {
+            color: $bright-blue;
+		    fill: $bright-blue;
+		}
+	}
+}
+
+
+
+
+
+// Class used only for the easter egg
+
+.contact-goose {
+	@include banner-light('goose.jpg');
+    @include breakpoint(map-get($break, medium))  {
+        @include banner-dark('goose.jpg');
+    }
+}
+
 
 
