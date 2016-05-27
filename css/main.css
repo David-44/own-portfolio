@@ -235,6 +235,80 @@ button {
   -webkit-animation: blurout 1s forwards;
   animation: blurout 1s forwards; }
 
+/* Fade and appear left */
+@-webkit-keyframes fadeleft {
+  0% {
+    opacity: 1;
+    left: 0; }
+  100% {
+    opacity: 0;
+    left: -200px; } }
+@keyframes fadeleft {
+  0% {
+    opacity: 1;
+    left: 0; }
+  100% {
+    opacity: 0;
+    left: -200px; } }
+@-webkit-keyframes appearleft {
+  0% {
+    opacity: 0;
+    left: 200px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+@keyframes appearleft {
+  0% {
+    opacity: 0;
+    left: 200px; }
+  100% {
+    opacity: 1;
+    left: 0; } }
+.fade-left {
+  -webkit-animation: fadeleft 0.5s forwards;
+  animation: fadeleft 0.5s forwards; }
+
+.appear-left {
+  -webkit-animation: appearleft 0.5s forwards;
+  animation: appearleft 0.5s forwards; }
+
+/* Fade and appear right */
+@-webkit-keyframes faderight {
+  0% {
+    opacity: 1;
+    right: 0; }
+  100% {
+    opacity: 0;
+    right: -200px; } }
+@keyframes faderight {
+  0% {
+    opacity: 1;
+    right: 0; }
+  100% {
+    opacity: 0;
+    right: -200px; } }
+@-webkit-keyframes appearright {
+  0% {
+    opacity: 0;
+    right: 200px; }
+  100% {
+    opacity: 1;
+    right: 0; } }
+@keyframes appearright {
+  0% {
+    opacity: 0;
+    right: 200px; }
+  100% {
+    opacity: 1;
+    right: 0; } }
+.fade-right {
+  -webkit-animation: faderight 0.5s forwards;
+  animation: faderight 0.5s forwards; }
+
+.appear-right {
+  -webkit-animation: appearright 0.5s forwards;
+  animation: appearright 0.5s forwards; }
+
 /***************************************************************************
  * LAYOUT STYLES
  ***************************************************************************/
@@ -612,7 +686,7 @@ button {
 
 .title-text {
   position: relative;
-  bottom: 24px; }
+  bottom: 26px; }
 
 /* Lists of links */
 .work-list {

@@ -53,18 +53,18 @@ Carousel.prototype.changeItem = function(newItem, blurClass, showClass) {
 // Changes to the previous item in the collection
 Carousel.prototype.moveLeft = function(event) {
     if (this.currentItemNumber === 0) {
-        this.changeItem(this.$collection.length - 1, "blur-out", "blur-in");
+        this.changeItem(this.$collection.length - 1, "fade-left", "appear-left");
     } else {
-        this.changeItem(this.currentItemNumber - 1, "blur-out", "blur-in");
+        this.changeItem(this.currentItemNumber - 1, "fade-left", "appear-left");
     }
 };
 
 // Changes to the next item in the collection
 Carousel.prototype.moveRight = function(event) {
     if (this.currentItemNumber === this.$collection.length - 1) {
-        this.changeItem(0, "blur-out", "blur-in");
+        this.changeItem(0, "fade-right", "appear-right");
     } else {
-        this.changeItem(this.currentItemNumber + 1, "blur-out", "blur-in");
+        this.changeItem(this.currentItemNumber + 1, "fade-right", "appear-right");
     }
 };
 

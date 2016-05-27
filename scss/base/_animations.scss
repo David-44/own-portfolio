@@ -14,6 +14,10 @@
 	}
 }
 
+
+
+
+
 @keyframes blurin {
 	0% {
 		opacity: 0;
@@ -36,10 +40,6 @@
 	}
 }
 
-
-
-
-
 .blur-in {
 	animation: blurin 1s forwards;
 }
@@ -47,3 +47,81 @@
 .blur-out {
 	animation: blurout 1s forwards;
 }
+
+
+
+/* Fade and appear left */
+
+@keyframes fadeleft {
+	0% {
+    	opacity: 1;
+    	left: 0;
+    }
+	100% {
+		opacity: 0;
+		left: -200px;
+	}
+}
+
+@keyframes appearleft {
+    0% {
+    	opacity: 0;
+    	left: 200px;
+    }
+
+	100% {
+		opacity: 1;
+		left: 0;
+	}
+}
+
+.fade-left {
+	animation: fadeleft 0.5s forwards;
+}
+
+.appear-left {
+	animation: appearleft 0.5s forwards;
+}
+
+
+
+
+
+/* Fade and appear right */
+
+@keyframes faderight {
+	0% {
+    	opacity: 1;
+    	right: 0;
+    }
+	100% {
+		opacity: 0;
+		right: -200px;
+	}
+}
+
+@keyframes appearright {
+    0% {
+    	opacity: 0;
+    	right: 200px;
+    }
+
+	100% {
+		opacity: 1;
+		right: 0;
+	}
+}
+
+.fade-right {
+	animation: faderight 0.5s forwards;
+}
+
+.appear-right {
+	animation: appearright 0.5s forwards;
+}
+
+
+
+
+
+
