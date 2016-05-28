@@ -9,7 +9,7 @@
 		position: fixed;
 	    height: 100vh;
 	    width: $font-size--x-small;
-	    z-index: 100;
+	    z-index: 1000;
         @include horizontal-center();
         background-color: $gray;
 	}

@@ -1,0 +1,66 @@
+/***************************************************************************
+ * PANEL OVERLAYS STYLES
+ ***************************************************************************/
+
+ // This is used to style the overlays that disappear when scrolling down
+
+%overlay {
+	position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.work-overlay {
+    @extend %overlay;
+    height: 200vh;
+    background-image: linear-gradient(to bottom, $white 50%, $black 50%);
+	@include breakpoint(map-get($break, medium)) {
+        background-image: linear-gradient(to right, $white 50%, $black 50%);
+        height: 100vh;
+	}
+}
+
+.perso-overlay {
+    @extend %overlay;
+    height: 200vh;
+    background-image: linear-gradient(to bottom, $white 50%, $black 50%);
+	@include breakpoint(map-get($break, medium)) {
+        background-image: linear-gradient(to right, $black 50%, $white 50%);
+        height: 100vh;
+	}
+}
+
+.contact-overlay {
+    @extend %overlay;
+    height: 100vh;
+    background-color: $white;
+    @include breakpoint(map-get($break, medium)) {
+        background-image: linear-gradient(to right, $white 50%, $black 50%);
+    }
+}
+
+.widgets-overlay {
+	@extend %overlay;
+	height: 100vh;
+	background-color: $black;
+	@include breakpoint(map-get($break, medium)) {
+		display: none;
+	}
+}
+
+.about-overlay {
+	@extend %overlay;
+	height: 100vh;
+	background-color: $black;
+	@include breakpoint(map-get($break, medium)) {
+		background-color: $white;
+	}
+}
+
+
+
+
+
+

@@ -1,10 +1,8 @@
 /***************************************************************************
- * MAIN FILE
+ * OVERLAY REMOVER
  ***************************************************************************/
 
-$(document).ready(pageUpdate);
-
-// Note : This function makes use of the variable wintop, defined in the indicator.js file
+ // Note : This function makes use of the variable wintop, defined in the indicator.js file
 
 function removeOverlay(trigger, $overlay1, $overlay2) {
 	if (wintop >= trigger) {
@@ -39,6 +37,3 @@ function makeThingsAppear() {
 
 
 $(window).on("scroll", makeThingsAppear);
-
-
-
