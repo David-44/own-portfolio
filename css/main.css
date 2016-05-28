@@ -557,8 +557,8 @@ button {
   text-align: center; }
 
 /***************************************************************************
- * CAROUSEL STYLES
- ***************************************************************************/
+* CAROUSEL STYLES
+***************************************************************************/
 .carousel-container {
   position: absolute;
   width: 100%; }
@@ -655,7 +655,7 @@ button {
   max-width: 50vh;
   max-height: 50vh;
   border-radius: 50%;
-  border: 8px solid #999;
+  border: 6px solid #999;
   -webkit-animation: size 4.5s 1s forwards;
   animation: size 4.5s 1s forwards; }
 
@@ -667,8 +667,8 @@ button {
   background-repeat: no-repeat; }
 @media (min-width: 800px) {
   .header-banner {
-    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/banner-grey.jpg");
-    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/banner-grey.jpg");
+    background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/banner-grey.jpg");
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/banner-grey.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat; } }
@@ -701,7 +701,7 @@ button {
     width: 200px;
     height: 200px;
     top: 0;
-    border: 8px solid #999; }
+    border: 6px solid #999; }
   100% {
     opacity: 1;
     width: 200px;
@@ -722,7 +722,7 @@ button {
     width: 200px;
     height: 200px;
     top: 0;
-    border: 8px solid #999; }
+    border: 6px solid #999; }
   100% {
     opacity: 1;
     width: 200px;
@@ -963,6 +963,39 @@ button {
     text-align: left;
     text-indent: 150px; } }
 
+.perso-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 6px solid #007fff;
+  margin-left: auto;
+  margin-right: auto; }
+
+.about-link {
+  color: #66b2ff;
+  text-indent: 0;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+@media (min-width: 800px) {
+  .about-link {
+    color: #007fff; } }
+.about-link:hover {
+  color: #004c99; }
+
+.certificate {
+  width: 100%;
+  max-width: 600px;
+  z-index: 1001;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+
 /***************************************************************************
  * CONTACT PANEL STYLES
  ***************************************************************************/
@@ -972,8 +1005,8 @@ button {
     background-image: linear-gradient(to right, #ffffff 50%, #000000 50%); } }
 
 .contact-img {
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/contact.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/contact.jpg");
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/contact.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/contact.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
@@ -1057,8 +1090,8 @@ button {
     fill: #007fff; } }
 
 .contact-goose {
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/goose.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), url("../images/goose.jpg");
+  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/goose.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/goose.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }

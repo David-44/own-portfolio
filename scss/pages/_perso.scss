@@ -53,6 +53,43 @@
     }
 }
 
+.perso-img {
+	display: block;
+	@include margin-center();
+	margin-bottom: $font-size--base;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	border: 6px solid $bright-blue;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.about-link {
+	color: $light-blue;
+	text-indent: 0;
+	transition: color $trans-duration;
+
+	@include breakpoint(map-get($break, medium)) {
+        color: $bright-blue;
+	}
+
+	&:hover {
+		color: $dark-blue;
+	}
+}
+
+.certificate {
+	width: 100%;
+	max-width: 600px;
+	z-index: 1001;
+	position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 
 
 
