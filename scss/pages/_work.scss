@@ -27,6 +27,8 @@
 
 .work-subtitle {
     @extend .subtitle;
+    margin-top: $font-size--base;
+    margin-bottom: 0 - $font-size--base;
     @include breakpoint(map-get($break, medium)) {
         width: 50%;
         text-align: left;
@@ -64,29 +66,84 @@
 
 /* Styling sites thumbnails */
 
+// When changing this variable, don't forget to update the calc in .sites-thumbnail::before
+$imac-border-size: 12px;
+
 .sites-item {
     position: relative;
     overflow: hidden;
     @include horizontal-center();
     margin-bottom: 50px;
     width: 83%;
-    border: 2px solid transparent;
-    border-radius: 16px;
-    transition: border-color $trans-duration;
 
     @include breakpoint(map-get($break, large)) {
         width: 66%;
-        @include filter(grayscale(100%));
-        transition: border-color $trans-duration, filter $trans-duration;
-    }
-
-    &:hover {
-        border-color: $bright-blue;
-        color: $bright-blue;
-        filter: none;
     }
 }
 
+.sites-item-link {
+    position: relative;
+    border-top: $imac-border-size solid black;
+    border-bottom: 50px solid $gray;
+    border-radius: $imac-border-size;
+
+    // We use box-shadow for the black borders in order to avoid two things :
+    // 1) To have a order-radius on the image
+    // 2) To have a diagonal border between the bottom gray border and sides right border
+    box-shadow: inset 0 - $imac-border-size   0 - $imac-border-size 0 $black,
+                inset $imac-border-size 0    0 $black;
+    
+    @include breakpoint(map-get($break, medium)) {
+        padding: $imac-border-size;
+        border-top: $imac-border-size solid $white;
+        border-left: $imac-border-size solid $white;
+        border-right: $imac-border-size solid $white;
+        border-bottom-color: $white;
+    }
+}
+
+.sites-item-link::after {
+  content:"";
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  width: 30px;
+  height: 30px;
+  background-color: $black;
+  z-index: 1;
+  border-radius: 50px;
+  transform: translate(-50%);
+  @include breakpoint(map-get($break, medium)) {
+    background-color: $gray;
+  }
+}
+
+.sites-item-link::before {
+    box-sizing: content-box;
+    content:"";
+    position: absolute;
+    @include horizontal-center();
+    width: calc(100% - 24px);    // Value is $imac-border-size * 2 (calc does not take sass variables)
+    height: calc(100% - 12px);   // Value is $imac-border-size
+    z-index: 1;
+    background-color: transparentize($bright-blue, 0.7);
+    transition: opacity $trans-duration;
+    opacity: 1;
+    @include breakpoint(map-get($break, medium)) {
+        height: calc(100% - 24px);   // Value is $imac-border-size * 2
+    }
+    
+    
+}
+
+.sites-item-link:hover::before {
+        opacity: 0;
+    }
+
+.sites-item-link img {
+
+    z-index: -1;
+}
 
 
 

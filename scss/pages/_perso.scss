@@ -13,6 +13,7 @@
 .skill-subtitle {
 	@include small-title;
 	text-align: center;
+	color: $bright-orange;
     
     @include breakpoint(map-get($break, large)) {
         text-align: left;

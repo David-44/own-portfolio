@@ -11,9 +11,11 @@
 
 // Banner on the right side
 .contact-img {
+	z-index: -1;
     @include banner-light('contact.jpg');
     @include breakpoint(map-get($break, medium))  {
         @include banner-dark('contact.jpg');
+        z-index: 0;
         background-color: $black;
     }
 }

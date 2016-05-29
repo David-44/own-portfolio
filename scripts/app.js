@@ -302,7 +302,7 @@ function makeThingsAppear() {
         removeOverlay(15, $("#work-overlay"));
         removeOverlay(34, $("#widgets-overlay"));
         removeOverlay(53, $("#perso-overlay"));
-        removeOverlay(72, $("#about-overlay"));
+        removeOverlay(68, $("#about-overlay"));
         removeOverlay(89, $("#contact-overlay"));
     }
     
@@ -1129,7 +1129,7 @@ $("#about-link").click(function(event) {
 
     background.click(function(event) {
         event.preventDefault();
-        certif.fadeOut();
+        certif.fadeOut(500);
         background.fadeOut();
     });
 });

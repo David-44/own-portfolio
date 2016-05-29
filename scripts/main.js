@@ -21,7 +21,7 @@ $("#about-link").click(function(event) {
 
     background.click(function(event) {
         event.preventDefault();
-        certif.fadeOut();
+        certif.fadeOut(500);
         background.fadeOut();
     });
 });
