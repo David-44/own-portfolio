@@ -134,7 +134,7 @@
 
 // Class used only for the easter egg
 
-.contact-goose {
+.contact-easter {
 	@include banner-light('goose.jpg');
     @include breakpoint(map-get($break, medium))  {
         @include banner-dark('goose.jpg');

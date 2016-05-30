@@ -320,20 +320,20 @@ $(window).on("scroll", makeThingsAppear);
 
 var contactImage = $("#contact-image");
 
- $("#goose-link").click(function(event) {
+ $("#easter-link").click(function(event) {
 	event.preventDefault();
 
     contactImage.fadeOut(500);
     setTimeout( function() {
         contactImage.removeClass("contact-img");
-        contactImage.addClass("contact-goose");
+        contactImage.addClass("contact-easter");
         contactImage.fadeIn(500);
     }, 500);
 
     setTimeout(function() {
     	contactImage.fadeOut(500);
     	setTimeout(function() {
-            contactImage.removeClass("contact-goose");
+            contactImage.removeClass("contact-easter");
             contactImage.addClass("contact-img");
             contactImage.fadeIn(500);
     	}, 500);

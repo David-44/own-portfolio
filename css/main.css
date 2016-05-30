@@ -1134,14 +1134,14 @@ button {
     color: #007fff;
     fill: #007fff; } }
 
-.contact-goose {
+.contact-easter {
   background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/goose.jpg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/goose.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
 @media (min-width: 800px) {
-  .contact-goose {
+  .contact-easter {
     background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goose.jpg");
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/goose.jpg");
     background-size: cover;
