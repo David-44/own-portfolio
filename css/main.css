@@ -980,7 +980,7 @@ button {
     text-align: left;
     text-indent: 100px; } }
 
-.about-paragraph, .skill-paragraph, .skill-intro {
+.about-paragraph, .skill-intro {
   line-height: 24px;
   margin-left: auto;
   margin-right: auto;
@@ -988,13 +988,13 @@ button {
   text-indent: 2.25em;
   width: 83%; }
 @media (min-width: 450px) {
-  .about-paragraph, .skill-paragraph, .skill-intro {
+  .about-paragraph, .skill-intro {
     width: 66%; } }
 @media (min-width: 800px) {
-  .about-paragraph, .skill-paragraph, .skill-intro {
+  .about-paragraph, .skill-intro {
     width: 83%; } }
 @media (min-width: 1200px) {
-  .about-paragraph, .skill-paragraph, .skill-intro {
+  .about-paragraph, .skill-intro {
     width: 66%; } }
 
 .about-paragraph {
@@ -1002,9 +1002,13 @@ button {
 
 .skills-list {
   text-align: center;
-  line-height: 24px; }
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 24px;
+  max-width: 83%; }
 @media (min-width: 1200px) {
   .skills-list {
+    max-width: 100%;
     text-align: left;
     text-indent: 150px; } }
 
@@ -1040,6 +1044,9 @@ button {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.skills-list:last-child, .about-paragraph:last-child {
+  margin-bottom: 50px; }
 
 /***************************************************************************
  * CONTACT PANEL STYLES

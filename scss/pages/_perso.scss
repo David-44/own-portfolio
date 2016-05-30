@@ -22,7 +22,6 @@
 }
 
 .about-paragraph,
-.skill-paragraph,
 .skill-intro {
 	line-height: $font-size--large;
 	@include margin-center();
@@ -47,8 +46,11 @@
 
 .skills-list {
 	text-align: center;
+	@include margin-center();
 	line-height: $font-size--large;
+	max-width: 83%;
 	@include breakpoint(map-get($break, large)) {
+		max-width: 100%;
 		text-align: left;
 		text-indent: 150px;
     }
@@ -90,7 +92,10 @@
     transform: translate(-50%, -50%);
 }
 
-
+.skills-list:last-child,
+.about-paragraph:last-child {
+	margin-bottom: 50px;
+}
 
 
 
