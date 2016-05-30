@@ -737,12 +737,13 @@ button {
   33% {
     opacity: 1;
     -webkit-filter: blur(0px);
-    filter: blur(0px); }
+    filter: blur(0px);
+    text-shadow: none; }
   66% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: none; }
+    text-shadow: 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff, inset 5 5 5px #007fff, inset 10 10 10px #007fff, inset 15 15 15px #007fff, 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff; }
   100% {
     opacity: 1;
     -webkit-filter: blur(0px);
@@ -756,12 +757,13 @@ button {
   33% {
     opacity: 1;
     -webkit-filter: blur(0px);
-    filter: blur(0px); }
+    filter: blur(0px);
+    text-shadow: none; }
   66% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: none; }
+    text-shadow: 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff, inset 5 5 5px #007fff, inset 10 10 10px #007fff, inset 15 15 15px #007fff, 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff; }
   100% {
     opacity: 1;
     -webkit-filter: blur(0px);
