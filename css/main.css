@@ -1024,16 +1024,24 @@ button {
   margin-left: auto;
   margin-right: auto; }
 
-.about-link {
-  color: #66b2ff;
+.about-link, .skills-link {
   text-indent: 0;
   -webkit-transition: color 0.3s;
   transition: color 0.3s; }
+.about-link:hover, .skills-link:hover {
+  color: #004c99; }
+
+.about-link {
+  color: #66b2ff; }
 @media (min-width: 800px) {
   .about-link {
     color: #007fff; } }
-.about-link:hover {
-  color: #004c99; }
+
+.skills-link {
+  color: #007fff; }
+@media (min-width: 800px) {
+  .skills-link {
+    color: #66b2ff; } }
 
 .certificate {
   width: 100%;
@@ -1044,9 +1052,6 @@ button {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
-
-.skills-list:last-child, .about-paragraph:last-child {
-  margin-bottom: 50px; }
 
 /***************************************************************************
  * CONTACT PANEL STYLES
