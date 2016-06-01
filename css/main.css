@@ -738,41 +738,31 @@ button {
     opacity: 0;
     -webkit-filter: blur(20px);
     filter: blur(20px); }
-  33% {
+  50% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: none; }
-  66% {
-    opacity: 1;
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    text-shadow: 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff, inset 5 5 5px #007fff, inset 10 10 10px #007fff, inset 15 15 15px #007fff, 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff; }
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
   100% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff; } }
+    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff, 0 0 20px #007fff, 0 0 30px #007fff, 0 0 40px #007fff; } }
 @keyframes headerin {
   0% {
     opacity: 0;
     -webkit-filter: blur(20px);
     filter: blur(20px); }
-  33% {
+  50% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: none; }
-  66% {
-    opacity: 1;
-    -webkit-filter: blur(0px);
-    filter: blur(0px);
-    text-shadow: 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff, inset 5 5 5px #007fff, inset 10 10 10px #007fff, inset 15 15 15px #007fff, 5 5 5px #007fff, 10 10 10px #007fff, 15 15 15px #007fff; }
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff; }
   100% {
     opacity: 1;
     -webkit-filter: blur(0px);
     filter: blur(0px);
-    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff; } }
+    text-shadow: 0 0 5px #007fff, 0 0 10px #007fff, 0 0 15px #007fff, 0 0 20px #007fff, 0 0 30px #007fff, 0 0 40px #007fff; } }
 /***************************************************************************
  * WORK PANEL STYLES
  ***************************************************************************/
