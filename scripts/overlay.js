@@ -2,8 +2,15 @@
  * OVERLAY REMOVER
  ***************************************************************************/
 
- // Note : This function makes use of the variable wintop, defined in the indicator.js file
 
+
+
+
+/*
+ * Fades out the main overlay and removes the secondary one if present
+ * if the position (wintop) is higher than the trigger
+ * Note : This function makes use of the variable wintop, defined in the indicator.js file
+ */
 function removeOverlay(trigger, $overlay1, $overlay2) {
 	if (wintop >= trigger) {
     	$overlay1.addClass("fade-out-slow");
@@ -16,6 +23,14 @@ function removeOverlay(trigger, $overlay1, $overlay2) {
     }
 }
 
+
+
+
+
+/*
+ * At large viewport, removes main and secondary overlay
+ * At small viewport, shows each panel one by one
+ */
 function makeThingsAppear() {
 	if ($(window).width() >= 800) {
 	    removeOverlay(22, $("#work-overlay"), $("#widgets-overlay"));
@@ -29,6 +44,7 @@ function makeThingsAppear() {
         removeOverlay(89, $("#contact-overlay"));
     }
     
+    // Removes the scroll event when all overlays are gone
     if (wintop >= 89) {
     	$(window).off("scroll", makeThingsAppear);
     }
@@ -36,4 +52,15 @@ function makeThingsAppear() {
 
 
 
+
+
 $(window).on("scroll", makeThingsAppear);
+
+
+
+
+
+
+
+
+

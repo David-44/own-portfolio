@@ -1,9 +1,12 @@
 /***************************************************************************
- * MAIN FILE
+ * LIGHTBOX
  ***************************************************************************/
 
-$(document).ready(pageUpdate);
 
+
+
+
+// Displays the certification on an overlay when clicked.
 $("#about-link").click(function(event) {
     event.preventDefault();
     var ref = $(this).attr("href");
@@ -25,6 +28,7 @@ $("#about-link").click(function(event) {
         background.fadeOut();
     });
 });
+
 
 
 

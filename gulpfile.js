@@ -22,13 +22,12 @@ gulp.task("concatScripts", function() {
         'scripts/indicators.js',
         'scripts/overlay.js',
         'scripts/easter.js',
+        'scripts/lightbox.js',
 
         'scripts/widgets/calculator.js',
         'scripts/widgets/simon.js',
         'scripts/widgets/noughts.js',
-        'scripts/widgets/wikipedia.js',
-
-        'scripts/main.js'
+        'scripts/widgets/wikipedia.js'
         ])
     .pipe(concat('app.js'))
     .pipe(gulp.dest('scripts'));

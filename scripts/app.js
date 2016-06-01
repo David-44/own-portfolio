@@ -10,15 +10,31 @@ e=n.propHooks[b]),void 0!==c?e&&"set"in e&&void 0!==(d=e.set(a,c,b))?d:a[b]=c:e&
  * CAROUSEL CONSTRUCTOR
  ***************************************************************************/
 
-/* Takes a jQuery collection of objects as argument */
+
+
+
+
+/* 
+ * The constructor takes two arguments :
+ * - A collection of jQuery objects
+ * - The timing in milliseconds between each transition
+ * NOTE : Duration of all CSS animations used with the carousel should be equal to the timing variable
+ */
 
 var Carousel = function($collection, timing) {
     this.$collection       = $collection; // The jQuery collection of items
-    this.timing            = timing;     // timing of blur functions
-    this.currentItemNumber = 0;          // Current item
+    this.timing            = timing;      // timing of blur functions
+    this.currentItemNumber = 0;           // Current item
 };
 
-// Blurs the current item using a blur CSS animation
+
+
+
+
+/* 
+ * Blurs the current item
+ * The argument is the class containing the animation that will be used to blur
+ */
 Carousel.prototype.blurCurrentItem = function(blurClass) {
     var that = this;
     this.$collection.eq(this.currentItemNumber).addClass(blurClass);
@@ -28,7 +44,13 @@ Carousel.prototype.blurCurrentItem = function(blurClass) {
     }, this.timing);
 };
 
-// Shows the new item using a show CSS animation
+
+
+
+
+/*
+ * Shows the new item using the CSS animation in showClass
+ */
 Carousel.prototype.showItem = function(itemNumber, showClass) {
     var that = this;
     this.currentItemNumber = itemNumber;
@@ -41,7 +63,12 @@ Carousel.prototype.showItem = function(itemNumber, showClass) {
     }, this.timing);
 };
 
-// Blurs the current item and shows the new one
+
+
+
+/*
+ * Blurs the current item and shows the new one
+ */
 Carousel.prototype.changeItem = function(newItem, blurClass, showClass) {
     var that = this;
     this.blurCurrentItem(blurClass);
@@ -50,7 +77,13 @@ Carousel.prototype.changeItem = function(newItem, blurClass, showClass) {
     }, this.timing);
 };
 
-// Changes to the previous item in the collection
+
+
+
+
+/*
+ * Moves to the previous item in the collection
+ */
 Carousel.prototype.moveLeft = function(event) {
     if (this.currentItemNumber === 0) {
         this.changeItem(this.$collection.length - 1, "fade-left", "appear-left");
@@ -59,7 +92,13 @@ Carousel.prototype.moveLeft = function(event) {
     }
 };
 
-// Changes to the next item in the collection
+
+
+
+
+/*
+ * Moves to the next item in the collection
+ */
 Carousel.prototype.moveRight = function(event) {
     if (this.currentItemNumber === this.$collection.length - 1) {
         this.changeItem(0, "fade-right", "appear-right");
@@ -261,26 +300,37 @@ $widgetsLinks.click(function(event) {
  * PAGE POSITION INDICATORS
  ***************************************************************************/
 
+// Slider shows progression on wide viewport and page on small ones
 var slider = $("#indicator-slider"),
       page = $("#page-number"),
 
+
+    // wintop is the vertical scroll percentage of the window compared to the document height
     wintop = Math.round($(window).scrollTop() / ($(document).height() - ($(window).height())) * 100);
 
 var pageUpdate = function() {
     wintop = Math.round($(window).scrollTop() / ($(document).height() - ($(window).height())) * 100);
     slider.css("height", wintop + "%");
-    page.text(Math.floor(wintop * 0.055) + 1);
+    page.text(Math.floor(wintop * 0.055) + 1); // 0.055 : Magic number that displays the page number accurately
 };
 
+// Call the pageUpdate function on scroll, and document ready
 $(window).scroll(pageUpdate);
 $(window).resize(pageUpdate);
-
+$(document).ready(pageUpdate);
 /***************************************************************************
  * OVERLAY REMOVER
  ***************************************************************************/
 
- // Note : This function makes use of the variable wintop, defined in the indicator.js file
 
+
+
+
+/*
+ * Fades out the main overlay and removes the secondary one if present
+ * if the position (wintop) is higher than the trigger
+ * Note : This function makes use of the variable wintop, defined in the indicator.js file
+ */
 function removeOverlay(trigger, $overlay1, $overlay2) {
 	if (wintop >= trigger) {
     	$overlay1.addClass("fade-out-slow");
@@ -293,6 +343,14 @@ function removeOverlay(trigger, $overlay1, $overlay2) {
     }
 }
 
+
+
+
+
+/*
+ * At large viewport, removes main and secondary overlay
+ * At small viewport, shows each panel one by one
+ */
 function makeThingsAppear() {
 	if ($(window).width() >= 800) {
 	    removeOverlay(22, $("#work-overlay"), $("#widgets-overlay"));
@@ -306,6 +364,7 @@ function makeThingsAppear() {
         removeOverlay(89, $("#contact-overlay"));
     }
     
+    // Removes the scroll event when all overlays are gone
     if (wintop >= 89) {
     	$(window).off("scroll", makeThingsAppear);
     }
@@ -313,10 +372,30 @@ function makeThingsAppear() {
 
 
 
+
+
 $(window).on("scroll", makeThingsAppear);
+
+
+
+
+
+
+
+
+
+
 /***************************************************************************
  * EASTER
  ***************************************************************************/
+
+/* 
+ * Displays the easter egg on the contact panel 
+ * using basic jQuery transitions
+ */
+
+// Each transition lasts 500ms and the image remains for 2s
+// Total time 3s, hence the 3000 on the setTimeout
 
 var contactImage = $("#contact-image");
 
@@ -337,9 +416,44 @@ var contactImage = $("#contact-image");
             contactImage.addClass("contact-img");
             contactImage.fadeIn(500);
     	}, 500);
-    }, 3000);
+    }, 3000); 
  
 });
+/***************************************************************************
+ * LIGHTBOX
+ ***************************************************************************/
+
+
+
+
+
+// Displays the certification on an overlay when clicked.
+$("#about-link").click(function(event) {
+    event.preventDefault();
+    var ref = $(this).attr("href");
+    var background = $("<div>").css({
+    	"width": "100%",
+    	"height": "100%",
+    	"position": "fixed",
+    	"top": "0",
+    	"left": "0",
+    	"z-index": "999",
+    	"background-color": "rgba(0, 0, 0, 0.8)"
+    });
+    var certif = $("<img>").attr("src", ref).addClass("certificate").fadeIn(500);
+    $("body").append(background).append(certif);
+
+    background.click(function(event) {
+        event.preventDefault();
+        certif.fadeOut(500);
+        background.fadeOut();
+    });
+});
+
+
+
+
+
 /***************************************************************************
  * CALCULATOR
  ***************************************************************************/
@@ -1106,33 +1220,3 @@ var contactImage = $("#contact-image");
   });
   
 });
-/***************************************************************************
- * MAIN FILE
- ***************************************************************************/
-
-$(document).ready(pageUpdate);
-
-$("#about-link").click(function(event) {
-    event.preventDefault();
-    var ref = $(this).attr("href");
-    var background = $("<div>").css({
-    	"width": "100%",
-    	"height": "100%",
-    	"position": "fixed",
-    	"top": "0",
-    	"left": "0",
-    	"z-index": "999",
-    	"background-color": "rgba(0, 0, 0, 0.8)"
-    });
-    var certif = $("<img>").attr("src", ref).addClass("certificate").fadeIn(500);
-    $("body").append(background).append(certif);
-
-    background.click(function(event) {
-        event.preventDefault();
-        certif.fadeOut(500);
-        background.fadeOut();
-    });
-});
-
-
-

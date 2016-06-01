@@ -2,6 +2,14 @@
  * EASTER
  ***************************************************************************/
 
+/* 
+ * Displays the easter egg on the contact panel 
+ * using basic jQuery transitions
+ */
+
+// Each transition lasts 500ms and the image remains for 2s
+// Total time 3s, hence the 3000 on the setTimeout
+
 var contactImage = $("#contact-image");
 
  $("#easter-link").click(function(event) {
@@ -21,6 +29,6 @@ var contactImage = $("#contact-image");
             contactImage.addClass("contact-img");
             contactImage.fadeIn(500);
     	}, 500);
-    }, 3000);
+    }, 3000); 
  
 });
