@@ -84,6 +84,18 @@ gulp.task('autoprefix', ["compileCompass"], function() {
     .pipe(gulp.dest('css'));
 });
 
+// CSS Autoprefixer Live
+// -----------------------------------------------------------------
+
+gulp.task('autoprefixLive', ["compileCompassLive"], function() {
+  return gulp.src('css/main.css')
+    .pipe(autoprefixer({
+      browsers: ['> 1%'],
+      cascade: false
+    }))
+    .pipe(gulp.dest('css'));
+});
+
 
 // Clean
 // -----------------------------------------------------------------
@@ -96,9 +108,9 @@ gulp.task('clean', function() {
 // Build -> Default task
 // -----------------------------------------------------------------
 
-gulp.task("build", ['minifyScripts', 'compileCompassLive'], function() {
+gulp.task("build", ['minifyScripts', 'autoprefixLive'], function() {
   return gulp.src(["css/main.css", "scripts/app.min.js", 'index.html',
-                   "img/**", "fonts/**"], { base: './'})
+                   "images/**"], { base: './'})
             .pipe(gulp.dest('dist'));
 });
 
