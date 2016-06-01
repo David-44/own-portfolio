@@ -9,6 +9,7 @@
     width: 100%;
     height: 100vh;
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-bottom: $font-size--huge;
     @include breakpoint(map-get($break, medium))  {
         width: 50%;
@@ -19,6 +20,7 @@
 // Basic panel layout
 %panel {
     overflow: scroll;
+    -webkit-overflow-scrolling: touch;
     position: relative;
     width: 100%;
     height: 100vh;
