@@ -52,8 +52,6 @@ $font-size--title      : $font-size--base * 1.5 * 1.5 * 1.5 * 1.5 !default;
 // COLORS
 // -----------------------------------------------------------------------------
 
-// Descriptive Colors
-
 $white     : #fff !default;
 $black     : #000 !default;
 $gray      : #999 !default;
@@ -66,6 +64,7 @@ $dark-orange  : darken($bright-orange, 20%);
 $dark-blue    : darken($bright-blue, 20%);
 $light-orange : lighten($bright-orange, 20%);
 $light-blue   : lighten($bright-blue, 20%);
+
 
 
 

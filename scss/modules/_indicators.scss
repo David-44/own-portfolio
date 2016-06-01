@@ -2,6 +2,11 @@
  * NAVIGATION INDICATOR STYLES
  ***************************************************************************/
 
+
+
+
+
+// Vertical indicator, displayed in the middle of the screen at large viewport
 .indicator-container {
 	display: none;
 	@include breakpoint(map-get($break, medium)) {
@@ -15,6 +20,7 @@
 	}
 }
 
+// Slider whose height is calculated by javascript (indicator.js)
 .indicator-slider {
 	position: fixed;
 	top: 0%;
@@ -22,6 +28,12 @@
 	height: 0%;
 	background-color: $light-gray;
 }
+
+
+
+
+
+// Page numbering showing only at small viewport
 
 .page-indicator {
 	position: fixed;

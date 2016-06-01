@@ -95,31 +95,31 @@ button {
 /*
  * Hide elements at small viewport size
  */
-.hidden-small {
+.is-hidden-small {
   display: none; }
 @media (min-width: 800px) {
-  .hidden-small {
+  .is-hidden-small {
     display: block; } }
 
 /*
  * Hide elements at small viewport size
  */
-.hidden-medium {
+.is-hidden-medium {
   display: block; }
 @media (min-width: 800px) {
-  .hidden-medium {
+  .is-hidden-medium {
     display: none; } }
 
 /*
  * Hides item
  */
-.hidden {
+.is-hidden {
   display: none; }
 
 /*
  * Displays item
  */
-.displayed {
+.is-displayed {
   display: inline-block; }
 
 /* Styles used for modifying colours
@@ -159,7 +159,7 @@ button {
     color: #fff; } }
 
 /***************************************************************************
- * GENRAL ANIMATIONS
+ * GENERAL ANIMATIONS
  ***************************************************************************/
 /* fade-in and fade-out */
 @-webkit-keyframes transparency {
@@ -442,9 +442,6 @@ button {
     height: 72px;
     font-size: 16px;
     line-height: 24px; } }
-
-.footer a {
-  line-height: 16px; }
 
 /***************************************************************************
  * NAVIGATION INDICATOR STYLES
@@ -881,7 +878,7 @@ button {
   height: 100%;
   max-height: 0;
   overflow: hidden; }
-.displayed .work-description, .displayed .widget-description {
+.is-displayed .work-description, .is-displayed .widget-description {
   -webkit-animation: growin 2s forwards;
   animation: growin 2s forwards; }
 
@@ -1014,9 +1011,7 @@ button {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 6px solid #007fff;
-  margin-left: auto;
-  margin-right: auto; }
+  border: 6px solid #007fff; }
 
 .about-link, .skills-link {
   text-indent: 0;

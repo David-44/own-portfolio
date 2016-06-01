@@ -39,8 +39,8 @@ Carousel.prototype.blurCurrentItem = function(blurClass) {
     var that = this;
     this.$collection.eq(this.currentItemNumber).addClass(blurClass);
     setTimeout(function() {
-        that.$collection.eq(that.currentItemNumber).removeClass("displayed " + blurClass);
-        that.$collection.eq(that.currentItemNumber).addClass("hidden");
+        that.$collection.eq(that.currentItemNumber).removeClass("is-displayed " + blurClass);
+        that.$collection.eq(that.currentItemNumber).addClass("is-hidden");
     }, this.timing);
 };
 
@@ -55,11 +55,11 @@ Carousel.prototype.showItem = function(itemNumber, showClass) {
     var that = this;
     this.currentItemNumber = itemNumber;
     this.$collection.eq(this.currentItemNumber).addClass(showClass);
-    this.$collection.eq(this.currentItemNumber).removeClass("hidden");
+    this.$collection.eq(this.currentItemNumber).removeClass("is-hidden");
 
     setTimeout(function() {
         that.$collection.eq(that.currentItemNumber).removeClass(showClass);
-        that.$collection.eq(that.currentItemNumber).addClass("displayed");
+        that.$collection.eq(that.currentItemNumber).addClass("is-displayed");
     }, this.timing);
 };
 
@@ -157,12 +157,12 @@ var timing = 500;
  * tTiming : how long the bluring is going to take
  */
 var toggleMedium = function($item1, $item2, tTiming) {
-    if(!$item1.hasClass("hidden-medium")){
+    if(!$item1.hasClass("is-hidden-medium")){
         $item1.addClass("fade-out");
         setTimeout(function() {
-            $item1.addClass("hidden-medium");
+            $item1.addClass("is-hidden-medium");
             $item1.removeClass("fade-out");
-            $item2.removeClass("hidden-medium");
+            $item2.removeClass("is-hidden-medium");
         }, tTiming);
     }
 };

@@ -3,7 +3,11 @@
  ***************************************************************************/
 
 
+
+
+
 // Mixin used to pass layout styles to half panels
+// Absolutely positionned, taking the whole viewport width on small screen
 @mixin panel-half {
     position: absolute;
     width: 100%;
@@ -28,6 +32,8 @@
 
 
 
+
+
 // A panel in which both sides are superposed at small size
 .l-panel_superposed {
     @extend %panel;
@@ -44,7 +50,9 @@
 
 
 
-// Left half panel, on top
+
+
+// Left half panel, on top at small viewport
 .l-panel-left {
     top: 0;
     z-index: 1;
@@ -53,7 +61,7 @@
     }
 }
 
-// Right half panel
+// Right half panel, on bottom at small viewport
 .l-panel-right {
     bottom: 0;
     @include panel-half {
@@ -62,6 +70,8 @@
 }
 
 // top and bottom half panels, in case of interlaced panels
+// position is set to static so that child elements can be positioned absolutely 
+// within the main panel
 .l-panel-bottom, 
 .l-panel-top {
     @include panel-half {

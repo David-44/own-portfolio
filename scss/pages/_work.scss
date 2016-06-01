@@ -162,7 +162,7 @@ $imac-border-size: 12px;
     overflow: hidden;
 
 
-    .displayed & {
+    .is-displayed & {
         animation: growin 2s forwards;
     }
 }

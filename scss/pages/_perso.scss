@@ -2,6 +2,12 @@
  * PERSO PANEL STYLES
  ***************************************************************************/
 
+
+
+
+
+// Main layout styles
+
 .perso {
     background-color: $white;
 	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
@@ -10,6 +16,11 @@
 	}
 }
 
+
+
+
+
+// Lists titles before each list of skills
 .skill-subtitle {
 	@include small-title;
 	text-align: center;
@@ -20,6 +31,12 @@
         text-indent: 100px;
     }
 }
+
+
+
+
+
+// Text paragraphs
 
 .about-paragraph,
 .skill-intro {
@@ -44,6 +61,12 @@
 	margin-bottom: $font-size--base;
 }
 
+
+
+
+
+
+
 .skills-list {
 	text-align: center;
 	@include margin-center();
@@ -56,6 +79,12 @@
     }
 }
 
+
+
+
+
+// The small rounded image illustrating the paragraph
+
 .perso-img {
 	display: block;
 	@include margin-center();
@@ -64,9 +93,13 @@
 	height: 200px;
 	border-radius: 50%;
 	border: 6px solid $bright-blue;
-	margin-left: auto;
-	margin-right: auto;
 }
+
+
+
+
+
+// Changing link colours depending on the size (and of the background colour)
 
 .about-link,
 .skills-link {
@@ -93,6 +126,12 @@
         color: $light-blue;
     }
 }
+
+
+
+
+
+// The certificate appearing on the overlay
 
 .certificate {
 	width: 100%;

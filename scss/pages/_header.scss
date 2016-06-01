@@ -2,6 +2,8 @@
  * HEADER PANEL STYLES
  ***************************************************************************/
 
+// Main styles
+
 .header {
     background-color: $black;
     color: $white;
@@ -15,6 +17,11 @@
 }
 
 
+
+
+
+// Titles
+
 .header-title,
 .header-subtitle {
 	position: relative;
@@ -23,6 +30,7 @@
     animation: headerin 3s 2.5s forwards;
 }
 
+// Temporary title that disappears after a few seconds
 .temp-title {
 	position: absolute;
 	animation: blurout 1s 2s forwards;
@@ -31,7 +39,7 @@
 .header-title,
 .temp-title,
 .header-subtitle {
-	top: 16.7vh;
+	top: 16.7vh; // 1/6th of the top window of the window
 	width: 100%;
     text-align: center;
 }
@@ -51,6 +59,11 @@
 	font-size: $font-size--base;
 }
 
+
+
+
+
+// The small picture and its animation
 .header-photo {
 	position: relative;
     @include horizontal-center();
@@ -67,6 +80,11 @@
     animation: size 4.5s 1s forwards;
 }
 
+
+
+
+
+// Header banner and its overlay (::after) that disappears as part of the intro animation
 
 .header-banner {
     @include banner-dark('banner-grey.jpg');

@@ -8,7 +8,7 @@
 /*
  * Hide elements at small viewport size
  */
-.hidden-small {
+.is-hidden-small {
   display: none;
   @include breakpoint(map-get($break, medium)) {
     display: block;
@@ -18,7 +18,7 @@
 /*
  * Hide elements at small viewport size
  */
-.hidden-medium {
+.is-hidden-medium {
   display: block;
 
   @include breakpoint(map-get($break, medium)) {
@@ -29,7 +29,7 @@
 /*
  * Hides item
  */
-.hidden {
+.is-hidden {
   display: none;
 }
 
@@ -37,7 +37,7 @@
  * Displays item
  */
 
- .displayed {
+ .is-displayed {
   display: inline-block;
  }
 

@@ -42,12 +42,12 @@ var timing = 500;
  * tTiming : how long the bluring is going to take
  */
 var toggleMedium = function($item1, $item2, tTiming) {
-    if(!$item1.hasClass("hidden-medium")){
+    if(!$item1.hasClass("is-hidden-medium")){
         $item1.addClass("fade-out");
         setTimeout(function() {
-            $item1.addClass("hidden-medium");
+            $item1.addClass("is-hidden-medium");
             $item1.removeClass("fade-out");
-            $item2.removeClass("hidden-medium");
+            $item2.removeClass("is-hidden-medium");
         }, tTiming);
     }
 };

@@ -31,8 +31,8 @@ Carousel.prototype.blurCurrentItem = function(blurClass) {
     var that = this;
     this.$collection.eq(this.currentItemNumber).addClass(blurClass);
     setTimeout(function() {
-        that.$collection.eq(that.currentItemNumber).removeClass("displayed " + blurClass);
-        that.$collection.eq(that.currentItemNumber).addClass("hidden");
+        that.$collection.eq(that.currentItemNumber).removeClass("is-displayed " + blurClass);
+        that.$collection.eq(that.currentItemNumber).addClass("is-hidden");
     }, this.timing);
 };
 
@@ -47,11 +47,11 @@ Carousel.prototype.showItem = function(itemNumber, showClass) {
     var that = this;
     this.currentItemNumber = itemNumber;
     this.$collection.eq(this.currentItemNumber).addClass(showClass);
-    this.$collection.eq(this.currentItemNumber).removeClass("hidden");
+    this.$collection.eq(this.currentItemNumber).removeClass("is-hidden");
 
     setTimeout(function() {
         that.$collection.eq(that.currentItemNumber).removeClass(showClass);
-        that.$collection.eq(that.currentItemNumber).addClass("displayed");
+        that.$collection.eq(that.currentItemNumber).addClass("is-displayed");
     }, this.timing);
 };
 

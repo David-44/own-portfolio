@@ -3,7 +3,6 @@
  ***************************************************************************/
 
  // This is used to style the overlays that disappear when scrolling down
-
 %overlay {
 	position: absolute;
     width: 100%;
@@ -11,6 +10,13 @@
     left: 0;
     z-index: 100;
 }
+
+
+
+
+
+// Each overlay has different height and background colours,
+// this is why there are no common classes
 
 .work-overlay {
     @extend %overlay;
