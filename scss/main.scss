@@ -1,29 +1,29 @@
 @charset 'UTF-8';
 
-// 0. Libraries
+// 1. Libraries
 @import
   'compass/css3',
   'compass/reset',
   'compass/css3/filter',
   'breakpoint';
 
-// 1. Configuration and helpers
+// 2. Configuration and helpers
 @import
   'abstracts/variables',
   'abstracts/mixins';
 
-// 2. Base stuff
+// 3. Base stuff
 @import
   'base/base',
   'base/helpers',
   'base/animations';
 
-// 3. Layout-related sections
+// 4. Layout-related sections
 @import
   'layout/layout',
   'layout/footer';
  
-// 4. Modules
+// 5. Modules
 @import
   'modules/indicators',
   'modules/overlay',
@@ -31,14 +31,14 @@
   'modules/carousel',
   'modules/widgets';
 
-// 5. Pages
+// 6. Pages
 @import
   'pages/header',
   'pages/work',
   'pages/perso',
   'pages/contact';
 
-// 6. Widgets
+// 7. Widgets
 @import
   'widgets/calculator',
   'widgets/simon',
