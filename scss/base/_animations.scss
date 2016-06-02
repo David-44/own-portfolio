@@ -44,22 +44,22 @@
 @keyframes blurin {
 	0% {
 		opacity: 0;
-	    filter: blur(20px);
+	    @include filter(blur(20px));
 	}
 	100% {
 		opacity: 1;
-		filter: blur(0px);
+		@include filter(blur(0px));
 	}
 }
 
 @keyframes blurout {
 	0% {
 		opacity: 1;
-	    filter: blur(0px);
+	    @include filter(blur(0px));
 	}
 	100% {
 		opacity: 0;
-		filter: blur(20px);
+		@include filter(blur(20px));
 	}
 }
 

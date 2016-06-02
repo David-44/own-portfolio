@@ -26,8 +26,8 @@
 .header-subtitle {
 	position: relative;
 	opacity: 0;
-    filter: blur(20px);
-    animation: headerin 3s 2.5s forwards;
+    @include filter(blur(20px));
+    animation: headerin 2s 2.5s forwards;
 }
 
 // Temporary title that disappears after a few seconds
@@ -77,7 +77,7 @@
 	border-radius: 50%;
 	border: 6px solid $gray;
 
-    animation: size 4.5s 1s forwards;
+    animation: size 3.5s 1s forwards;
 }
 
 
@@ -145,19 +145,19 @@
 @keyframes headerin {
 	0% {
 		opacity: 0;
-	    filter: blur(20px);
+	    @include filter(blur(20px));
 	}
-	50% {
+	66% {
 		opacity: 1;
-		filter: blur(0px);
-		text-shadow: 0 0 5px $white, 0 0 10px $white, 0 0 15px $white,
-		0 0 20px $white, 0 0 30px $white, 0 0 40px $white;
+		text-shadow: $white 0 0 5px, $white 0 0 10px, $white 0 0 15px,
+		$white 0 0 20px, $white 0 0 30px, $white 0 0 40px; 
+		@include filter(blur(20px));
 	}
 	100% {
 		opacity: 1;
-		filter: blur(0px);
-		text-shadow: 0 0 5px $bright-blue, 0 0 10px $bright-blue, 0 0 15px $bright-blue
-		, 0 0 20px $bright-blue, 0 0 30px $bright-blue, 0 0 40px $bright-blue;
+		text-shadow: $bright-blue 0 0 5px, $bright-blue 0 0 10px, $bright-blue 0 0 15px,
+		$bright-blue 0 0 20px, $bright-blue 0 0 30px, $bright-blue 0 0 40px;
+		@include filter(blur(0px));
 	}
 }
 
