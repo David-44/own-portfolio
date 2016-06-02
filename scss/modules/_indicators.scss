@@ -29,7 +29,8 @@
 	height: 0%;
 	background-color: $light-gray;
 
-	.ie11 & {
+	.ie11 &,
+	.ie10 & {
 		transform: translate(-3.6px); // $font-size--x-small / 2
 	}
 }

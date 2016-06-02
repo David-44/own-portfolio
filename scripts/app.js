@@ -27,6 +27,11 @@ if (!(window.ActiveXObject) && "ActiveXObject" in window) {
 	$("html").addClass("ie11");
 }
 
+// Checks if browser is IE10
+if (Function('/*@cc_on return document.documentMode===10@*/')()){
+    $("html").addClass("ie10");
+}
+
 
 
 
