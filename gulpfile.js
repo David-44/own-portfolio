@@ -14,7 +14,7 @@ autoprefixer = require('gulp-autoprefixer');
 
 gulp.task("concatScripts", function() {
     return gulp.src([
-        'scripts/libraries/respond.min.js',
+        // 'scripts/libraries/respond.min.js',
         'scripts/libraries/html5shiv.min.js',
 
         'scripts/jquery.js',

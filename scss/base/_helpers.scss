@@ -54,6 +54,10 @@
 .white {
   color: $white;
   fill: $white;
+
+  .no-gradients & {
+    color: $black;
+  }
 }
 
 /*
@@ -73,6 +77,10 @@
   @include breakpoint(map-get($break, medium)) {
       color: $black;
   }
+
+  .no-gradients & {
+    color: $black;
+  }
 }
 
 /*
@@ -83,6 +91,10 @@
   color: $black;
   @include breakpoint(map-get($break, medium)) {
       color: $white;
+  }
+
+  .no-gradients & {
+    color: $black;
   }
 }
 

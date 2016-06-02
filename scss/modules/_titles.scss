@@ -35,7 +35,7 @@
   @include small_title;
   text-align: center;
 
-  // Fixes a vertical alignment discrepancy with IE
+  // Fixes a vertical alignment discrepancy between IE and other browsers
   .ie11 & {
     position: relative;
     top: 0 - $font-size--small;
