@@ -615,15 +615,15 @@ button {
 .header-title, .header-subtitle {
   position: relative;
   opacity: 0;
-  -webkit-filter: blur(20px);
-  filter: blur(20px);
+  text-shadow: #007fff 1px 1px 5px, #007fff -1px -1px 5px;
   -webkit-animation: headerin 2s 2.5s forwards;
   animation: headerin 2s 2.5s forwards; }
 
 .temp-title {
   position: absolute;
-  -webkit-animation: blurout 1s 2s forwards;
-  animation: blurout 1s 2s forwards; }
+  opacity: 1;
+  -webkit-animation: transparency 1s 2s forwards;
+  animation: transparency 1s 2s forwards; }
 
 .header-title, .temp-title, .header-subtitle {
   top: 16.7vh;

@@ -26,14 +26,17 @@
 .header-subtitle {
 	position: relative;
 	opacity: 0;
-    @include filter(blur(20px));
+
+	// Animated text shadows don't work on IE and Edge if not defined before the animation
+	text-shadow: $bright-blue 1px 1px 5px, $bright-blue -1px -1px 5px;
     animation: headerin 2s 2.5s forwards;
 }
 
 // Temporary title that disappears after a few seconds
 .temp-title {
 	position: absolute;
-	animation: blurout 1s 2s forwards;
+	opacity: 1;
+	animation: transparency 1s 2s forwards;
 }
 
 .header-title,
