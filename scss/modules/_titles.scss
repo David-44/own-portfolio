@@ -34,4 +34,10 @@
 .elem-title {
   @include small_title;
   text-align: center;
+
+  // Fixes a vertical alignment discrepancy with IE
+  .ie11 & {
+    position: relative;
+    top: 0 - $font-size--small;
+  }
 }

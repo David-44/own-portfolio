@@ -39,6 +39,10 @@
 .title-text {
     position: relative;
     bottom: $font-size--large +2px;
+
+    .ie11 & {
+        bottom: 0;
+    }
 }
 
 

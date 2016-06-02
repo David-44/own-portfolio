@@ -12,7 +12,8 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    overflow: auto;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     padding-bottom: $font-size--huge;
     @include breakpoint(map-get($break, medium))  {
         width: 50%;
@@ -22,7 +23,8 @@
 
 // Basic panel layout
 %panel {
-    overflow: auto;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
     position: relative;
     width: 100%;
     height: 100vh;

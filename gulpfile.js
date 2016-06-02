@@ -19,6 +19,8 @@ gulp.task("concatScripts", function() {
 
         'scripts/jquery.js',
         'scripts/jquery-mobile.js',
+
+        'scripts/feature-detection.js',
         'scripts/helpers.js',
         'scripts/carousel.js',
         'scripts/work-panel.js',
