@@ -20,7 +20,6 @@
 	}
 }
 
-
 // Slider whose height is calculated by javascript (indicator.js)
 .indicator-slider {
 	position: fixed;
@@ -29,8 +28,8 @@
 	height: 0%;
 	background-color: $light-gray;
 
-	.ie11 &,
-	.ie10 & {
+	.ie10 &,
+    .ie11 & {
 		transform: translate(-3.6px); // $font-size--x-small / 2
 	}
 }

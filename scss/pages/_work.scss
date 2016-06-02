@@ -40,8 +40,8 @@
     position: relative;
     bottom: $font-size--large +2px;
 
-    .ie11 &,
-    .ie10 & {
+    .ie10 &,
+    .ie11 & {
         bottom: 0;
     }
 }

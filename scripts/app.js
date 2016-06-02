@@ -46,6 +46,7 @@ if (!dummy.style.backgroundImage) {
 
 
 
+
 // Testing for animations
 // Borrowed from https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 var animation = false,
