@@ -8,6 +8,7 @@
 
 // Positions and adds effect to a banner image
 @mixin banner-dark($image) {
+    background-image: url('#{$base-url}#{$image}');  // Fallback for browsers with no gradients
     background-image: linear-gradient(hsla(0, 0%, 0%, 0.5), hsla(0, 0%, 0%, 0.5)),
                       url('#{$base-url}#{$image}');
     background-size: cover;
@@ -16,6 +17,7 @@
 }
 
 @mixin banner-light($image) {
+    background-image: url('#{$base-url}#{$image}');  // Fallback for browsers with no gradients
     background-image: linear-gradient(hsla(0, 0%, 100%, 0.7), hsla(0, 0%, 100%, 0.7)),
                       url('#{$base-url}#{$image}');
     background-size: cover;

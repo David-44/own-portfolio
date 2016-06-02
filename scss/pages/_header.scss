@@ -30,6 +30,10 @@
 	// Animated text shadows don't work on IE and Edge if not defined before the animation
 	text-shadow: $bright-blue 1px 1px 5px, $bright-blue -1px -1px 5px;
     animation: headerin 2s 2.5s forwards;
+
+    .no-animations & {
+        opacity: 1;
+    }
 }
 
 // Temporary title that disappears after a few seconds
@@ -37,6 +41,10 @@
 	position: absolute;
 	opacity: 1;
 	animation: transparency 1s 2s forwards;
+
+	.no-animations & {
+		display: none;
+	}
 }
 
 .header-title,
@@ -81,6 +89,14 @@
 	border: 6px solid $gray;
 
     animation: size 3.5s 1s forwards;
+
+    .no-animations & {
+        opacity: 1;
+		width: 200px;
+		height: 200px;
+		top: 0;
+		border-color: $bright-orange;
+    }
 }
 
 
@@ -109,6 +125,10 @@
 	background-color: $black;
 	@include breakpoint(map-get($break, medium))  {
         background-color: $white;
+	}
+
+	.no-animations & {
+		display: none;
 	}
 }
 
