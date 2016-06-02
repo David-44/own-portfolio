@@ -78,7 +78,7 @@ gulp.task('compileCompassLive', function() {
 gulp.task('autoprefix', ["compileCompass"], function() {
   return gulp.src('css/main.css')
     .pipe(autoprefixer({
-      browsers: ['> 1%'],
+      browsers: ['> 1%', 'Explorer >= 9'],
       cascade: false
     }))
     .pipe(gulp.dest('css'));
@@ -90,7 +90,7 @@ gulp.task('autoprefix', ["compileCompass"], function() {
 gulp.task('autoprefixLive', ["compileCompassLive"], function() {
   return gulp.src('css/main.css')
     .pipe(autoprefixer({
-      browsers: ['> 1%'],
+      browsers: ['> 1%', 'Explorer >= 9'],
       cascade: false
     }))
     .pipe(gulp.dest('css'));

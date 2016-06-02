@@ -32,3 +32,8 @@ dummy.style.backgroundImage = 'linear-gradient(white, black)';
 if (!dummy.style.backgroundImage) {
 	$("html").addClass("no-gradients");
 }
+
+
+
+
+

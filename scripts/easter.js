@@ -6,7 +6,7 @@
  * Displays the easter egg on the contact panel 
  * using basic jQuery transitions
  */
- 
+
 // Each transition lasts 500ms and the image remains for 2s
 // Total time 3s, hence the 3000 on the setTimeout
 
