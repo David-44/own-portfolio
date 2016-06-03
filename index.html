@@ -118,9 +118,17 @@
       
 	    <h3 class="work-subtitle">Sites</h3>
 	    <ul id="sites-list" class="work-list is-hidden-small">
-        <li class="work-list-item"><a class="js-work-link work-link is-selected" href="#" data-num="0">Rodolf Vanthuyne</a>
-        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="1">Alpha Clean</a></li>
-        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="2">My portfolio</a></li>
+        <li class="work-list-item">
+          <a class="js-work-link work-link is-selected" href="#" data-num="0">My portfolio</a>
+          <a class="source-link" href="https://github.com/David-44/own-portfolio">
+            <svg viewBox="0 0 16 16" class="contact-icon">
+              <use xlink:href="#github"></use>
+            </svg>
+            <p class="work-helper">View Source</p>
+          </a>
+        </li>
+        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="1">Rodolf Vanthuyne</a>
+        <li class="work-list-item"><a class="js-work-link work-link" href="#" data-num="2">Alpha Clean</a></li>
       </ul>
 
       <!-- SITES CAROUSEL -->
@@ -133,6 +141,25 @@
           <ul class="carousel" id="carousel-sites">
 
             <li class="carousel-item js-carousel-item is-displayed">
+              <h3 class="elem-title black is-hidden-medium">
+                <a class="black source-link" href="https://github.com/David-44/own-portfolio">
+                  <svg viewBox="0 0 16 16" class="contact-icon">
+                    <use xlink:href="#github"></use>
+                  </svg>
+                </a>
+                <span class="title-text">Portfolio</span>
+              </h3>
+              <div class="sites-item">
+                <a class="sites-item-link" href="#">
+                  <img class="carousel-thumbnail" src="images/perso.jpg" alt="screenshot of David Morisset's website">
+                </a>
+                <p class="work-description black-to-white">
+                  This site has been built using sass, javascript and jQuery. The building process is automated with gulp and NPM.
+                </p>
+              </div>
+            </li>
+
+            <li class="carousel-item js-carousel-item is-hidden">
               <h3 class="elem-title is-hidden-medium">Rodolf Vanthuyne</h3>
               <div class="sites-item">
                 <a class="sites-item-link" href="http://rodolf-vanthuyne.com">
@@ -153,18 +180,6 @@
                 <p class="work-description black-to-white">
                   Alex is a professional carpet cleaner operating throughout Glasgow and Paisley. He needed a straightforward website to advertise his business. By working together, we found a design that he liked, and one week later he had a fully responsive site.<br>
                   This site is made with <abbr>HTML</abbr>, <abbr>CSS</abbr> with some javascript and PHP for the contact form.
-                </p>
-              </div>
-            </li>
-
-            <li class="carousel-item js-carousel-item is-hidden">
-              <h3 class="elem-title is-hidden-medium">Portfolio</h3>
-              <div class="sites-item">
-                <a class="sites-item-link" href="#">
-                  <img class="carousel-thumbnail" src="images/perso.jpg" alt="screenshot of David Morisset's website">
-                </a>
-                <p class="work-description black-to-white">
-                  This site has been built using sass, javascript and jQuery. The building process is automated with gulp and NPM.
                 </p>
               </div>
             </li>
