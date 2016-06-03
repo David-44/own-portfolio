@@ -94,7 +94,7 @@ $imac-border-size: 12px;
     border-radius: $imac-border-size;
 
     // We use box-shadow for the black borders in order to avoid two things :
-    // 1) To have a order-radius on the image
+    // 1) To have a border-radius on the image
     // 2) To have a diagonal border between the bottom gray border and sides right border
     box-shadow: inset 0 - $imac-border-size   0 - $imac-border-size 0 $black,
                 inset $imac-border-size 0    0 $black;
@@ -105,6 +105,17 @@ $imac-border-size: 12px;
         border-left: $imac-border-size solid $white;
         border-right: $imac-border-size solid $white;
         border-bottom-color: $white;
+    }
+    // In case of browser not supporting gradients, the background will be white so the original style is kept
+    .no-gradients & {
+        padding: 0;
+        border-top: $imac-border-size solid black;
+        border-bottom: 50px solid $gray;
+        border-left: none;
+        border-right: none;
+        border-radius: $imac-border-size;
+        box-shadow: inset 0 - $imac-border-size   0 - $imac-border-size 0 $black,
+                    inset $imac-border-size 0    0 $black;
     }
 }
 
@@ -121,6 +132,9 @@ $imac-border-size: 12px;
   transform: translate(-50%);
   @include breakpoint(map-get($break, medium)) {
     background-color: $gray;
+  }
+  .no-gradients & {
+    background-color: $black;
   }
 }
 
@@ -139,7 +153,9 @@ $imac-border-size: 12px;
         height: calc(100% - 24px);   // Value is $imac-border-size * 2
     }
     
-    
+    .no-gradients & {
+        height: calc(100% - 12px);   // Value is $imac-border-size for black iMac
+    }
 }
 
 .sites-item-link:hover::before {
@@ -170,6 +186,10 @@ $imac-border-size: 12px;
 
     .is-displayed & {
         animation: growin 2s forwards;
+    }
+
+    .no-animations .is-displayed & {
+        max-height: 500px;
     }
 }
 
