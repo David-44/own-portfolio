@@ -39,7 +39,7 @@
   text-align: center;
 
   // Fixes a vertical alignment discrepancy between IE and other browsers
-  .ie10 &,
+  .ie &,
   .ie11 & {
     position: relative;
     top: 0 - $font-size--small;

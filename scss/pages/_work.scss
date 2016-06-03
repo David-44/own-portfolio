@@ -41,7 +41,7 @@
     position: relative;
     bottom: $font-size--large +2px;
 
-    .ie10 &,
+    .ie &,
     .ie11 & {
         bottom: 0;
     }
