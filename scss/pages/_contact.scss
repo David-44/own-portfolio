@@ -8,6 +8,8 @@
 
 // Sets the background colour for the panel
 .contact {
+	height: auto;
+	min-height: 100vh;
 	@include breakpoint(map-get($break, medium))  {
 	    background-image: linear-gradient(to right, $white 50%, black 50%);
 	}
@@ -16,6 +18,7 @@
 // Banner on the right side
 .contact-img {
 	z-index: -1;
+	height: 100%;
     @include banner-light('contact.jpg');
     @include breakpoint(map-get($break, medium))  {
         @include banner-dark('contact.jpg');

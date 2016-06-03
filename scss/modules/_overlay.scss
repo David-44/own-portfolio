@@ -6,6 +6,7 @@
 %overlay {
 	position: absolute;
     width: 100%;
+    height: 200vh;  // Twice the viewports' height to avoid part of the panel not being covered
     top: 0;
     left: 0;
     z-index: 100;
@@ -20,7 +21,6 @@
 
 .work-overlay {
     @extend %overlay;
-    height: 200vh;
     background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to right, $white 50%, $black 50%);
@@ -30,7 +30,6 @@
 
 .perso-overlay {
     @extend %overlay;
-    height: 200vh;
     background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to right, $black 50%, $white 50%);
@@ -40,7 +39,6 @@
 
 .contact-overlay {
     @extend %overlay;
-    height: 100vh;
     background-color: $white;
     @include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to right, $white 50%, $black 50%);
@@ -49,7 +47,6 @@
 
 .widgets-overlay {
 	@extend %overlay;
-	height: 100vh;
 	background-color: $black;
 	@include breakpoint(map-get($break, medium)) {
 		display: none;
@@ -58,7 +55,6 @@
 
 .about-overlay {
 	@extend %overlay;
-	height: 100vh;
 	background-color: $black;
 	@include breakpoint(map-get($break, medium)) {
 		background-color: $white;

@@ -8,6 +8,7 @@
 
 // Sets the background of the whole panel
 .work {
+    overflow-y: auto;
 	background-image: linear-gradient(to bottom, $white 50%, $black 50%);
 	@include breakpoint(map-get($break, medium)) {
         background-image: linear-gradient(to right, $white 50%, $black 50%);
