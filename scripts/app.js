@@ -939,7 +939,7 @@ $("#about-link").click(function(event) {
      cell6 = document.getElementById("c-2-0"),
      cell7 = document.getElementById("c-2-1"),
      cell8 = document.getElementById("c-2-2"),
-      
+    
       /* All table cells are pushed in an array
          It is much simpler to represent the grid as a single array
          instead of a 3x3 2 dimensional array
@@ -1111,7 +1111,16 @@ $("#about-link").click(function(event) {
         cell[i] = false;
         emptyCells[i] = true;
         if (forkArray.length >= 2) {
-          return i;
+          // Deals with a special case in which the opponent control 2 opposite corners
+          // and the player controls only the middle.
+          // In this case, the player should play a side in order to prevent the opponent to play a diagonal
+          if ( p2Cells[4] && (p1Cells[0] && p1Cells[8] || p1Cells[2] && p1Cells[6])){
+              return 3;
+          }
+          // Returns the fork if we are not in the special case
+          else {
+            return i;
+          }
         }
       }
     }
