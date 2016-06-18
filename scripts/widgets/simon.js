@@ -70,7 +70,7 @@
   // Launched each time "strict" is pressed
   function toggleStrict() {
     strict = !strict;
-    strictBtn.classList.toggle("active");
+    strictBtn.classList.toggle("sim-active");
   }
   
   
